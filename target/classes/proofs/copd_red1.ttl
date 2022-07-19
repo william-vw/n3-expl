@@ -1,0 +1,144 @@
+<http://provenanceweb.org/ns/pml#info5>
+      a       <http://provenanceweb.org/ns/pml#Information> ;
+      <http://purl.org/dc/terms/format>
+              "RDF" ;
+      <http://www.w3.org/ns/prov#value>
+              [ a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> ;
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#object>
+                        86 ;
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate>
+                        <http://niche.cs.dal.ca/ns/copd.owl#has02SaturationValue> ;
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject>
+                        <http://niche.cs.dal.ca/ns/copd.owl#patientA>
+              ] ;
+      <http://www.w3.org/ns/prov#wasGeneratedBy>
+              [ a       <http://niche.cs.dal.ca/xpl#DiaryEntryActivity> , <http://niche.cs.dal.ca/xpl#EntryActivity> ;
+                <http://www.w3.org/ns/prov#endedAtTime>
+                        "2021-12-14T11:57:31Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+              ] .
+
+<http://provenanceweb.org/ns/pml#info7>
+      a       <http://provenanceweb.org/ns/pml#Information> ;
+      <http://purl.org/dc/terms/format>
+              "functor" ;
+      <http://www.w3.org/ns/prov#value>
+              [ <http://provenanceweb.org/ns/pml#functorArgs>
+                        (86 "88"^^<http://www.w3.org/2001/XMLSchema#int>) ;
+                <http://provenanceweb.org/ns/pml#functorName>
+                        "lessThan"
+              ] .
+
+<http://provenanceweb.org/ns/pml#R5>
+      a       <http://provenanceweb.org/ns/pml#Rule> .
+
+<http://provenanceweb.org/ns/pml#S7>
+      a       <http://provenanceweb.org/ns/pml#Rule> .
+
+<http://jena.apache.org>
+      a       <http://provenanceweb.org/ns/pml#InferenceEngine> .
+
+<http://provenanceweb.org/ns/pml#nodeSet6>
+      a       <http://provenanceweb.org/ns/pml#NodeSet> ;
+      <http://provenanceweb.org/ns/pml#hasConclusion>
+              <http://provenanceweb.org/ns/pml#info7> ;
+      <http://provenanceweb.org/ns/pml#isConsequentOf>
+              [ a       <http://provenanceweb.org/ns/pml#Assertion> ;
+                <http://www.w3.org/ns/prov#qualifiedUsage>
+                        [ <http://www.w3.org/ns/prov#entity>
+                                  [] ;
+                          <http://www.w3.org/ns/prov#hadRole>
+                                  <http://provenanceweb.org/ns/pml#Source>
+                        ]
+              ] .
+
+<http://provenanceweb.org/ns/pml#nodeSet4>
+      a       <http://provenanceweb.org/ns/pml#NodeSet> ;
+      <http://provenanceweb.org/ns/pml#hasConclusion>
+              <http://provenanceweb.org/ns/pml#info5> ;
+      <http://provenanceweb.org/ns/pml#isConsequentOf>
+              [ a       <http://provenanceweb.org/ns/pml#Assertion> ;
+                <http://www.w3.org/ns/prov#qualifiedUsage>
+                        [ <http://www.w3.org/ns/prov#entity>
+                                  [] ;
+                          <http://www.w3.org/ns/prov#hadRole>
+                                  <http://provenanceweb.org/ns/pml#Source>
+                        ]
+              ] .
+
+<http://provenanceweb.org/ns/pml#info1>
+      a       <http://provenanceweb.org/ns/pml#Information> ;
+      <http://purl.org/dc/terms/format>
+              "RDF" ;
+      <http://www.w3.org/ns/prov#value>
+              [ a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> ;
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#object>
+                        <http://niche.cs.dal.ca/ns/copd.owl#RedZone> ;
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate>
+                        <http://niche.cs.dal.ca/ns/copd.owl#isStratified> ;
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject>
+                        <http://niche.cs.dal.ca/ns/copd.owl#patientA>
+              ] .
+
+<http://provenanceweb.org/ns/pml#nodeSet2>
+      a       <http://provenanceweb.org/ns/pml#NodeSet> ;
+      <http://provenanceweb.org/ns/pml#hasConclusion>
+              <http://provenanceweb.org/ns/pml#info3> ;
+      <http://provenanceweb.org/ns/pml#isConsequentOf>
+              [ a       <http://provenanceweb.org/ns/pml#Derivation> ;
+                <http://www.w3.org/ns/prov#qualifiedAssociation>
+                        [ <http://www.w3.org/ns/prov#agent>
+                                  <http://jena.apache.org> ;
+                          <http://www.w3.org/ns/prov#hadPlan>
+                                  <http://provenanceweb.org/ns/pml#S7>
+                        ] ;
+                <http://www.w3.org/ns/prov#qualifiedUsage>
+                        [ <http://www.w3.org/ns/prov#entity>
+                                  <http://provenanceweb.org/ns/pml#nodeSet6> ;
+                          <http://www.w3.org/ns/prov#hadRole>
+                                  <http://provenanceweb.org/ns/pml#Antecedent>
+                        ] ;
+                <http://www.w3.org/ns/prov#qualifiedUsage>
+                        [ <http://www.w3.org/ns/prov#entity>
+                                  <http://provenanceweb.org/ns/pml#nodeSet4> ;
+                          <http://www.w3.org/ns/prov#hadRole>
+                                  <http://provenanceweb.org/ns/pml#Antecedent>
+                        ] ;
+                <http://www.w3.org/ns/prov#wasAssociatedWith>
+                        <http://jena.apache.org>
+              ] .
+
+<http://provenanceweb.org/ns/pml#info3>
+      a       <http://provenanceweb.org/ns/pml#Information> ;
+      <http://purl.org/dc/terms/format>
+              "RDF" ;
+      <http://www.w3.org/ns/prov#value>
+              [ a       <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> ;
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#object>
+                        "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate>
+                        <http://niche.cs.dal.ca/ns/copd.owl#hasLow02Saturation> ;
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject>
+                        <http://niche.cs.dal.ca/ns/copd.owl#patientA>
+              ] .
+
+<http://provenanceweb.org/ns/pml#nodeSet0>
+      a       <http://provenanceweb.org/ns/pml#NodeSet> ;
+      <http://provenanceweb.org/ns/pml#hasConclusion>
+              <http://provenanceweb.org/ns/pml#info1> ;
+      <http://provenanceweb.org/ns/pml#isConsequentOf>
+              [ a       <http://provenanceweb.org/ns/pml#Derivation> ;
+                <http://www.w3.org/ns/prov#qualifiedAssociation>
+                        [ <http://www.w3.org/ns/prov#agent>
+                                  <http://jena.apache.org> ;
+                          <http://www.w3.org/ns/prov#hadPlan>
+                                  <http://provenanceweb.org/ns/pml#R5>
+                        ] ;
+                <http://www.w3.org/ns/prov#qualifiedUsage>
+                        [ <http://www.w3.org/ns/prov#entity>
+                                  <http://provenanceweb.org/ns/pml#nodeSet2> ;
+                          <http://www.w3.org/ns/prov#hadRole>
+                                  <http://provenanceweb.org/ns/pml#Antecedent>
+                        ] ;
+                <http://www.w3.org/ns/prov#wasAssociatedWith>
+                        <http://jena.apache.org>
+              ] .

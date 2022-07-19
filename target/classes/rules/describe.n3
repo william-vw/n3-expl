@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix pml: <http://provenanceweb.org/ns/pml#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix string: <http://www.w3.org/2000/10/swap/string#> .
+@prefix: <http://wvw.org/xai#> .
+@base <http://wvw.org/xai#> .
+
+
+{	?value rdf:subject ?s ; rdf:predicate ?p ; rdf:object ?o . 
+
+} => { ?value :term ?s , ?p , ?o } .
+
+
+{	?value :term ?t . 
+	?t log:rawType log:Uri . 
+	<> log:notIncludes { ?t rdfs:label ?l } .
+	?t log:localName ?str .
+
+} => { ?t :description ?str } .
+
+
+{ 	?value :term ?t .
+	?t log:rawType log:Uri .
+	?t rdfs:label ?str .
+
+} => { ?t :description ?str } .
+
+
+{ 	?value :term ?t .
+	?t log:rawType log:Literal .
+
+} => { ?t :description ?t } .
+
+
+{	?nodeset!pml:hasConclusion prov:value ?value .
+	
+	?value!rdf:subject :description ?s .
+	?value!rdf:predicate :description ?p .
+	?value!rdf:object :description ?o .
+	( ?s " " ?p " " ?o ) string:concatenation ?str .
+	
+} => { ?nodeset :description ?str } .
+
+
+{	?nodeset!pml:hasConclusion prov:value ?value .
+	
+	?value pml:functorName ?name ; pml:functorArgs ?args .
+	( ?args ", " ) string:join ?argStr .
+	
+	( ?name "(" ?argStr ")" ) string:concatenation ?str .
+	
+} => { ?nodeset :description ?str } .
