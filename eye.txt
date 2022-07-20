@@ -21,5 +21,9 @@ extraction lemma
 	
 	
 describe proofs:
+cd src/main/resources/
 eye --pass-only-new --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/list.n3
 eye --pass-only-new --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html.n3
+
+filtered:
+eye --nope --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html.n3 --query explain/swap/eye/query.n3

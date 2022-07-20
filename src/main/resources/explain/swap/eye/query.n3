@@ -1,0 +1,3 @@
+@prefix : <http://wvw.org/xai#> .
+
+{ <http://wvw.org/xai#> :output ?output } => { <http://wvw.org/xai#> :output ?output } .

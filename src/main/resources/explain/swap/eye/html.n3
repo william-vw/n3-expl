@@ -20,7 +20,7 @@
 
 
 {	?inf a r:Inference .
-	_:x log:notIncludes { ?x r:component ?inf } .
+	<> log:notIncludes { ?x r:component ?inf } .
 		
 } => { ?inf a :InferenceNode } .
 
@@ -28,15 +28,18 @@
 {	?inf a :InferenceNode ;
 		r:evidence ?evidences .
 
-	( ?html { ?evidence list:in ?evidences ; :output ?html } ?htmls ) log:collectAllIn _:x .
+	( ?li
+	{ 	?evidence list:in ?evidences ; :output ?html .
+		( "<li>" ?html "</li>" ) string:concatenation ?li }
+	?lis ) log:collectAllIn _:x .
 	
 	?evidences list:length ?len .
-	?htmls!list:length math:equalTo ?len .
+	?lis!list:length math:equalTo ?len .
 	
 	?inf :description ?label .
-	
-	( ?htmls "</li><li>" ) string:join ?lis .
-	( "<b>" ?label "</b><ul><li>" ?lis "</li></ul>" ) string:concatenation ?html .
+		
+	?lis string:concatenation ?lisStr .
+	( "<b>" ?label "</b><ul>" ?lisStr "</ul>" ) string:concatenation ?html .
 
 } => { ?inf :output ?html } .
 

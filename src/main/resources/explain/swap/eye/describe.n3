@@ -13,22 +13,23 @@
 
 
 {	?value :term ?t . 
-	?t log:rawType log:Uri . 
+	?t log:rawType log:Other . 
 	<> log:notIncludes { ?t rdfs:label ?l } .
-	?t log:localName ?str .
+	?t log:uri ?uri .
+ 	( ?uri ".*?#(.*)" ) string:scrape ?str .
 
 } => { ?t :description ?str } .
 
 
 { 	?value :term ?t .
-	?t log:rawType log:Uri .
+	?t log:rawType log:Other .
 	?t rdfs:label ?str .
 
 } => { ?t :description ?str } .
 
 
 { 	?value :term ?t .
-	?t log:rawType log:Literal .
+	?t log:rawType rdfs:Literal .
 
 } => { ?t :description ?t } .
 
