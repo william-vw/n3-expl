@@ -1,0 +1,15 @@
+cd src/main/resources/cases/copd
+eye --pass-only-new --nope --n3 patient_red1.ttl rules.n3
+eye --pass --n3 patient_red1.ttl rules.n3
+
+inference lemma:
+	r:gives conclusion
+	(r:rule rule , r:binding [ r:variable ; r:boundTo ])
+	
+	r:evidence
+		lemma x, y (either inference or extraction)
+		a r:Fact; r:gives ..
+		
+extraction lemma:
+	r:gives conclusion
+	r:because (file)

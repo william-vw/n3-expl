@@ -1,0 +1,56 @@
+@prefix : <http://wvw.org/copd#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pml: <http://provenanceweb.org/ns/pml#> . 
+@prefix diary: <http://wvw.org/diary#> .
+
+:patientA 
+	:hasPhlemAmountValue [
+		prov:value 4 ;
+	
+		prov:wasGeneratedBy [
+			a diary:DiaryEntryActivity , diary:EntryActivity ;
+			prov:endedAtTime "2021-12-14T11:57:31Z"^^xsd:dateTime ;
+		]
+	] ;
+	:hasColoredPhlem [
+		prov:value false ;
+	
+		prov:wasGeneratedBy [
+			a diary:DiaryEntryActivity , diary:EntryActivity ;
+			prov:endedAtTime "2021-12-14T11:57:31Z"^^xsd:dateTime ;
+		]
+	] ;
+	:hasActivityExertionValue [
+		prov:value 3 ;
+	
+		prov:wasGeneratedBy [
+			a diary:DiaryEntryActivity , diary:EntryActivity ;
+			prov:endedAtTime "2021-12-14T11:57:31Z"^^xsd:dateTime ;
+		]
+	] ;
+	:hasCoughValue [
+		prov:value 4 ;
+	
+		prov:wasGeneratedBy [
+			a diary:DiaryEntryActivity , diary:EntryActivity ;
+			prov:endedAtTime "2021-12-14T11:57:31Z"^^xsd:dateTime ;
+		]
+	] ;
+	:has02SaturationValue [
+		prov:value 86 ;
+	
+		prov:wasGeneratedBy [
+			a diary:DiaryEntryActivity , diary:EntryActivity ;
+			prov:endedAtTime "2021-12-14T11:57:31Z"^^xsd:dateTime ;
+		]
+	] ;
+	:hasFeverValue [
+		prov:value 36 ;
+	
+		prov:wasGeneratedBy [
+			a diary:DiaryEntryActivity , diary:EntryActivity ;
+			prov:endedAtTime "2021-12-14T11:57:31Z"^^xsd:dateTime ;
+		]
+	] .
