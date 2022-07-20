@@ -29,7 +29,7 @@
 
 
 { 	?value :term ?t .
-	?t log:rawType rdfs:Literal .
+	?t log:rawType log:Literal .
 
 } => { ?t :description ?t } .
 

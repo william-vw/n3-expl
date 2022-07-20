@@ -20,7 +20,7 @@
 
 
 {	?inf a r:Inference .
-	<> log:notIncludes { ?x r:component ?inf } .
+	_:x log:notIncludes { ?x r:component ?inf } .
 		
 } => { ?inf a :InferenceNode } .
 
