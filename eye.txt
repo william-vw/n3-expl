@@ -1,8 +1,10 @@
+get output:
 cd src/main/resources/cases/copd
 eye --pass-only-new --nope --n3 patient_red1.ttl rules.n3
 eye --pass --n3 patient_red1.ttl rules.n3
 
-inference lemma:
+proof structure:
+inference lemma
 	r:gives conclusion
 	(r:rule rule , r:binding [ r:variable ; r:boundTo ])
 	
@@ -13,6 +15,11 @@ inference lemma:
 ignore "useless" inference lemmas:
 	r:rule r:because r:source  <http://eulersharp.sourceforge.net/2003/03swap/pass>
 
-extraction lemma:
+extraction lemma
 	r:gives conclusion
 	r:because (file)
+	
+	
+describe proofs:
+eye --pass-only-new --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/list.n3
+eye --pass-only-new --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html.n3

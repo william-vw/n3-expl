@@ -7,8 +7,8 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#> .
 @prefix math: <http://www.w3.org/2000/10/swap/math#> .
 @prefix string: <http://www.w3.org/2000/10/swap/string#> .
-@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
-@prefix: <http://wvw.org/xai#> .
+@prefix r: <http://www.w3.org/2000/10/swap/reason#> .
+@prefix : <http://wvw.org/xai#> .
 @base <http://wvw.org/xai#> .
 
 
@@ -31,3 +31,19 @@
 	?t log:rawType log:Literal .
 
 } => { ?t :description ?t } .
+
+
+{	?x r:gives ?value . ?value log:includes { ?s ?p ?o } .
+
+} => { ?value :term ?s , ?p , ?o } .
+
+ 
+{	?x r:gives ?value .
+	?value log:includes { ?s ?p ?o } .
+	
+	?s :description ?sd .
+	?p :description ?pd .
+	?o :description ?od .
+	( ?sd " " ?pd " " ?od ) string:concatenation ?str .
+	
+} => { ?x :description ?str } .

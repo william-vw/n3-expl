@@ -11,6 +11,27 @@
 @base <http://wvw.org/xai#> .
 
 
+{	?value :term ?t . 
+	?t log:rawType log:Uri . 
+	<> log:notIncludes { ?t rdfs:label ?l } .
+	?t log:localName ?str .
+
+} => { ?t :description ?str } .
+
+
+{ 	?value :term ?t .
+	?t log:rawType log:Uri .
+	?t rdfs:label ?str .
+
+} => { ?t :description ?str } .
+
+
+{ 	?value :term ?t .
+	?t log:rawType log:Literal .
+
+} => { ?t :description ?t } .
+
+
 {	?value rdf:subject ?s ; rdf:predicate ?p ; rdf:object ?o . 
 
 } => { ?value :term ?s , ?p , ?o } .
