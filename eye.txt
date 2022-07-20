@@ -9,7 +9,10 @@ inference lemma:
 	r:evidence
 		lemma x, y (either inference or extraction)
 		a r:Fact; r:gives ..
-		
+
+ignore "useless" inference lemmas:
+	r:rule r:because r:source  <http://eulersharp.sourceforge.net/2003/03swap/pass>
+
 extraction lemma:
 	r:gives conclusion
 	r:because (file)

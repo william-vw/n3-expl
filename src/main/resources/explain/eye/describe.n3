@@ -7,30 +7,22 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#> .
 @prefix math: <http://www.w3.org/2000/10/swap/math#> .
 @prefix string: <http://www.w3.org/2000/10/swap/string#> .
+@prefix r: <http://www.w3.org/2000/10/swap/reason#> .
 @prefix: <http://wvw.org/xai#> .
 @base <http://wvw.org/xai#> .
 
 
-{	?value rdf:subject ?s ; rdf:predicate ?p ; rdf:object ?o . 
+{	?x r:gives ?value . ?value log:includes { ?s ?p ?o } .
 
 } => { ?value :term ?s , ?p , ?o } .
 
-
-{	?nodeset!pml:hasConclusion prov:value ?value .
+ 
+{	?x r:gives ?value .
+	?value log:includes { ?s ?p ?o } .
 	
-	?value!rdf:subject :description ?s .
-	?value!rdf:predicate :description ?p .
-	?value!rdf:object :description ?o .
-	( ?s " " ?p " " ?o ) string:concatenation ?str .
+	?s :description ?sd .
+	?p :description ?pd .
+	?o :description ?od .
+	( ?sd " " ?pd " " ?od ) string:concatenation ?str .
 	
-} => { ?nodeset :description ?str } .
-
-
-{	?nodeset!pml:hasConclusion prov:value ?value .
-	
-	?value pml:functorName ?name ; pml:functorArgs ?args .
-	( ?args ", " ) string:join ?argStr .
-	
-	( ?name "(" ?argStr ")" ) string:concatenation ?str .
-	
-} => { ?nodeset :description ?str } .
+} => { ?x :description ?str } .

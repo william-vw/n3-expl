@@ -7,34 +7,30 @@
 @prefix list: <http://www.w3.org/2000/10/swap/list#> .
 @prefix math: <http://www.w3.org/2000/10/swap/math#> .
 @prefix string: <http://www.w3.org/2000/10/swap/string#> .
+@prefix r: <http://www.w3.org/2000/10/swap/reason#> .
 @prefix: <http://wvw.org/xai#> .
 @base <http://wvw.org/xai#> .
 
 
-{	?nodeset a pml:NodeSet .
-	<> log:notIncludes { ?nodeset pml:isConsequentOf ?deriv . ?deriv a pml:Derivation } .
+{	?x a ?type .
+	?type list:in ( r:Extraction r:Fact ) .
 	
-	?nodeset :description ?description .
+	?x :description ?description .
 	
-} => { ?nodeset :output ?description } .
+} => { ?x :output ?description } .
 
 
-{	?nodeset a pml:NodeSet .
-	
-	( ?reason
-	{ ?nodeset!pml:isConsequentOf!prov:qualifiedUsage prov:entity ?reason }
-	?reasons ) log:collectAllIn <> .
+{	?inf a r:Inference ;
+		r:evidence ?evidences .
 
-	( ?html
-	{ ?nodeset!pml:isConsequentOf!prov:qualifiedUsage!prov:entity :output ?html }
-	?htmls ) log:collectAllIn <> .
+	( ?html { ?evidence list:in ?evidences ; :output ?html } ?htmls ) log:collectAllIn <> .
 	
-	?reasons list:length ?len .
+	?evidences list:length ?len .
 	?htmls!list:length math:equalTo ?len .
 	
-	?nodeset :description ?label .
+	?inf :description ?label .
 	
 	( ?htmls "</li><li>" ) string:join ?lis .
 	( "<b>" ?label "</b><ul><li>" ?lis "</li></ul>" ) string:concatenation ?html .
 
-} => { ?nodeset :output ?html } .
+} => { ?inf :output ?html } .

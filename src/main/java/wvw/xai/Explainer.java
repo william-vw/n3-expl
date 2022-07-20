@@ -14,21 +14,27 @@ import org.apache.jen3.util.IOUtils;
 public class Explainer {
 
 	public static void main(String[] args) throws Exception {
+		String proofType = "eye";
+		String outputType = "html";
+
 		N3ModelSpec spec = N3ModelSpec.get(Types.N3_MEM_FP_INF);
 		spec.setFeedback(new N3Feedback(N3MistakeTypes.BUILTIN_WRONG_INPUT, FeedbackTypes.WARN, FeedbackActions.LOG));
 
 		N3Model model = ModelFactory.createN3Model(N3ModelSpec.get(Types.N3_MEM_FP_INF));
 
-		model.read(IOUtils.getResourceInputStream(Explainer.class, "proofs/copd_red1.ttl"), "N3");
-		
-		model.read(IOUtils.getResourceInputStream(Explainer.class, "rules/describe.n3"), "N3");
+		model.read(IOUtils.getResourceInputStream(Explainer.class, "proofs/" + proofType + "/patient_red1_proof.ttl"),
+				"N3");
+
+		model.read(IOUtils.getResourceInputStream(Explainer.class, "explain/atomic_describe.n3"), "N3");
+		model.read(IOUtils.getResourceInputStream(Explainer.class, "explain/" + proofType + "/describe.n3"), "N3");
 		model.listStatements(null, model.createResource("http://wvw.org/xai#description"), (Resource) null)
 				.forEachRemaining(stmt -> {
 					System.out.println(stmt.getSubject() + " - " + stmt.getObject());
 				});
 		System.out.println();
-		
-		model.read(IOUtils.getResourceInputStream(Explainer.class, "rules/html.n3"), "N3");
+
+		model.read(IOUtils.getResourceInputStream(Explainer.class, "explain/" + proofType + "/" + outputType + ".n3"),
+				"N3");
 		model.listStatements(null, model.createResource("http://wvw.org/xai#output"), (Resource) null)
 				.forEachRemaining(stmt -> {
 					System.out.println(stmt.getSubject() + " ? " + stmt.getObject());
