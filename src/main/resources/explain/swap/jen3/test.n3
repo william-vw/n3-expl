@@ -1,0 +1,18 @@
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#> .
+@prefix string: <http://www.w3.org/2000/10/swap/string#> .
+
+<> :ruleStr "{?_13388 :has02SaturationValue ?_13390 . ?_13390 math:lessThan 88} => {?_13388 :hasLow02Saturation true}" .
+
+{	<> :ruleStr ?ruleStr .
+  	( ?ruleStr "\\?([^\\s]*)" ) string:scrapeAll ?ruleVars .
+ 
+ 	( ?consecVar { 
+      ?ruleVars list:iterate (?i ?ruleVar) .
+      ( "var:x" ?i ) string:concatenation ?consecVar .
+                
+    } ?consecVars) log:collectAllIn _:x .
+ 
+ 	( ?ruleStr ?ruleVars ?consecVars ) string:replaceAll ?output .
+                    
+} => { <> :ruleVars ?ruleVars ; :consecVars ?consecVars ; :output ?output } .

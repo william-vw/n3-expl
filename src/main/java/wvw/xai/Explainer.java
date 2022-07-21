@@ -14,6 +14,21 @@ import org.apache.jen3.util.IOUtils;
 public class Explainer {
 
 	public static void main(String[] args) throws Exception {
+		test();
+//		explain();
+	}
+
+	protected static void test() throws Exception {
+		N3ModelSpec spec = N3ModelSpec.get(Types.N3_MEM_FP_INF);
+		spec.setFeedback(new N3Feedback(N3MistakeTypes.BUILTIN_WRONG_INPUT, FeedbackTypes.WARN, FeedbackActions.LOG));
+
+		N3Model model = ModelFactory.createN3Model(N3ModelSpec.get(Types.N3_MEM_FP_INF));
+		model.read(IOUtils.getResourceInputStream(Explainer.class, "explain/swap/jen3/test.n3"), "N3");
+
+		model.getDeductionsModel().write(System.out);
+	}
+
+	protected static void explain() throws Exception {
 		String proofType = "swap";
 		String system = "jen3";
 		String outputType = "html";

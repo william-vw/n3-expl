@@ -63,10 +63,10 @@
 	?extraction!r:gives log:n3String ?ruleStr . 
 	?extraction!r:because r:source ?source .
 	
-	#( ?assign
-	#{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?constant . 
-	#	( ?var " = " ?constant ) string:concatenation ?assign .
-	#} ?assigns) log:collectAllIn _:x .
+	( ?assign
+	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?constant . 
+		( ?var " = " ?constant ) string:concatenation ?assign .
+	} ?assigns) log:collectAllIn _:x .
 	
-} => { ?x x:ruleStr ?ruleStr ; x:sourceStr ?source .} . # ; x:bindings ?assigns } .
+} => { ?x x:ruleStr ?ruleStr ; x:sourceStr ?source ; x:bindings ?assigns } .
 	
