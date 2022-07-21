@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix pml: <http://provenanceweb.org/ns/pml#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix string: <http://www.w3.org/2000/10/swap/string#> .
+@prefix r: <http://www.w3.org/2000/10/swap/reason#> .
+@prefix x: <http://wvw.org/xai#> .
+@base <http://wvw.org/xai#> .
+
+
+{	?x a ?type .
+	?type list:in ( r:Extraction r:Fact ) .
+	?x x:conclusionStr ?str .
+	
+} => { ?x x:output ?str } .
+
+
+{	?inf x:output ?html
+	
+} <= { ?inf a x:InferenceNode ;
+		r:evidence ?evidences .
+
+	( ?li
+	{ 	?evidence list:in ?evidences ; x:output ?html .
+		( "<li>" ?html "</li>" ) string:concatenation ?li }
+	?lis ) log:collectAllIn _:x .
+	
+	?inf x:conclusionStr ?label .
+		
+	?lis string:concatenation ?lisStr .
+	( "<b>" ?label "</b><ul>" ?lisStr "</ul>" ) string:concatenation ?html .
+} .
