@@ -191,13 +191,15 @@
 
 <#lemma18> a r:Extraction;
   r:gives {
-    # @forAll var:x_0, var:x_1. {var:x_0 :has02SaturationValue var:x_1.
-    # var:x_1 math:lessThan 88} => {var:x_0 :hasLow02Saturation true}.
+  	# parse error for jen3
+    @forAll var:x_0, var:x_1. {var:x_0 :has02SaturationValue var:x_1.
+    var:x_1 math:lessThan 88} => {var:x_0 :hasLow02Saturation true}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
 
 <#lemma19> a r:Extraction;
   r:gives {
-    # @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :isStratified :RedZone}.
+  	# parse error for jen3
+    @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :isStratified :RedZone}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].

@@ -8,43 +8,65 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#> .
 @prefix string: <http://www.w3.org/2000/10/swap/string#> .
 @prefix r: <http://www.w3.org/2000/10/swap/reason#> .
-@prefix : <http://wvw.org/xai#> .
+@prefix n3: <http://www.w3.org/2004/06/rei#>.
+@prefix x: <http://wvw.org/xai#> .
 @base <http://wvw.org/xai#> .
 
 
-{	?value :term ?t . 
+{	?value x:term ?t . 
 	?t log:rawType log:Other . 
 	<> log:notIncludes { ?t rdfs:label ?l } .
 	?t log:uri ?uri .
  	( ?uri ".*?#(.*)" ) string:scrape ?str .
 
-} => { ?t :description ?str } .
+} => { ?t x:description ?str } .
 
 
-{ 	?value :term ?t .
+{ 	?value x:term ?t .
 	?t log:rawType log:Other .
 	?t rdfs:label ?str .
 
-} => { ?t :description ?str } .
+} => { ?t x:description ?str } .
 
 
-{ 	?value :term ?t .
+{ 	?value x:term ?t .
 	?t log:rawType log:Literal .
 
-} => { ?t :description ?t } .
+} => { ?t x:description ?t } .
 
 
 {	?x r:gives ?value . ?value log:includes { ?s ?p ?o } .
 
-} => { ?value :term ?s , ?p , ?o } .
+} => { ?value x:term ?s , ?p , ?o } .
 
  
 {	?x r:gives ?value .
 	?value log:includes { ?s ?p ?o } .
 	
-	?s :description ?sd .
-	?p :description ?pd .
-	?o :description ?od .
+	?s x:description ?sd .
+	?p x:description ?pd .
+	?o x:description ?od .
 	( ?sd " " ?pd " " ?od ) string:concatenation ?str .
 	
-} => { ?x :description ?str } .
+} => { ?x x:conclusionStr ?str } .
+
+
+{	?inf a x:InferenceNode 
+		
+} <= { ?inf a r:Inference .
+	_:x log:notIncludes { ?x r:component ?inf } 
+} .
+
+
+{	?x a x:InferenceNode ; 
+		r:rule ?extraction .
+	?extraction!r:gives log:n3String ?ruleStr . 
+	?extraction!r:because r:source ?source .
+	
+	#( ?assign
+	#{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?constant . 
+	#	( ?var " = " ?constant ) string:concatenation ?assign .
+	#} ?assigns) log:collectAllIn _:x .
+	
+} => { ?x x:ruleStr ?ruleStr ; x:sourceStr ?source .} . # ; x:bindings ?assigns } .
+	
