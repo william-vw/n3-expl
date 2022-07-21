@@ -60,13 +60,28 @@
 
 {	?x a x:InferenceNode ; 
 		r:rule ?extraction .
-	?extraction!r:gives log:n3String ?ruleStr . 
+	
+	?extraction!r:gives log:n3String ?fullRuleStr . 
+	( ?fullRuleStr ".*?\n\n(\\{.*)" ) string:scrape ?ruleStr .
+	
 	?extraction!r:because r:source ?source .
 	
 	( ?assign
-	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?constant . 
-		( ?var " = " ?constant ) string:concatenation ?assign .
-	} ?assigns) log:collectAllIn _:x .
+	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?uri .
+		( ?var ".*#(.*)" ) string:scrape ?var2 .
+		( "?" ?var2 " = " ?uri " , " ) string:concatenation ?assign .
+	} ?uriAssigns) log:collectAllIn _:x .
 	
-} => { ?x x:ruleStr ?ruleStr ; x:sourceStr ?source ; x:bindings ?assigns } .
+	( ?assign
+	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . 
+		?binding r:boundTo ?lit . ?lit log:rawType log:Literal .
+		( ?var ".*#(.*)" ) string:scrape ?var2 .
+		( "?" ?var2 " = " ?lit " , " ) string:concatenation ?assign .
+	} ?litAssigns) log:collectAllIn _:x .
 	
+	( ?uriAssigns ?litAssigns ) list:append ?assigns .
+	?assigns string:concatenation ?bindingStr .
+	( ?bindingStr "(.*) , $" ) string:scrape ?bindingStr2 .
+	
+	
+} => { ?x x:ruleStr ?ruleStr ; x:sourceStr ?source ; x:bindingStr ?bindingStr2 } .

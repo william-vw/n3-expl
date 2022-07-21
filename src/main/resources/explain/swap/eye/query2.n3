@@ -11,15 +11,15 @@
 @prefix x: <http://wvw.org/xai#> .
 @base <http://wvw.org/xai#> .
 
-#{	<http://wvw.org/xai#> x:output ?html
-#
-#} <= { ?inf a x:InferenceNode .
-#	
-#	( ?x { ?x a x:InferenceNode . ?x!r:evidence list:member ?inf } ?xs ) log:collectAllIn _:x .
-#	?xs!list:length math:equalTo 0 .
-#	
-#	?inf x:output ?html 
-#} .
+{	1 log:outputString ?html
 
-{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr #; x:bindings ?bindings 
-} <= { ?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr } . #; x:bindings ?bindings } .
+} <= { ?inf a x:InferenceNode .
+	
+	( ?x { ?x a x:InferenceNode . ?x!r:evidence list:member ?inf } ?xs ) log:collectAllIn _:x .
+	?xs!list:length math:equalTo 0 .
+	
+	?inf x:output ?html 
+} .
+
+#{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr 
+#} <= { ?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr } .

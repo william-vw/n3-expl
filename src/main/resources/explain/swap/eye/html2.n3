@@ -28,9 +28,14 @@
 	{ 	?evidence list:in ?evidences ; x:output ?html .
 		( "<li>" ?html "</li>" ) string:concatenation ?li }
 	?lis ) log:collectAllIn _:x .
-	
-	?inf x:conclusionStr ?label .
-		
 	?lis string:concatenation ?lisStr .
-	( "<b>" ?label "</b><ul>" ?lisStr "</ul>" ) string:concatenation ?html .
+	
+	?inf x:conclusionStr ?label ;
+		x:ruleStr ?ruleStr ;
+		x:sourceStr ?sourceStr ;
+		x:bindingStr ?bindingStr .	
+		
+	( ?ruleStr "<br />" ?bindingStr "<br />(from: " ?sourceStr ")" ) string:concatenation ?infInfo .	
+	
+	( "<b>" ?label "</b><div class='ruleInfo'>" ?infInfo "</div><ul>" ?lisStr "</ul>" ) string:concatenation ?html .
 } .
