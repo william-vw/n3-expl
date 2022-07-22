@@ -61,22 +61,21 @@
 {	?x a x:InferenceNode ; 
 		r:rule ?extraction .
 	
-	?extraction!r:gives log:n3String ?fullRuleStr . 
-	( ?fullRuleStr ".*?\n\n(\\{.*)" ) string:scrape ?ruleStr .
+	?extraction!r:gives log:localN3String ?ruleStr . 
 	
-	?extraction!r:because r:source ?source .
+	?extraction!r:because!r:source log:uri ?source .
 	
 	( ?assign
 	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?uri .
 		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "?" ?var2 " = " ?uri " , " ) string:concatenation ?assign .
+		( "var:" ?var2 " = " ?uri " , " ) string:concatenation ?assign .
 	} ?uriAssigns) log:collectAllIn _:x .
 	
 	( ?assign
 	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . 
 		?binding r:boundTo ?lit . ?lit log:rawType log:Literal .
 		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "?" ?var2 " = " ?lit " , " ) string:concatenation ?assign .
+		( "var:" ?var2 " = " ?lit " , " ) string:concatenation ?assign .
 	} ?litAssigns) log:collectAllIn _:x .
 	
 	( ?uriAssigns ?litAssigns ) list:append ?assigns .

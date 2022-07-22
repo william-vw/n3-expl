@@ -11,14 +11,24 @@
 @prefix x: <http://wvw.org/xai#> .
 @base <http://wvw.org/xai#> .
 
-{	1 log:outputString ?html
+{	1 log:outputString ?doc
 
 } <= { ?inf a x:InferenceNode .
 	
 	( ?x { ?x a x:InferenceNode . ?x!r:evidence list:member ?inf } ?xs ) log:collectAllIn _:x .
 	?xs!list:length math:equalTo 0 .
 	
-	?inf x:output ?html 
+	?inf x:output ?html .
+	
+	( "<html>"
+		"<head>"
+			"<link rel='stylesheet' href='popup.css' />"
+			"<script type='text/javascript' src='popup.js'></script>"
+		"</head>"
+		"<body onload='loaded()'>" ?html "</body>"
+	"</html>"
+		
+	) string:concatenation ?doc .
 } .
 
 #{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr 

@@ -35,7 +35,13 @@
 		x:sourceStr ?sourceStr ;
 		x:bindingStr ?bindingStr .	
 		
-	( ?ruleStr "<br />" ?bindingStr "<br />(from: " ?sourceStr ")" ) string:concatenation ?infInfo .	
+	( 	?ruleStr 
+		"<div class='bindings'>" ?bindingStr "</div>"
+		"<div class='source'>(from: " ?sourceStr ")</div>" ) string:concatenation ?infInfo .	
 	
-	( "<b>" ?label "</b><div class='ruleInfo'>" ?infInfo "</div><ul>" ?lisStr "</ul>" ) string:concatenation ?html .
+	( 	"<div class='popup'>"
+			"<b>" ?label "</b> <span class='popuplink'>(show details)</span>"
+			"<div class='popuptext'>" ?infInfo "</div>"
+			"<ul>" ?lisStr "</ul>"
+		"</div>" ) string:concatenation ?html .
 } .

@@ -32,3 +32,5 @@ forward:
 eye --nope --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html.n3 --query explain/swap/eye/query.n3
 backward:
 eye --nope --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html2.n3 --query explain/swap/eye/query2.n3
+(outputString:)
+eye --strings --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html2.n3 --query explain/swap/eye/query2.n3
