@@ -35,8 +35,10 @@
 		x:sourceStr ?sourceStr ;
 		x:bindingStr ?bindingStr .	
 		
+	( ?bindingStr " , " "<br />" ) string:replace ?bindingStr2 .
+	
 	( 	?ruleStr 
-		"<div class='bindings'>" ?bindingStr "</div>"
+		"<div class='bindings'>" ?bindingStr2 "</div>"
 		"<div class='source'>(from: " ?sourceStr ")</div>" ) string:concatenation ?infInfo .	
 	
 	( 	"<div class='popup'>"

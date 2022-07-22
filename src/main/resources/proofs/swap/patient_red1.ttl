@@ -1,3 +1,6 @@
+#Processed by EYE v22.0722.0847 josd
+#eye --pass --n3 cases/copd/patient_red1.ttl cases/copd/rules.n3
+
 @prefix : <http://wvw.org/copd#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -133,7 +136,7 @@
 
 <#lemma10> a r:Extraction;
   r:gives {
-    # @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
+    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
   };
   r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
 
@@ -191,15 +194,17 @@
 
 <#lemma18> a r:Extraction;
   r:gives {
-  	# parse error for jen3
     @forAll var:x_0, var:x_1. {var:x_0 :has02SaturationValue var:x_1.
-    var:x_1 math:lessThan 88} => {var:x_0 :hasLow02Saturation true}.
+     var:x_1 math:lessThan 88} => {var:x_0 :hasLow02Saturation true}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
 
 <#lemma19> a r:Extraction;
   r:gives {
-  	# parse error for jen3
     @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :isStratified :RedZone}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
+
+#2022-07-22T18:19:20.192Z in=28 out=8 ent=10 step=36 brake=4 inf=72588 sec=0.056 inf/sec=1296214
+#ENDS
+
