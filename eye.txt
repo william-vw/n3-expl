@@ -28,9 +28,16 @@ eye --pass-only-new --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/des
 
 
 - filtered:
+cd src/main/resources/
 forward:
 eye --nope --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html.n3 --query explain/swap/eye/query.n3
 backward:
 eye --nope --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html2.n3 --query explain/swap/eye/query2.n3
 (outputString:)
 eye --strings --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html2.n3 --query explain/swap/eye/query2.n3
+
+
+- shell script:
+cd src/main/resources/
+./explain.sh -d cases/copd/patient_red1.ttl -r cases/copd/rules.n3 -p proofs/swap/patient_red1.ttl -h explain/swap/eye/output/copd.html
+./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case1/example-data1.n3 -r cases/diabetes/case1/diabetes-case1.n3 -p proofs/swap/diabetes_case1.ttl -h explain/swap/eye/output/diabetes_case1.html
