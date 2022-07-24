@@ -1,0 +1,345 @@
+#Processed by EYE v22.0722.2355 josd
+#eye --pass --n3 cases/diabetes/case2/example-data2.n3 cases/diabetes/case2/diabetes-case2.n3
+
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix DMTO: <https://bioportal.bioontology.org/ontologies/DMTO.owl#>.
+@prefix DTO: <https://bioportal.bioontology.org/ontologies/DTO.owl#>.
+@prefix DDO: <http://purl.obolibrary.org/obo/DDO.owl#>.
+@prefix obo: <http://purl.obolibrary.org/obo#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix cg: <http://niche.cs.dal.ca/codegen.owl#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix var: <http://josd.github.io/var#>.
+@prefix n3: <http://www.w3.org/2004/06/rei#>.
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:component <#lemma7>;
+  r:component <#lemma8>;
+  r:component <#lemma9>;
+  r:component <#lemma10>;
+  r:component <#lemma11>;
+  r:component <#lemma12>;
+  r:component <#lemma13>;
+  r:gives {
+    cg:sys0 a DDO:DDO_0000239.
+    cg:dias a DDO:DDO_0000241.
+    cg:patient0 a DMTO:DMTO_0000021.
+    cg:sys0 DDO:DDO_0000134 150 .
+    cg:dias DDO:DDO_0000134 92 .
+    cg:patient0 DMTO:DMTO_0001667 <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1>.
+    <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1> DMTO:DMTO_0001671 cg:patient0_plan.
+    _:sk_0 a DMTO:DMTO_0001712.
+    _:sk_1 a DMTO:DMTO_0001710.
+    cg:patient0_plan DMTO:DMTO_0001701 _:sk_0.
+    cg:patient0_plan DMTO:DMTO_0001701 _:sk_1.
+    _:sk_0 rdfs:label "weight loss if indicated, \n            a Dietary Approaches to Stop Hypertension (DASH)-style eating pattern, \n            including reducing sodium and increasing potassium intake, moderation of alcohol intake, \n            and increased physical activity.".
+    _:sk_1 rdfs:label "in addition to lifestyle therapy, \n        have prompt initiation and timely titration of pharmacologic therapy \n        to achieve blood pressure goals".
+  }.
+
+<#lemma1> a r:Inference;
+  r:gives {
+    cg:sys0 a DDO:DDO_0000239.
+  };
+  r:evidence (
+    <#lemma14>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#sys0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://purl.obolibrary.org/obo/DDO.owl#DDO_0000239"]];
+  r:rule <#lemma15>.
+
+<#lemma2> a r:Inference;
+  r:gives {
+    cg:dias a DDO:DDO_0000241.
+  };
+  r:evidence (
+    <#lemma16>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#dias"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://purl.obolibrary.org/obo/DDO.owl#DDO_0000241"]];
+  r:rule <#lemma15>.
+
+<#lemma3> a r:Inference;
+  r:gives {
+    cg:patient0 a DMTO:DMTO_0000021.
+  };
+  r:evidence (
+    <#lemma17>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0000021"]];
+  r:rule <#lemma15>.
+
+<#lemma4> a r:Inference;
+  r:gives {
+    cg:sys0 DDO:DDO_0000134 150 .
+  };
+  r:evidence (
+    <#lemma18>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.obolibrary.org/obo/DDO.owl#DDO_0000134"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#sys0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 150];
+  r:rule <#lemma15>.
+
+<#lemma5> a r:Inference;
+  r:gives {
+    cg:dias DDO:DDO_0000134 92 .
+  };
+  r:evidence (
+    <#lemma19>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.obolibrary.org/obo/DDO.owl#DDO_0000134"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#dias"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 92];
+  r:rule <#lemma15>.
+
+<#lemma6> a r:Inference;
+  r:gives {
+    cg:patient0 DMTO:DMTO_0001667 <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1>.
+  };
+  r:evidence (
+    <#lemma20>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001667"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/1127560729498495641#bn_1"]];
+  r:rule <#lemma15>.
+
+<#lemma7> a r:Inference;
+  r:gives {
+    <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1> DMTO:DMTO_0001671 cg:patient0_plan.
+  };
+  r:evidence (
+    <#lemma21>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001671"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/1127560729498495641#bn_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0_plan"]];
+  r:rule <#lemma15>.
+
+<#lemma8> a r:Inference;
+  r:gives {
+    _:sk_0 a DMTO:DMTO_0001712.
+  };
+  r:evidence (
+    <#lemma22>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001712"]];
+  r:rule <#lemma15>.
+
+<#lemma9> a r:Inference;
+  r:gives {
+    _:sk_1 a DMTO:DMTO_0001710.
+  };
+  r:evidence (
+    <#lemma23>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001710"]];
+  r:rule <#lemma15>.
+
+<#lemma10> a r:Inference;
+  r:gives {
+    cg:patient0_plan DMTO:DMTO_0001701 _:sk_0.
+  };
+  r:evidence (
+    <#lemma22>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001701"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0_plan"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
+  r:rule <#lemma15>.
+
+<#lemma11> a r:Inference;
+  r:gives {
+    cg:patient0_plan DMTO:DMTO_0001701 _:sk_1.
+  };
+  r:evidence (
+    <#lemma23>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001701"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0_plan"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
+  r:rule <#lemma15>.
+
+<#lemma12> a r:Inference;
+  r:gives {
+    _:sk_0 rdfs:label "weight loss if indicated, \n            a Dietary Approaches to Stop Hypertension (DASH)-style eating pattern, \n            including reducing sodium and increasing potassium intake, moderation of alcohol intake, \n            and increased physical activity.".
+  };
+  r:evidence (
+    <#lemma22>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "weight loss if indicated, \n            a Dietary Approaches to Stop Hypertension (DASH)-style eating pattern, \n            including reducing sodium and increasing potassium intake, moderation of alcohol intake, \n            and increased physical activity."];
+  r:rule <#lemma15>.
+
+<#lemma13> a r:Inference;
+  r:gives {
+    _:sk_1 rdfs:label "in addition to lifestyle therapy, \n        have prompt initiation and timely titration of pharmacologic therapy \n        to achieve blood pressure goals".
+  };
+  r:evidence (
+    <#lemma23>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "in addition to lifestyle therapy, \n        have prompt initiation and timely titration of pharmacologic therapy \n        to achieve blood pressure goals"];
+  r:rule <#lemma15>.
+
+<#lemma14> a r:Extraction;
+  r:gives {
+    cg:sys0 a DDO:DDO_0000239.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/example-data2.n3>].
+
+<#lemma15> a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
+  };
+  r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
+
+<#lemma16> a r:Extraction;
+  r:gives {
+    cg:dias a DDO:DDO_0000241.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/example-data2.n3>].
+
+<#lemma17> a r:Extraction;
+  r:gives {
+    cg:patient0 a DMTO:DMTO_0000021.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/example-data2.n3>].
+
+<#lemma18> a r:Extraction;
+  r:gives {
+    cg:sys0 DDO:DDO_0000134 150 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/example-data2.n3>].
+
+<#lemma19> a r:Extraction;
+  r:gives {
+    cg:dias DDO:DDO_0000134 92 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/example-data2.n3>].
+
+<#lemma20> a r:Extraction;
+  r:gives {
+    cg:patient0 DMTO:DMTO_0001667 <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1>.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/example-data2.n3>].
+
+<#lemma21> a r:Extraction;
+  r:gives {
+    <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1> DMTO:DMTO_0001671 cg:patient0_plan.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/example-data2.n3>].
+
+<#lemma22> a r:Inference;
+  r:gives {
+    cg:patient0_plan DMTO:DMTO_0001701 _:sk_0.
+    _:sk_0 a DMTO:DMTO_0001712.
+    _:sk_0 rdfs:label "weight loss if indicated, \n            a Dietary Approaches to Stop Hypertension (DASH)-style eating pattern, \n            including reducing sodium and increasing potassium intake, moderation of alcohol intake, \n            and increased physical activity.".
+  };
+  r:evidence (
+    <#lemma14>
+    <#lemma18>
+    [ a r:Fact; r:gives {150 math:greaterThan 120}]
+    <#lemma16>
+    <#lemma19>
+    [ a r:Fact; r:gives {92 math:greaterThan 80}]
+    <#lemma17>
+    <#lemma20>
+    <#lemma21>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#sys0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 150];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#dias"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 92];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/1127560729498495641#bn_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0_plan"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
+  r:rule <#lemma24>.
+
+<#lemma23> a r:Inference;
+  r:gives {
+    cg:patient0_plan DMTO:DMTO_0001701 _:sk_1.
+    _:sk_1 a DMTO:DMTO_0001710.
+    _:sk_1 rdfs:label "in addition to lifestyle therapy, \n        have prompt initiation and timely titration of pharmacologic therapy \n        to achieve blood pressure goals".
+  };
+  r:evidence (
+    <#lemma14>
+    <#lemma18>
+    [ a r:Fact; r:gives {150 math:greaterThan 140}]
+    <#lemma16>
+    <#lemma19>
+    [ a r:Fact; r:gives {92 math:greaterThan 80}]
+    <#lemma17>
+    <#lemma20>
+    <#lemma21>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#sys0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 150];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#dias"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 92];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/1127560729498495641#bn_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0_plan"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
+  r:rule <#lemma25>.
+
+<#lemma24> a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5, var:x_6. @forSome var:x_7. {var:x_0 a DDO:DDO_0000239.
+     var:x_0 DDO:DDO_0000134 var:x_1.
+     var:x_1 math:greaterThan 120 .
+     var:x_2 a DDO:DDO_0000241.
+     var:x_2 DDO:DDO_0000134 var:x_3.
+     var:x_3 math:greaterThan 80 .
+     var:x_4 a DMTO:DMTO_0000021.
+     var:x_4 DMTO:DMTO_0001667 var:x_5.
+     var:x_5 DMTO:DMTO_0001671 var:x_6} => {var:x_6 DMTO:DMTO_0001701 var:x_7.
+     var:x_7 a DMTO:DMTO_0001712.
+     var:x_7 rdfs:label "weight loss if indicated, \n            a Dietary Approaches to Stop Hypertension (DASH)-style eating pattern, \n            including reducing sodium and increasing potassium intake, moderation of alcohol intake, \n            and increased physical activity."}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/diabetes-case2.n3>].
+
+<#lemma25> a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5, var:x_6. @forSome var:x_7. {var:x_0 a DDO:DDO_0000239.
+     var:x_0 DDO:DDO_0000134 var:x_1.
+     var:x_1 math:greaterThan 140 .
+     var:x_2 a DDO:DDO_0000241.
+     var:x_2 DDO:DDO_0000134 var:x_3.
+     var:x_3 math:greaterThan 80 .
+     var:x_4 a DMTO:DMTO_0000021.
+     var:x_4 DMTO:DMTO_0001667 var:x_5.
+     var:x_5 DMTO:DMTO_0001671 var:x_6} => {var:x_6 DMTO:DMTO_0001701 var:x_7.
+     var:x_7 a DMTO:DMTO_0001710.
+     var:x_7 rdfs:label "in addition to lifestyle therapy, \n        have prompt initiation and timely titration of pharmacologic therapy \n        to achieve blood pressure goals"}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/diabetes-case2.n3>].
+
+#2022-07-24T20:45:31.538Z in=17 out=13 ent=19 step=39 brake=3 inf=87956 sec=0.058 inf/sec=1516483
+#ENDS
+

@@ -42,3 +42,6 @@ eye --strings --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.
 cd src/main/resources/
 ./explain.sh -d cases/copd/patient_red1.ttl -r cases/copd/rules.n3 -p proofs/swap/patient_red1.ttl -h output/copd.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case1/example-data1.n3 -r cases/diabetes/case1/diabetes-case1-bnodes.n3 -p proofs/swap/diabetes_case1.ttl -h output/diabetes_case1.html
+./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case2/example-data2.n3 -r cases/diabetes/case2/diabetes-case2.n3 -p proofs/swap/diabetes_case2.ttl -h output/diabetes_case2.html
+./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case3/example-data3.n3 -r cases/diabetes/case3/diabetes-case3.n3 -p proofs/swap/diabetes_case3.ttl -h output/diabetes_case3.html
+./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case4/example-data4.n3 -r cases/diabetes/case4/diabetes-case4.n3 -p proofs/swap/diabetes_case4.ttl -h output/diabetes_case4.html

@@ -27,30 +27,33 @@
 
     ?t log:uri ?uri .
     ( ?uri ".*?#(.*)" ) string:scrape ?ln .
+	( ":" ?ln ) string:concatenation ?ln2 . 
 
     ?t log:localN3String ?ts .
 
-} => { ?ts x:description ?ln } .
+} => { ?ts x:description ?ln2 } .
 
 
 {   ?value x:term ?t .
     ?t log:rawType log:Other .
 	?t rdfs:label ?l .
-	
+	( "'" ?l "'" ) string:concatenation ?l2 .
+		
 	?t log:localN3String ?ts .
 	
-} => { ?ts x:description ?l } .
+} => { ?ts x:description ?l2 } .
 
 
 { 	?value x:term ?t .
 	?t log:rawType log:Literal .
+	( "\"" ?t "\"" ) string:concatenation ?t2 .
 
 	?t log:localN3String ?ts .
 
-} => { ?ts x:description ?t } .
+} => { ?ts x:description ?t2 } .
 
 
-{   ?x!rdf:type list:in ( r:Extraction r:Inference ) .
+{   ?x!rdf:type list:in ( r:Extraction r:Inference r:Fact ) .
     ?x r:gives ?value .
     ?value e:labelvars ?valuel .
 
@@ -67,10 +70,10 @@
     } ?strs ) log:collectAllIn _:x .
     
     ?strs string:concatenation ?str .
-    ( ?str "(.*) , $" ) string:scrape ?str2 . 
+    #( ?str "(.*) , $" ) string:scrape ?str2 . 
     
 
-} => { ?x x:conclusionStr ?str2 } .
+} => { ?x x:conclusionStr ?str } .
 
 
 {	?inf a x:InferenceNode 
@@ -90,16 +93,16 @@
 	
 	( ?assign
 	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?uri .
-		( ?uri ".*?#(.*)" ) string:scrape ?ln .
+		( ?uri ".*?#(.*)" ) string:scrape ?ln . ( ":" ?ln ) string:concatenation ?ln2 .
 		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "var:" ?var2 " = " ?ln " , " ) string:concatenation ?assign .
+		( "var:" ?var2 " = " ?ln2 " , " ) string:concatenation ?assign .
 	} ?uriAssigns) log:collectAllIn _:x .
 	
 	( ?assign
 	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . 
-		?binding r:boundTo ?lit . ?lit log:rawType log:Literal .
+		?binding r:boundTo ?lit . ?lit log:rawType log:Literal . ( "\"" ?lit "\"" ) string:concatenation ?lit2 .
 		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "var:" ?var2 " = " ?lit " , " ) string:concatenation ?assign .
+		( "var:" ?var2 " = " ?lit2 " , " ) string:concatenation ?assign .
 	} ?litAssigns) log:collectAllIn _:x .
 	
 	( ?uriAssigns ?litAssigns ) list:append ?assigns .

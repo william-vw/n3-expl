@@ -33,8 +33,9 @@
 	?inf x:conclusionStr ?label ;
 		x:ruleStr ?ruleStr ;
 		x:sourceStr ?sourceStr ;
-		x:bindingStr ?bindingStr .	
-		
+		x:bindingStr ?bindingStr .
+	
+	( ?label " , " "<br />" ) string:replace ?label2 .	
 	( ?bindingStr " , " "<br />" ) string:replace ?bindingStr2 .
 	
 	( 	?ruleStr 
@@ -42,7 +43,7 @@
 		"<div class='source'>(from: " ?sourceStr ")</div>" ) string:concatenation ?infInfo .	
 	
 	( 	"<div class='popup'>"
-			"<b>" ?label "</b> <span class='popuplink'>(show details)</span>"
+			?label2 " <span class='popuplink'>(show rule)</span>"
 			"<div class='popuptext'>" ?infInfo "</div>"
 			"<ul>" ?lisStr "</ul>"
 		"</div>" ) string:concatenation ?html .

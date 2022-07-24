@@ -11,10 +11,10 @@ function clicked(e) {
 	// show current info element
 	if (info.style.display != "block") {
 		info.style.display = "block";
-		link.innerHTML = "(hide details)"
+		link.innerHTML = "(hide rule)"
 	} else {
 		info.style.display = "none";
-		link.innerHTML = "(show details)"
+		link.innerHTML = "(show rule)"
 	}
 
 	//	info.classList.add('show');
