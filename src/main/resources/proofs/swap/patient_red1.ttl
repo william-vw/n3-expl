@@ -205,6 +205,6 @@
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
 
-#2022-07-24T20:09:13.211Z in=28 out=8 ent=10 step=36 brake=4 inf=72587 sec=0.056 inf/sec=1296196
+#2022-07-24T20:22:01.952Z in=28 out=8 ent=10 step=36 brake=4 inf=72594 sec=0.055 inf/sec=1319891
 #ENDS
 

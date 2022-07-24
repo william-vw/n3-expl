@@ -26,7 +26,7 @@
 	_:x log:notIncludes { ?t rdfs:label ?l } .
 
     ?t log:uri ?uri .
-     ( ?uri ".*?#(.*)" ) string:scrape ?ln .
+    ( ?uri ".*?#(.*)" ) string:scrape ?ln .
 
     ?t log:localN3String ?ts .
 
@@ -83,13 +83,16 @@
 {	?x a x:InferenceNode ; 
 		r:rule ?extraction .
 	
-	?extraction!r:gives log:localN3String ?ruleStr . 
+	?extraction!r:gives log:localN3String ?ruleStr .
+	( ?ruleStr "(\\{.*?\\}\\s*=>\\s*\\{.*?\\})" ) string:scrape ?ruleStr2 . 
+	 
 	?extraction!r:because!r:source log:uri ?source .
 	
 	( ?assign
 	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?uri .
+		( ?uri ".*?#(.*)" ) string:scrape ?ln .
 		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "var:" ?var2 " = " ?uri " , " ) string:concatenation ?assign .
+		( "var:" ?var2 " = " ?ln " , " ) string:concatenation ?assign .
 	} ?uriAssigns) log:collectAllIn _:x .
 	
 	( ?assign
@@ -105,4 +108,4 @@
 	?assigns2 string:concatenation ?bindingStr .
 	( ?bindingStr "(.*) , $" ) string:scrape ?bindingStr2 .
 	
-} => { ?x x:ruleStr ?ruleStr ; x:sourceStr ?source ; x:bindingStr ?bindingStr2 } .
+} => { ?x x:ruleStr ?ruleStr2 ; x:sourceStr ?source ; x:bindingStr ?bindingStr2 } .

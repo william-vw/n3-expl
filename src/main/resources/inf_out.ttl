@@ -1,24 +1,17 @@
 #Processed by EYE v22.0722.2355 josd
-#eye --pass-only-new --nope --n3 cases/diabetes/case1/example-data1.n3 cases/diabetes/case1/diabetes-case1-bnodes.n3
+#eye --pass-only-new --nope --n3 cases/copd/patient_red1.ttl cases/copd/rules.n3
 
-@prefix dc: <http://purl.org/dc/elements/1.1/>.
-@prefix DMTO: <https://bioportal.bioontology.org/ontologies/DMTO.owl#>.
-@prefix DTO: <https://bioportal.bioontology.org/ontologies/DTO.owl#>.
-@prefix DDO: <http://purl.obolibrary.org/obo/DDO.owl#>.
-@prefix obo: <http://purl.obolibrary.org/obo#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix : <http://wvw.org/copd#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix pml: <http://provenanceweb.org/ns/pml#>.
+@prefix diary: <http://wvw.org/diary#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
-@prefix cg: <http://niche.cs.dal.ca/codegen.owl#>.
 
-DMTO:patient0_profile DDO:DDO_0000139 _:sk_0.
-_:sk_0 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>.
+:patientA :hasLow02Saturation true.
+:patientA :isStratified :RedZone.
 
-#2022-07-24T20:15:19.754Z in=9 out=2 ent=2 step=2 brake=2 inf=39669 sec=0.054 inf/sec=734611
+#2022-07-24T20:22:01.761Z in=28 out=2 ent=2 step=5 brake=3 inf=55023 sec=0.052 inf/sec=1058135
 #ENDS
 
