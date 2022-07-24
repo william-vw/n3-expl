@@ -14,9 +14,9 @@
 
 {	?x a ?type .
 	?type list:in ( r:Extraction r:Fact ) .
-	?x :description ?description .
+	?x :conclusionStr ?conclStr .
 	
-} => { ?x :output ?description } .
+} => { ?x :output ?conclStr } .
 
 
 {	?inf a r:Inference .
@@ -33,7 +33,7 @@
 	?evidences list:length ?len .
 	?htmls!list:length math:equalTo ?len .
 	
-	?inf :description ?label .
+	?inf :conclusionStr ?label .
 	
 	( ?htmls "</li><li>" ) string:join ?lis .
 	( "<b>" ?label "</b><ul><li>" ?lis "</li></ul>" ) string:concatenation ?html .
