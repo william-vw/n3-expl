@@ -1,5 +1,5 @@
-#Processed by EYE v22.0722.0847 josd
-#eye --pass-only-new --nope --n3 cases/diabetes/case1/example-data1.n3 cases/diabetes/case1/diabetes-case1.n3
+#Processed by EYE v22.0722.2355 josd
+#eye --pass-only-new --nope --n3 cases/diabetes/case1/example-data1.n3 cases/diabetes/case1/diabetes-case1-bnodes.n3
 
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
 @prefix DMTO: <https://bioportal.bioontology.org/ontologies/DMTO.owl#>.
@@ -16,8 +16,9 @@
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix cg: <http://niche.cs.dal.ca/codegen.owl#>.
 
-DMTO:patient0_profile DDO:DDO_0000139 <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>.
+DMTO:patient0_profile DDO:DDO_0000139 _:sk_0.
+_:sk_0 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>.
 
-#2022-07-22T18:38:49.598Z in=9 out=1 ent=1 step=2 brake=2 inf=39231 sec=0.053 inf/sec=740208
+#2022-07-23T13:03:05.974Z in=9 out=2 ent=2 step=2 brake=2 inf=39666 sec=0.050 inf/sec=793320
 #ENDS
 

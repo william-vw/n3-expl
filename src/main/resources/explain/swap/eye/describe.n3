@@ -17,39 +17,60 @@
 {	?value x:term ?t . 
 	?t log:rawType log:Other . 
 	_:x log:notIncludes { ?t rdfs:label ?l } .
+	
 	?t log:uri ?uri .
  	( ?uri ".*?#(.*)" ) string:scrape ?str .
 
-} => { ?t x:description ?str } .
+	?t log:localN3String ?ts .
+
+} => { ?ts x:description ?str } .
 
 
 { 	?value x:term ?t .
 	?t log:rawType log:Other .
 	?t rdfs:label ?str .
+	
+	?t log:localN3String ?ts .
 
-} => { ?t x:description ?str } .
+} => { ?ts x:description ?str } .
 
 
 { 	?value x:term ?t .
 	?t log:rawType log:Literal .
 
-} => { ?t x:description ?t } .
+	?t log:localN3String ?ts .
+
+} => { ?ts x:description ?t } .
 
 
 {	?x r:gives ?value . ?value log:includes { ?s ?p ?o } .
 
 } => { ?value x:term ?s , ?p , ?o } .
 
- 
-{	?x r:gives ?value .
-	?value log:includes { ?s ?p ?o } .
+
+{	?x!rdf:type list:in ( r:Extraction r:Inference ) .
+	?x r:gives ?value .
+
+	( ?cons
+	{ 
+		?value e:graphMember ?m .
+		?m log:includes { ?s ?p ?o } .
 	
-	?s x:description ?sd .
-	?p x:description ?pd .
-	?o x:description ?od .
-	( ?sd " " ?pd " " ?od ) string:concatenation ?str .
+		{ ?s ?p ?o } e:labelvars { ?sl ?pl ?ol }.    
+        ( ?sl )!e:skolem x:description ?sd .
+        ( ?pl )!e:skolem x:description ?pd .
+        ( ?ol )!e:skolem x:description ?od .
+        #( ?ss ?sp ?so ) log:equalTo ?cons .
+        #( ?s ?p ?o ) log:equalTo ?cons .
+        
+		( ?sd " " ?pd " " ?od ) string:concatenation ?str .
+		( ?str " , " ) string:concatenation ?str2 .
+		
+	} ?conses ) log:collectAllIn _:x .
 	
-} => { ?x x:conclusionStr ?str } .
+	# ?strs string:concatenation ?str .
+	
+} => { ?x x:conclusionStr ?conses } .
 
 
 {	?inf a x:InferenceNode 
