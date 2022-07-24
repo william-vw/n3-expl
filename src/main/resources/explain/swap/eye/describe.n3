@@ -14,25 +14,32 @@
 @base <http://wvw.org/xai#> .
 
 
-{	?value x:term ?t . 
-	?t log:rawType log:Other . 
+{   ?x r:gives ?value . 
+	?value e:labelvars ?valuel.
+	?valuel log:includes { ?s ?p ?o } .
+
+} => { ?valuel x:term ?s , ?p , ?o } .
+
+
+{   ?value x:term ?t .
+    ?t log:rawType log:Other .
 	_:x log:notIncludes { ?t rdfs:label ?l } .
+
+    ?t log:uri ?uri .
+     ( ?uri ".*?#(.*)" ) string:scrape ?ln .
+
+    ?t log:localN3String ?ts .
+
+} => { ?ts x:description ?ln } .
+
+
+{   ?value x:term ?t .
+    ?t log:rawType log:Other .
+	?t rdfs:label ?l .
 	
-	?t log:uri ?uri .
- 	( ?uri ".*?#(.*)" ) string:scrape ?str .
-
 	?t log:localN3String ?ts .
-
-} => { ?ts x:description ?str } .
-
-
-{ 	?value x:term ?t .
-	?t log:rawType log:Other .
-	?t rdfs:label ?str .
 	
-	?t log:localN3String ?ts .
-
-} => { ?ts x:description ?str } .
+} => { ?ts x:description ?l } .
 
 
 { 	?value x:term ?t .
@@ -43,34 +50,27 @@
 } => { ?ts x:description ?t } .
 
 
-{	?x r:gives ?value . ?value log:includes { ?s ?p ?o } .
+{   ?x!rdf:type list:in ( r:Extraction r:Inference ) .
+    ?x r:gives ?value .
+    ?value e:labelvars ?valuel .
 
-} => { ?value x:term ?s , ?p , ?o } .
-
-
-{	?x!rdf:type list:in ( r:Extraction r:Inference ) .
-	?x r:gives ?value .
-
-	( ?cons
-	{ 
-		?value e:graphMember ?m .
-		?m log:includes { ?s ?p ?o } .
-	
-		{ ?s ?p ?o } e:labelvars { ?sl ?pl ?ol }.    
-        ( ?sl )!e:skolem x:description ?sd .
-        ( ?pl )!e:skolem x:description ?pd .
-        ( ?ol )!e:skolem x:description ?od .
-        #( ?ss ?sp ?so ) log:equalTo ?cons .
-        #( ?s ?p ?o ) log:equalTo ?cons .
+    ( ?str
+    {
+        ?valuel e:graphMember ?m .
+        ?m log:includes { ?s ?p ?o } .
         
-		( ?sd " " ?pd " " ?od ) string:concatenation ?str .
-		( ?str " , " ) string:concatenation ?str2 .
-		
-	} ?conses ) log:collectAllIn _:x .
-	
-	# ?strs string:concatenation ?str .
-	
-} => { ?x x:conclusionStr ?conses } .
+        ?s!log:localN3String x:description ?sd .
+        ?p!log:localN3String x:description ?pd .
+        ?o!log:localN3String x:description ?od .
+        ( ?sd " " ?pd " " ?od " , " ) string:concatenation ?str .
+
+    } ?strs ) log:collectAllIn _:x .
+    
+    ?strs string:concatenation ?str .
+    ( ?str "(.*) , $" ) string:scrape ?str2 . 
+    
+
+} => { ?x x:conclusionStr ?str2 } .
 
 
 {	?inf a x:InferenceNode 

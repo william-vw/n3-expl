@@ -19,6 +19,6 @@
 DMTO:patient0_profile DDO:DDO_0000139 _:sk_0.
 _:sk_0 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>.
 
-#2022-07-23T13:03:05.974Z in=9 out=2 ent=2 step=2 brake=2 inf=39666 sec=0.050 inf/sec=793320
+#2022-07-24T20:15:19.754Z in=9 out=2 ent=2 step=2 brake=2 inf=39669 sec=0.054 inf/sec=734611
 #ENDS
 

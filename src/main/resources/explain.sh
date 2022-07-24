@@ -13,7 +13,7 @@ fi
 
 describe_in=explain/swap/eye/describe.n3
 html_in=explain/swap/eye/html2.n3
-query_in=explain/swap/eye/query2.n3
+query_in=explain/swap/eye/query2_html.n3
 
 inf_out=inf_out.ttl
 pe_out=pe_out.ttl

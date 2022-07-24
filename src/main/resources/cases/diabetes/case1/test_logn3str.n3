@@ -30,36 +30,42 @@
   } .
 
 
-{   ?x r:gives ?value . ?value log:includes { ?s ?p ?o } .
+{   ?x r:gives ?value . 
+	?value e:labelvars ?valuel.
+	?valuel log:includes { ?s ?p ?o } .
 
-} => { ?value x:term ?s , ?p , ?o } .
+} => { ?valuel x:term ?s , ?p , ?o } .
 
 
 {   ?value x:term ?t .
     ?t log:rawType log:Other .
 
     ?t log:uri ?uri .
-     ( ?uri ".*?#(.*)" ) string:scrape ?str .
+     ( ?uri ".*?#(.*)" ) string:scrape ?ln .
 
     ?t log:localN3String ?ts .
 
-} => { ?ts x:description ?str } .
+} => { ?ts x:description ?ln } .
 
 
 {   ?x!rdf:type list:in ( r:Extraction r:Inference ) .
     ?x r:gives ?value .
     ?value e:labelvars ?valuel .
 
-    ( ?cons
+    ( ?str
     {
         ?valuel e:graphMember ?m .
         ?m log:includes { ?s ?p ?o } .
         
-        ?s log:localN3String ?sd .
-        ?p log:localN3String ?pd .
-        ?o log:localN3String ?od .
-        ( ?sd ?pd ?od ) log:equalTo ?cons .
+        ?s!log:localN3String x:description ?sd .
+        ?p!log:localN3String x:description ?pd .
+        ?o!log:localN3String x:description ?od .
+        ( ?sd " " ?pd " " ?od " , " ) string:concatenation ?str .
 
-    } ?conses ) log:collectAllIn _:x .
+    } ?strs ) log:collectAllIn _:x .
+    
+    ?strs string:concatenation ?str .
+    ( ?str "(.*) , $" ) string:scrape ?str2 . 
+    
 
-} => { ?x x:conclusionStr ?conses } .
+} => { ?x x:conclusionStr ?str2 } .

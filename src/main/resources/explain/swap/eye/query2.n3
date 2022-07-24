@@ -13,13 +13,13 @@
 
 
 
-#{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr 
-#} <= { ?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr } .
+{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr 
+} <= { ?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr } .
 
 
 {	?x x:conclusionStr ?conclStr 
 } <= { ?x x:conclusionStr ?conclStr } .
 
 
-{	?x x:description ?descr 
-} <= { ?x x:description ?descr } .
+#{	?x x:description ?descr 
+#} <= { ?x x:description ?descr } .

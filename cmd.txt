@@ -40,5 +40,5 @@ eye --strings --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.
 
 - shell script:
 cd src/main/resources/
-./explain.sh -d cases/copd/patient_red1.ttl -r cases/copd/rules.n3 -p proofs/swap/patient_red1.ttl -output/copd.html
+./explain.sh -d cases/copd/patient_red1.ttl -r cases/copd/rules.n3 -p proofs/swap/patient_red1.ttl -h output/copd.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case1/example-data1.n3 -r cases/diabetes/case1/diabetes-case1-bnodes.n3 -p proofs/swap/diabetes_case1.ttl -h output/diabetes_case1.html
