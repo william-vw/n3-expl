@@ -23,9 +23,10 @@
 	
 } <= { ?inf a x:InferenceNode ;
 		r:evidence ?evidences .
+	?evidences list:removeDuplicates ?evidences2 .
 
 	( ?li
-	{ 	?evidence list:in ?evidences ; x:output ?html .
+	{ 	?evidence list:in ?evidences2 ; x:output ?html .
 		( "<li>" ?html "</li>" ) string:concatenation ?li }
 	?lis ) log:collectAllIn _:x .
 	?lis string:concatenation ?lisStr .
@@ -34,11 +35,14 @@
 		x:ruleStr ?ruleStr ;
 		x:sourceStr ?sourceStr ;
 		x:bindingStr ?bindingStr .
+		
+	( ?ruleStr "<" "&lt;" ) string:replace ?ruleStr2 .
+	( ?ruleStr2 ">" "&gt;" ) string:replace ?ruleStr3 .
 	
 	( ?label " , " "<br />" ) string:replace ?label2 .	
 	( ?bindingStr " , " "<br />" ) string:replace ?bindingStr2 .
 	
-	( 	?ruleStr 
+	( 	?ruleStr3
 		"<div class='bindings'>" ?bindingStr2 "</div>"
 		"<div class='source'>(from: " ?sourceStr ")</div>" ) string:concatenation ?infInfo .	
 	

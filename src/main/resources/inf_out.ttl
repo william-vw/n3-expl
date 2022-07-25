@@ -1,4 +1,4 @@
-#Processed by EYE v22.0722.2355 josd
+#Processed by EYE v22.0725.1110 josd
 #eye --pass-only-new --nope --n3 cases/diabetes/case3/example-data3.n3 cases/diabetes/case3/diabetes-case3.n3
 
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
@@ -24,6 +24,6 @@ DMTO:patient0_profile DDO:DDO_0000140 <https://bioportal.bioontology.org/ontolog
 DMTO:patient0_profile DMTO:recommend_test _:sk_1.
 _:sk_1 a DMTO:diabetes_screening.
 
-#2022-07-25T01:11:16.025Z in=15 out=5 ent=5 step=6 brake=2 inf=59085 sec=0.058 inf/sec=1018707
+#2022-07-25T14:05:39.789Z in=15 out=5 ent=5 step=6 brake=2 inf=59085 sec=0.059 inf/sec=1001441
 #ENDS
 

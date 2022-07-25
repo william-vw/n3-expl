@@ -11,15 +11,9 @@
 @prefix x: <http://wvw.org/xai#> .
 @base <http://wvw.org/xai#> .
 
+<> :list ( 1 1 2 3 ) .
 
-
-#{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr 
-#} <= { ?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr } .
-
-
-#{	?x x:conclusionStr ?conclStr 
-#} <= { ?x x:conclusionStr ?conclStr } .
-
-
-{	?x x:description ?descr 
-} <= { ?x x:description ?descr } .
+{	<> :list ?list .
+	?list list:setEqualTo ?set .
+	
+} => {	<> :set ?set } .

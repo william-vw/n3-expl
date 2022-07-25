@@ -53,6 +53,43 @@
 } => { ?ts x:description ?t2 } .
 
 
+{	?value x:term ?t .
+	?t log:rawType rdf:List .
+	?t e:labelvars ?tl .
+	
+	?tl list:member ?m
+	
+} => { ?tl x:term ?m } .
+
+
+{   ?value x:term ?list .
+	?list log:rawType rdf:List .
+	?list e:labelvars ?listl .
+
+    ( ?td
+    {
+        ?listl list:member ?t .
+        ?t!log:localN3String x:description ?td .
+
+    } ?strs ) log:collectAllIn _:x .
+    
+    ( ?strs " " ) string:join ?str2 .
+    ( "( " ?str2 " )" ) string:concatenation ?str3 .
+
+	?list log:localN3String ?ls
+
+} => { ?ls x:description ?str3 } .
+
+
+#{	?value x:term ?t .
+#	?t log:rawType log:Formula .
+#	
+#	?t log:localN3String ?ts .
+#	( "{ " ?ts " }" ) string:concatenation ?str . 
+#	
+#} => { ?ts x:description ?str } .
+
+
 {   ?x!rdf:type list:in ( r:Extraction r:Inference r:Fact ) .
     ?x r:gives ?value .
     ?value e:labelvars ?valuel .
@@ -65,13 +102,11 @@
         ?s!log:localN3String x:description ?sd .
         ?p!log:localN3String x:description ?pd .
         ?o!log:localN3String x:description ?od .
-        ( ?sd " " ?pd " " ?od " , " ) string:concatenation ?str .
+        ( ?sd " " ?pd " " ?od ) string:concatenation ?str .
 
     } ?strs ) log:collectAllIn _:x .
     
-    ?strs string:concatenation ?str .
-    #( ?str "(.*) , $" ) string:scrape ?str2 . 
-    
+    ( ?strs " , " ) string:join ?str .
 
 } => { ?x x:conclusionStr ?str } .
 
@@ -95,20 +130,19 @@
 	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?uri .
 		( ?uri ".*?#(.*)" ) string:scrape ?ln . ( ":" ?ln ) string:concatenation ?ln2 .
 		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "var:" ?var2 " = " ?ln2 " , " ) string:concatenation ?assign .
+		( "var:" ?var2 " = " ?ln2 ) string:concatenation ?assign .
 	} ?uriAssigns) log:collectAllIn _:x .
 	
 	( ?assign
 	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . 
 		?binding r:boundTo ?lit . ?lit log:rawType log:Literal . ( "\"" ?lit "\"" ) string:concatenation ?lit2 .
 		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "var:" ?var2 " = " ?lit2 " , " ) string:concatenation ?assign .
+		( "var:" ?var2 " = " ?lit2 ) string:concatenation ?assign .
 	} ?litAssigns) log:collectAllIn _:x .
 	
 	( ?uriAssigns ?litAssigns ) list:append ?assigns .
 	?assigns e:sort ?assigns2 .
 	
-	?assigns2 string:concatenation ?bindingStr .
-	( ?bindingStr "(.*) , $" ) string:scrape ?bindingStr2 .
+	( ?assigns2 " , " ) string:join ?bindingStr .
 	
-} => { ?x x:ruleStr ?ruleStr2 ; x:sourceStr ?source ; x:bindingStr ?bindingStr2 } .
+} => { ?x x:ruleStr ?ruleStr2 ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
