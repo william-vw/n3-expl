@@ -23,9 +23,11 @@
 	
 } <= { ?inf a x:InferenceNode ;
 		r:evidence ?evidences .
+	# currently causing exception after 20-30 sec
+	?evidences list:setEqualTo ?evidences2 .
 
 	( ?li
-	{ 	?evidence list:in ?evidences ; x:output ?html .
+	{ 	?evidence list:in ?evidences2 ; x:output ?html .
 		( "<li>" ?html "</li>" ) string:concatenation ?li }
 	?lis ) log:collectAllIn _:x .
 	?lis string:concatenation ?lisStr .

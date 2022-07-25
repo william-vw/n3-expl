@@ -24,6 +24,6 @@ DMTO:patient0_profile DDO:DDO_0000140 <https://bioportal.bioontology.org/ontolog
 DMTO:patient0_profile DMTO:recommend_test _:sk_1.
 _:sk_1 a DMTO:diabetes_screening.
 
-#2022-07-24T21:01:11.264Z in=15 out=5 ent=5 step=6 brake=2 inf=59085 sec=0.071 inf/sec=832183
+#2022-07-25T01:11:16.025Z in=15 out=5 ent=5 step=6 brake=2 inf=59085 sec=0.058 inf/sec=1018707
 #ENDS
 
