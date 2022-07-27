@@ -35,20 +35,18 @@
 		x:ruleStr ?ruleStr ;
 		x:sourceStr ?sourceStr ;
 		x:bindingStr ?bindingStr .
-		
-	( ?ruleStr "<" "&lt;" ) string:replace ?ruleStr2 .
-	( ?ruleStr2 ">" "&gt;" ) string:replace ?ruleStr3 .
 	
-	( ?label " , " "<br />" ) string:replace ?label2 .	
-	( ?bindingStr " , " "<br />" ) string:replace ?bindingStr2 .
+	( ?label "</span><span" "</span><br /><span" ) string:replace ?label2 .
 	
-	( 	?ruleStr3
-		"<div class='bindings'>" ?bindingStr2 "</div>"
-		"<div class='source'>(from: " ?sourceStr ")</div>" ) string:concatenation ?infInfo .	
+	( 	"<div class='rule'>" ?ruleStr "</div>"
+		"<div class='bindings'>" ?bindingStr "</div>"
+		"<div class='source'>(from: " ?sourceStr ")</div>" ) string:concatenation ?ruleInfo .	
 	
-	( 	"<div class='popup'>"
-			?label2 " <span class='popuplink'>(show rule)</span>"
-			"<div class='popuptext'>" ?infInfo "</div>"
+	(	"<div class='inf'>" 
+			?label2 " "
+			"<span class='showHideRule'>(show rule)</span>"
+			"<div class='ruleInfo'>" ?ruleInfo "</div>"
 			"<ul>" ?lisStr "</ul>"
-		"</div>" ) string:concatenation ?html .
+		"</div>"
+	) string:concatenation ?html .
 } .

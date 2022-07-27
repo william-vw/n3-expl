@@ -1,0 +1,56 @@
+.predicate {
+	font-style: italic;
+}
+
+.bindings {
+	margin-left: 25px;	
+}
+
+ul {
+	margin-top: 0;
+}
+
+ul li {
+	list-style: none;
+	background-image: url("../img/left arrow.svg");
+	background-repeat: no-repeat;
+	background-position: left 5px;
+	background-size: 24px;
+	padding-left: 28px;
+}
+
+/* ul {
+    list-style: none;
+}
+
+ul li:before
+{
+    content: '\2190';
+} */
+
+.source {
+	margin-top: 5px;
+}
+
+.showHideRule {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.ruleInfo {
+	display: none;
+	width: 85%;
+	font-family: Verdana;
+	font-size: 12px;
+	margin-left: 25px;
+	border: 1px dashed grey;
+	padding: 5px;
+}
+
+.var {
+	font-weight: bold;
+}
+
+.inf {
+	display: table;
+}

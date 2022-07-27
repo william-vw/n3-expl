@@ -102,11 +102,12 @@
         ?s!log:localN3String x:description ?sd .
         ?p!log:localN3String x:description ?pd .
         ?o!log:localN3String x:description ?od .
-        ( ?sd " " ?pd " " ?od ) string:concatenation ?str .
+        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span> .</span>") 
+        	string:concatenation ?str .
 
     } ?strs ) log:collectAllIn _:x .
     
-    ( ?strs " , " ) string:join ?str .
+    ?strs string:concatenation ?str .
 
 } => { ?x x:conclusionStr ?str } .
 
@@ -123,6 +124,9 @@
 	
 	?extraction!r:gives log:localN3String ?ruleStr .
 	( ?ruleStr "(\\{.*?\\}\\s*=>\\s*\\{.*?\\})" ) string:scrape ?ruleStr2 . 
+	( ?ruleStr2 "<" "&lt;" ) string:replace ?ruleStr3 .
+	( ?ruleStr3 ">" "&gt;" ) string:replace ?ruleStr4 .
+	( ?ruleStr4 "(var:[^ ]*)" "<span class='var'>$1</span>" ) string:replace ?ruleStr5.
 	 
 	?extraction!r:because!r:source log:uri ?source .
 	
@@ -130,19 +134,23 @@
 	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?uri .
 		( ?uri ".*?#(.*)" ) string:scrape ?ln . ( ":" ?ln ) string:concatenation ?ln2 .
 		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "var:" ?var2 " = " ?ln2 ) string:concatenation ?assign .
+		( "<div class='assign'><span class='var'>var:" ?var2 "</span> = <span class='val uri'>" ?ln2 "</span></div>" ) 
+			string:concatenation ?assign .
+		
 	} ?uriAssigns) log:collectAllIn _:x .
 	
 	( ?assign
 	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . 
 		?binding r:boundTo ?lit . ?lit log:rawType log:Literal . ( "\"" ?lit "\"" ) string:concatenation ?lit2 .
 		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "var:" ?var2 " = " ?lit2 ) string:concatenation ?assign .
+		( "<div class='assign'><span class='var'>var:" ?var2 "</span> = <span class='val lit'>" ?lit2 "</span></div>" ) 
+			string:concatenation ?assign .
+			
 	} ?litAssigns) log:collectAllIn _:x .
 	
 	( ?uriAssigns ?litAssigns ) list:append ?assigns .
 	?assigns e:sort ?assigns2 .
 	
-	( ?assigns2 " , " ) string:join ?bindingStr .
+	?assigns2 string:concatenation ?bindingStr .
 	
-} => { ?x x:ruleStr ?ruleStr2 ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
+} => { ?x x:ruleStr ?ruleStr5 ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
