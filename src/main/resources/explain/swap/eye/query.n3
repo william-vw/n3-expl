@@ -14,19 +14,17 @@
 
 {	1 log:outputString ?doc
 
-} <= { ?inf a x:InferenceNode .
+} <= {
+	( ?html { ?inf a x:RootNode ; x:output ?html } ?htmls ) log:collectAllIn _:x . 
 	
-	( ?x { ?x a x:InferenceNode . ?x!r:evidence list:member ?inf } ?xs ) log:collectAllIn _:x .
-	?xs!list:length math:equalTo 0 .
-	
-	?inf x:output ?html .
+	?htmls string:concatenation ?lis .
 	
 	( "<html>"
 		"<head>"
 			"<link rel='stylesheet' href='lib/style.css' />"
 			"<script type='text/javascript' src='lib/util.js'></script>"
 		"</head>"
-		"<body onload='loaded()'>" ?html "</body>"
+		"<body onload='loaded()'><ul>" ?lis "</ul></body>"
 	"</html>"
 		
 	) string:concatenation ?doc .

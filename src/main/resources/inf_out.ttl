@@ -1,5 +1,5 @@
 #Processed by EYE v22.0725.1110 josd
-#eye --pass-only-new --nope --n3 cases/diabetes/case3/example-data3.n3 cases/diabetes/case3/diabetes-case3.n3
+#eye --pass-only-new --nope --n3 cases/diabetes/case4/example-data4.n3 cases/diabetes/case4/diabetes-case4.n3
 
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
 @prefix DMTO: <https://bioportal.bioontology.org/ontologies/DMTO.owl#>.
@@ -15,15 +15,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix cg: <http://niche.cs.dal.ca/codegen.owl#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
-@prefix log: <http://www.w3.org/2000/10/swap/log#>.
-@prefix list: <http://www.w3.org/2000/10/swap/list#>.
 
-DMTO:patient0_profile DDO:DDO_0000139 _:sk_0.
-_:sk_0 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>.
-DMTO:patient0_profile DDO:DDO_0000140 <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0001935>.
-DMTO:patient0_profile DMTO:recommend_test _:sk_1.
-_:sk_1 a DMTO:diabetes_screening.
+cg:patient0_profile DDO:DDO_0000139 _:sk_0.
+_:sk_0 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002079>.
+_:sk_0 DDO:DDO_0000134 0 .
+cg:patient0_plan DMTO:DMTO_0001701 _:sk_1.
+_:sk_1 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0001980>.
+_:sk_1 DMTO:DMTO_0001713 DMTO:DMTO_0000923.
 
-#2022-07-28T12:08:18.355Z in=15 out=5 ent=5 step=6 brake=2 inf=59084 sec=0.064 inf/sec=923188
+#2022-07-28T12:47:05.499Z in=22 out=6 ent=6 step=4 brake=2 inf=62206 sec=0.056 inf/sec=1110821
 #ENDS
 

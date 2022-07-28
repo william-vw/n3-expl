@@ -1,4 +1,4 @@
-#Processed by EYE v22.0722.2355 josd
+#Processed by EYE v22.0725.1110 josd
 #eye --pass --n3 cases/diabetes/case2/example-data2.n3 cases/diabetes/case2/diabetes-case2.n3
 
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
@@ -40,8 +40,8 @@
     cg:patient0 a DMTO:DMTO_0000021.
     cg:sys0 DDO:DDO_0000134 150 .
     cg:dias DDO:DDO_0000134 92 .
-    cg:patient0 DMTO:DMTO_0001667 <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1>.
-    <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1> DMTO:DMTO_0001671 cg:patient0_plan.
+    cg:patient0 DMTO:DMTO_0001667 <http://josd.github.io/.well-known/genid/2344096786379123897#bn_1>.
+    <http://josd.github.io/.well-known/genid/2344096786379123897#bn_1> DMTO:DMTO_0001671 cg:patient0_plan.
     _:sk_0 a DMTO:DMTO_0001712.
     _:sk_1 a DMTO:DMTO_0001710.
     cg:patient0_plan DMTO:DMTO_0001701 _:sk_0.
@@ -112,25 +112,25 @@
 
 <#lemma6> a r:Inference;
   r:gives {
-    cg:patient0 DMTO:DMTO_0001667 <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1>.
+    cg:patient0 DMTO:DMTO_0001667 <http://josd.github.io/.well-known/genid/2344096786379123897#bn_1>.
   };
   r:evidence (
     <#lemma20>
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001667"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/1127560729498495641#bn_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/2344096786379123897#bn_1"]];
   r:rule <#lemma15>.
 
 <#lemma7> a r:Inference;
   r:gives {
-    <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1> DMTO:DMTO_0001671 cg:patient0_plan.
+    <http://josd.github.io/.well-known/genid/2344096786379123897#bn_1> DMTO:DMTO_0001671 cg:patient0_plan.
   };
   r:evidence (
     <#lemma21>
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001671"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/1127560729498495641#bn_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/2344096786379123897#bn_1"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0_plan"]];
   r:rule <#lemma15>.
 
@@ -244,13 +244,13 @@
 
 <#lemma20> a r:Extraction;
   r:gives {
-    cg:patient0 DMTO:DMTO_0001667 <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1>.
+    cg:patient0 DMTO:DMTO_0001667 <http://josd.github.io/.well-known/genid/2344096786379123897#bn_1>.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/example-data2.n3>].
 
 <#lemma21> a r:Extraction;
   r:gives {
-    <http://josd.github.io/.well-known/genid/1127560729498495641#bn_1> DMTO:DMTO_0001671 cg:patient0_plan.
+    <http://josd.github.io/.well-known/genid/2344096786379123897#bn_1> DMTO:DMTO_0001671 cg:patient0_plan.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/example-data2.n3>].
 
@@ -276,7 +276,7 @@
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#dias"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 92];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/1127560729498495641#bn_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/2344096786379123897#bn_1"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0_plan"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
   r:rule <#lemma24>.
@@ -303,7 +303,7 @@
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#dias"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 92];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/1127560729498495641#bn_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/2344096786379123897#bn_1"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://niche.cs.dal.ca/codegen.owl#patient0_plan"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
   r:rule <#lemma25>.
@@ -340,6 +340,6 @@
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case2/diabetes-case2.n3>].
 
-#2022-07-24T20:45:31.538Z in=17 out=13 ent=19 step=39 brake=3 inf=87956 sec=0.058 inf/sec=1516483
+#2022-07-28T12:47:03.910Z in=17 out=13 ent=19 step=39 brake=3 inf=87955 sec=0.059 inf/sec=1490763
 #ENDS
 

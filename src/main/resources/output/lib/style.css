@@ -7,19 +7,15 @@
 }
 
 ul {
-	margin-top: 0;
+	margin-top: 0;	
 }
 
-ul:not(:first-child) li {
+li.fact {
 	list-style-type: disc;
 	padding-left: 2px;
 }
 
-li.inf:first-child {
-	list-style: none;
-}
-
-li.inf:not(:first-child) {
+li.inf {
 	list-style: none;
 	background-image: url("../img/left arrow.svg");
 	background-repeat: no-repeat;
@@ -30,14 +26,23 @@ li.inf:not(:first-child) {
 	padding-left: 20px;
 }
 
-/* ul {
-    list-style: none;
+/* top-level inferences */ 
+
+body > ul {
+	padding-left: 0;
 }
 
-ul li:before
-{
-    content: '\2190';
-} */
+body > ul > li.inf {
+	background: none;
+	left: 0;
+	padding-left: 0;
+}
+
+/* second, third, .. top-level inference */
+
+body > ul > li:not(:first-child) {
+	margin-top: 15px;
+}
 
 .source {
 	margin-top: 5px;
