@@ -16,7 +16,9 @@
 	?type list:in ( r:Extraction r:Fact ) .
 	?x x:conclusionStr ?str .
 	
-} => { ?x x:output ?str } .
+	( "<li class='fact'>" ?str "</li>" ) string:concatenation ?html .
+	
+} => { ?x x:output ?html } .
 
 
 {	?inf x:output ?html
@@ -25,10 +27,7 @@
 		r:evidence ?evidences .
 	?evidences list:removeDuplicates ?evidences2 .
 
-	( ?li
-	{ 	?evidence list:in ?evidences2 ; x:output ?html .
-		( "<li>" ?html "</li>" ) string:concatenation ?li }
-	?lis ) log:collectAllIn _:x .
+	( ?li {	?evidence list:in ?evidences2 ; x:output ?li } ?lis ) log:collectAllIn _:x .
 	?lis string:concatenation ?lisStr .
 	
 	?inf x:conclusionStr ?label ;
@@ -42,11 +41,11 @@
 		"<div class='bindings'>" ?bindingStr "</div>"
 		"<div class='source'>(from: " ?sourceStr ")</div>" ) string:concatenation ?ruleInfo .	
 	
-	(	"<div class='inf'>" 
+	(	"<li class='inf'>" 
 			?label2 " "
 			"<span class='showHideRule'>(show rule)</span>"
 			"<div class='ruleInfo'>" ?ruleInfo "</div>"
 			"<ul>" ?lisStr "</ul>"
-		"</div>"
+		"</li>"
 	) string:concatenation ?html .
 } .

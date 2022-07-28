@@ -10,13 +10,24 @@ ul {
 	margin-top: 0;
 }
 
-ul li {
+ul:not(:first-child) li {
+	list-style-type: disc;
+	padding-left: 2px;
+}
+
+li.inf:first-child {
+	list-style: none;
+}
+
+li.inf:not(:first-child) {
 	list-style: none;
 	background-image: url("../img/left arrow.svg");
 	background-repeat: no-repeat;
-	background-position: left 5px;
-	background-size: 24px;
-	padding-left: 28px;
+	background-position: left 2px;
+	background-size: 16px;
+	position: relative;
+	left: -18px;
+	padding-left: 20px;
 }
 
 /* ul {
@@ -49,8 +60,4 @@ ul li:before
 
 .var {
 	font-weight: bold;
-}
-
-.inf {
-	display: table;
 }
