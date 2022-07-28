@@ -1,40 +1,3 @@
-- get output:
-cd src/main/resources/cases/copd
-eye --pass-only-new --nope --n3 patient_red1.ttl rules.n3
-eye --pass --n3 patient_red1.ttl rules.n3
-
-
-- proof structure:
-inference lemma
-	r:gives conclusion
-	(r:rule rule , r:binding [ r:variable ; r:boundTo ])
-	
-	r:evidence
-		lemma x, y (either inference or extraction)
-		a r:Fact; r:gives ..
-
-ignore "useless" inference lemmas:
-	r:rule r:because r:source  <http://eulersharp.sourceforge.net/2003/03swap/pass>
-
-extraction lemma
-	r:gives conclusion
-	r:because (file)
-	
-	
-- describe proofs:
-cd src/main/resources/
-eye --pass-only-new --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/list.n3
-eye --pass-only-new --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/html.n3
-
-
-- filtered:
-cd src/main/resources/
-eye --nope --n3 proofs/swap/patient_red1.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query.n3
-eye --nope --n3 proofs/swap/diabetes_case1.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query.n3
-(outputString:)
-eye --strings --n3 proofs/swap/patient_red1_proof.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query.n3
-
-
 - shell script:
 cd src/main/resources/
 ./explain.sh -d cases/copd/patient_red1.ttl -r cases/copd/rules.n3 -p proofs/swap/patient_red1.ttl -h output/copd.html
@@ -42,3 +5,9 @@ cd src/main/resources/
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case2/example-data2.n3 -r cases/diabetes/case2/diabetes-case2.n3 -p proofs/swap/diabetes_case2.ttl -h output/diabetes_case2.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case3/example-data3.n3 -r cases/diabetes/case3/diabetes-case3.n3 -p proofs/swap/diabetes_case3.ttl -h output/diabetes_case3.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case4/example-data4.n3 -r cases/diabetes/case4/diabetes-case4.n3 -p proofs/swap/diabetes_case4.ttl -h output/diabetes_case4.html
+
+
+- debugging:
+cd src/main/resources/
+eye --nope --n3 proofs/swap/patient_red1.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query_test.n3
+eye --nope --n3 proofs/swap/diabetes_case1.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query_test.n3
