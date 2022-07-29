@@ -1,13 +1,19 @@
 - shell script:
 cd src/main/resources/
 ./explain.sh -d cases/copd/patient_red1.ttl -r cases/copd/rules.n3 -p proofs/swap/patient_red1.ttl -h output/copd.html
+
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case1/example-data1.n3 -r cases/diabetes/case1/diabetes-case1-bnodes.n3 -p proofs/swap/diabetes_case1.ttl -h output/diabetes_case1.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case2/example-data2.n3 -r cases/diabetes/case2/diabetes-case2.n3 -p proofs/swap/diabetes_case2.ttl -h output/diabetes_case2.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case3/example-data3.n3 -r cases/diabetes/case3/diabetes-case3.n3 -p proofs/swap/diabetes_case3.ttl -h output/diabetes_case3.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case4/example-data4.n3 -r cases/diabetes/case4/diabetes-case4.n3 -p proofs/swap/diabetes_case4.ttl -h output/diabetes_case4.html
+
+./explain.sh -d cases/witch/witch.n3 -r cases/witch/witch.n3 -p proofs/swap/witch.ttl -h output/witch.html
+./explain.sh -d cases/medic/medic.n3 -r cases/medic/medic.n3 -p proofs/swap/medic.ttl -h output/medic.html
 
 
 - debugging:
 cd src/main/resources/
 eye --nope --n3 proofs/swap/patient_red1.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query_test.n3
 eye --nope --n3 proofs/swap/diabetes_case1.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query_test.n3
+eye --nope --n3 proofs/swap/medic.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query_test.n3
+eye --nope --n3 proofs/swap/test.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query_test.n3

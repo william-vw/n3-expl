@@ -4,6 +4,7 @@
 @prefix pml: <http://provenanceweb.org/ns/pml#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix graph: <http://www.w3.org/2000/10/swap/graph#> .
 @prefix list: <http://www.w3.org/2000/10/swap/list#> .
 @prefix math: <http://www.w3.org/2000/10/swap/math#> .
 @prefix string: <http://www.w3.org/2000/10/swap/string#> .
@@ -26,12 +27,22 @@
 	_:x log:notIncludes { ?t rdfs:label ?l } .
 
     ?t log:uri ?uri .
-    ( ?uri ".*?#(.*)" ) string:scrape ?ln .
+    ( ?uri ".+#(.+)" ) string:scrape ?ln .
 	( ":" ?ln ) string:concatenation ?ln2 . 
 
     ?t log:localN3String ?ts .
 
 } => { ?ts x:description ?ln2 } .
+
+
+{   ?value x:term ?t .
+    ?t log:uri ?uri .
+    
+    ?uri string:notMatches ".+#.+" .
+
+    ?t log:localN3String ?ts .
+
+} => { ?ts x:description ":" } .
 
 
 {   ?value x:term ?t .
@@ -62,6 +73,16 @@
 } => { ?tl x:term ?m } .
 
 
+{ 	?value x:term ?t .
+	?t log:rawType log:Formula .
+	?t e:labelvars ?tl .
+	
+	?tl e:graphMember ?m .
+	?m log:includes { ?s ?p ?o } .
+	
+} => { ?tl x:term ?s , ?p , ?o } .
+
+
 {   ?value x:term ?list .
 	?list log:rawType rdf:List .
 	?list e:labelvars ?listl .
@@ -73,6 +94,8 @@
 
     } ?strs ) log:collectAllIn _:x .
     
+    ?strs!list:length math:equalTo ?list!list:length .
+    
     ( ?strs " " ) string:join ?str2 .
     ( "( " ?str2 " )" ) string:concatenation ?str3 .
 
@@ -81,13 +104,31 @@
 } => { ?ls x:description ?str3 } .
 
 
-#{	?value x:term ?t .
-#	?t log:rawType log:Formula .
-#	
-#	?t log:localN3String ?ts .
-#	( "{ " ?ts " }" ) string:concatenation ?str . 
-#	
-#} => { ?ts x:description ?str } .
+{   ?value x:term ?form .
+	?form log:rawType log:Formula .
+	?form e:labelvars ?forml .
+
+    ( ?td
+    {
+        ?forml e:graphMember ?m .
+		?m log:includes { ?s ?p ?o } .
+	
+        ?s!log:localN3String x:description ?sd .
+        ?p!log:localN3String x:description ?pd .
+        ?o!log:localN3String x:description ?od .
+        
+        ( ?sd " " ?pd " " ?od " ." ) string:concatenation ?td .
+
+    } ?strs ) log:collectAllIn _:x .
+    
+    ?form graph:length ?strs!list:length .
+    
+    ( ?strs " " ) string:join ?str2 .
+    ( "{ " ?str2 " }" ) string:concatenation ?str3 .
+
+	?form log:localN3String ?fs
+
+} => { ?fs x:description ?str3 } .
 
 
 {   ?x!rdf:type list:in ( r:Extraction r:Inference r:Fact ) .
@@ -106,6 +147,8 @@
         	string:concatenation ?str .
 
     } ?strs ) log:collectAllIn _:x .
+    
+    ?value graph:length ?strs!list:length .
     
     ?strs string:concatenation ?str .
 

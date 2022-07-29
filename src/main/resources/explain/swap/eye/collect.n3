@@ -12,13 +12,14 @@
 @base <http://wvw.org/xai#> .
 
 
-{	?x a ?type .
+{	?x x:output ?html 
+
+} <= {	?x a ?type .
 	?type list:in ( r:Extraction r:Fact ) .
 	?x x:conclusionStr ?str .
 	
-	( "<li class='fact'>" ?str "</li>" ) string:concatenation ?html .
-	
-} => { ?x x:output ?html } .
+	( "<li class='fact'>" ?str "</li>" ) string:concatenation ?html .	
+} .
 
 
 {	?inf x:output ?html
@@ -28,6 +29,8 @@
 	?evidences list:removeDuplicates ?evidences2 .
 
 	( ?li {	?evidence list:in ?evidences2 ; x:output ?li } ?lis ) log:collectAllIn _:x .
+	?evidences2!list:length math:equalTo ?lis!list:length .
+	
 	?lis string:concatenation ?lisStr .
 	
 	?inf x:conclusionStr ?label ;

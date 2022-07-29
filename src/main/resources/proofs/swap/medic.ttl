@@ -1,0 +1,431 @@
+#Processed by EYE v22.0725.1110 josd
+#eye --pass --n3 cases/medic/medic.n3 cases/medic/medic.n3
+
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix fl: <http://eulersharp.sourceforge.net/2003/03swap/fl-rules#>.
+@prefix : <http://eulersharp.sourceforge.net/2006/02swap/med#>.
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix var: <http://josd.github.io/var#>.
+@prefix n3: <http://www.w3.org/2004/06/rei#>.
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:component <#lemma5>;
+  r:component <#lemma6>;
+  r:component <#lemma7>;
+  r:component <#lemma8>;
+  r:component <#lemma9>;
+  r:component <#lemma10>;
+  r:component <#lemma11>;
+  r:component <#lemma12>;
+  r:component <#lemma13>;
+  r:component <#lemma14>;
+  r:component <#lemma15>;
+  r:component <#lemma16>;
+  r:component <#lemma17>;
+  r:component <#lemma18>;
+  r:gives {
+    (:Ann :Fever) fl:mu 0.8 .
+    (:Ann :AllergyForAspirin) fl:mu 0.001 .
+    (:Joe :AcuteMyocardialInfarction) fl:mu 0.9 .
+    (:Joe :ActivePepticUlcerDisease) fl:mu 0.006 .
+    (:Joe :AllergyForAspirin) fl:mu 0.001 .
+    (:Joe :SevereAsthma) fl:mu 0.001 .
+    (:Joe :ChronicObstructivePumonaryDisease) fl:mu 0.001 .
+    :aspirinHighDose :prescribedFor :Fever.
+    :aspirinLowDose :prescribedFor :AcuteMyocardialInfarction.
+    :betaBlocker :prescribedFor :AcuteMyocardialInfarction.
+    :aspirinHighDose :excludedFor :ActivePepticUlcerDisease.
+    :aspirinHighDose :excludedFor :AllergyForAspirin.
+    :aspirinLowDose :excludedFor :ActivePepticUlcerDisease.
+    :aspirinLowDose :excludedFor :AllergyForAspirin.
+    :betaBlocker :excludedFor :SevereAsthma.
+    :betaBlocker :excludedFor :ChronicObstructivePumonaryDisease.
+    :Joe :isPrescribed :aspirinLowDose.
+    :Joe :isPrescribed :betaBlocker.
+  }.
+
+<#lemma1> a r:Inference;
+  r:gives {
+    (:Ann :Fever) fl:mu 0.8 .
+  };
+  r:evidence (
+    <#lemma19>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2003/03swap/fl-rules#mu"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo (:Ann :Fever)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 0.8];
+  r:rule <#lemma20>.
+
+<#lemma2> a r:Inference;
+  r:gives {
+    (:Ann :AllergyForAspirin) fl:mu 0.001 .
+  };
+  r:evidence (
+    <#lemma21>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2003/03swap/fl-rules#mu"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo (:Ann :AllergyForAspirin)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 0.001];
+  r:rule <#lemma20>.
+
+<#lemma3> a r:Inference;
+  r:gives {
+    (:Joe :AcuteMyocardialInfarction) fl:mu 0.9 .
+  };
+  r:evidence (
+    <#lemma22>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2003/03swap/fl-rules#mu"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo (:Joe :AcuteMyocardialInfarction)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 0.9];
+  r:rule <#lemma20>.
+
+<#lemma4> a r:Inference;
+  r:gives {
+    (:Joe :ActivePepticUlcerDisease) fl:mu 0.006 .
+  };
+  r:evidence (
+    <#lemma23>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2003/03swap/fl-rules#mu"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo (:Joe :ActivePepticUlcerDisease)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 0.006];
+  r:rule <#lemma20>.
+
+<#lemma5> a r:Inference;
+  r:gives {
+    (:Joe :AllergyForAspirin) fl:mu 0.001 .
+  };
+  r:evidence (
+    <#lemma24>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2003/03swap/fl-rules#mu"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo (:Joe :AllergyForAspirin)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 0.001];
+  r:rule <#lemma20>.
+
+<#lemma6> a r:Inference;
+  r:gives {
+    (:Joe :SevereAsthma) fl:mu 0.001 .
+  };
+  r:evidence (
+    <#lemma25>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2003/03swap/fl-rules#mu"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo (:Joe :SevereAsthma)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 0.001];
+  r:rule <#lemma20>.
+
+<#lemma7> a r:Inference;
+  r:gives {
+    (:Joe :ChronicObstructivePumonaryDisease) fl:mu 0.001 .
+  };
+  r:evidence (
+    <#lemma26>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2003/03swap/fl-rules#mu"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo (:Joe :ChronicObstructivePumonaryDisease)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 0.001];
+  r:rule <#lemma20>.
+
+<#lemma8> a r:Inference;
+  r:gives {
+    :aspirinHighDose :prescribedFor :Fever.
+  };
+  r:evidence (
+    <#lemma27>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#prescribedFor"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#aspirinHighDose"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#Fever"]];
+  r:rule <#lemma20>.
+
+<#lemma9> a r:Inference;
+  r:gives {
+    :aspirinLowDose :prescribedFor :AcuteMyocardialInfarction.
+  };
+  r:evidence (
+    <#lemma28>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#prescribedFor"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#aspirinLowDose"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#AcuteMyocardialInfarction"]];
+  r:rule <#lemma20>.
+
+<#lemma10> a r:Inference;
+  r:gives {
+    :betaBlocker :prescribedFor :AcuteMyocardialInfarction.
+  };
+  r:evidence (
+    <#lemma29>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#prescribedFor"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#betaBlocker"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#AcuteMyocardialInfarction"]];
+  r:rule <#lemma20>.
+
+<#lemma11> a r:Inference;
+  r:gives {
+    :aspirinHighDose :excludedFor :ActivePepticUlcerDisease.
+  };
+  r:evidence (
+    <#lemma30>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#excludedFor"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#aspirinHighDose"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#ActivePepticUlcerDisease"]];
+  r:rule <#lemma20>.
+
+<#lemma12> a r:Inference;
+  r:gives {
+    :aspirinHighDose :excludedFor :AllergyForAspirin.
+  };
+  r:evidence (
+    <#lemma31>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#excludedFor"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#aspirinHighDose"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#AllergyForAspirin"]];
+  r:rule <#lemma20>.
+
+<#lemma13> a r:Inference;
+  r:gives {
+    :aspirinLowDose :excludedFor :ActivePepticUlcerDisease.
+  };
+  r:evidence (
+    <#lemma32>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#excludedFor"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#aspirinLowDose"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#ActivePepticUlcerDisease"]];
+  r:rule <#lemma20>.
+
+<#lemma14> a r:Inference;
+  r:gives {
+    :aspirinLowDose :excludedFor :AllergyForAspirin.
+  };
+  r:evidence (
+    <#lemma33>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#excludedFor"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#aspirinLowDose"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#AllergyForAspirin"]];
+  r:rule <#lemma20>.
+
+<#lemma15> a r:Inference;
+  r:gives {
+    :betaBlocker :excludedFor :SevereAsthma.
+  };
+  r:evidence (
+    <#lemma34>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#excludedFor"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#betaBlocker"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#SevereAsthma"]];
+  r:rule <#lemma20>.
+
+<#lemma16> a r:Inference;
+  r:gives {
+    :betaBlocker :excludedFor :ChronicObstructivePumonaryDisease.
+  };
+  r:evidence (
+    <#lemma35>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#excludedFor"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#betaBlocker"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#ChronicObstructivePumonaryDisease"]];
+  r:rule <#lemma20>.
+
+<#lemma17> a r:Inference;
+  r:gives {
+    :Joe :isPrescribed :aspirinLowDose.
+  };
+  r:evidence (
+    <#lemma36>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#isPrescribed"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#Joe"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#aspirinLowDose"]];
+  r:rule <#lemma20>.
+
+<#lemma18> a r:Inference;
+  r:gives {
+    :Joe :isPrescribed :betaBlocker.
+  };
+  r:evidence (
+    <#lemma37>
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#isPrescribed"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#Joe"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#betaBlocker"]];
+  r:rule <#lemma20>.
+
+<#lemma19> a r:Extraction;
+  r:gives {
+    (:Ann :Fever) fl:mu 0.8 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma20> a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
+  };
+  r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
+
+<#lemma21> a r:Extraction;
+  r:gives {
+    (:Ann :AllergyForAspirin) fl:mu 0.001 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma22> a r:Extraction;
+  r:gives {
+    (:Joe :AcuteMyocardialInfarction) fl:mu 0.9 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma23> a r:Extraction;
+  r:gives {
+    (:Joe :ActivePepticUlcerDisease) fl:mu 0.006 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma24> a r:Extraction;
+  r:gives {
+    (:Joe :AllergyForAspirin) fl:mu 0.001 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma25> a r:Extraction;
+  r:gives {
+    (:Joe :SevereAsthma) fl:mu 0.001 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma26> a r:Extraction;
+  r:gives {
+    (:Joe :ChronicObstructivePumonaryDisease) fl:mu 0.001 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma27> a r:Extraction;
+  r:gives {
+    :aspirinHighDose :prescribedFor :Fever.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma28> a r:Extraction;
+  r:gives {
+    :aspirinLowDose :prescribedFor :AcuteMyocardialInfarction.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma29> a r:Extraction;
+  r:gives {
+    :betaBlocker :prescribedFor :AcuteMyocardialInfarction.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma30> a r:Extraction;
+  r:gives {
+    :aspirinHighDose :excludedFor :ActivePepticUlcerDisease.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma31> a r:Extraction;
+  r:gives {
+    :aspirinHighDose :excludedFor :AllergyForAspirin.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma32> a r:Extraction;
+  r:gives {
+    :aspirinLowDose :excludedFor :ActivePepticUlcerDisease.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma33> a r:Extraction;
+  r:gives {
+    :aspirinLowDose :excludedFor :AllergyForAspirin.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma34> a r:Extraction;
+  r:gives {
+    :betaBlocker :excludedFor :SevereAsthma.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma35> a r:Extraction;
+  r:gives {
+    :betaBlocker :excludedFor :ChronicObstructivePumonaryDisease.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+<#lemma36> a r:Inference;
+  r:gives {
+    :Joe :isPrescribed :aspirinLowDose.
+  };
+  r:evidence (
+    <#lemma28>
+    <#lemma22>
+    [ a r:Fact; r:gives {0.9 math:greaterThan 0.7}]
+    [ a r:Fact; r:gives {((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1) e:findall (_:sk_0 {:aspirinLowDose :excludedFor _:sk_0} (:ActivePepticUlcerDisease :AllergyForAspirin))}]
+    [ a r:Fact; r:gives {((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1) e:findall (_:sk_0 {:aspirinLowDose :excludedFor _:sk_0.
+     (:Joe _:sk_0) fl:mu _:sk_1.
+     _:sk_1 math:notGreaterThan 0.01} (:ActivePepticUlcerDisease :AllergyForAspirin))}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#aspirinLowDose"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#AcuteMyocardialInfarction"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 0.9];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#Joe"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo ((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo (:ActivePepticUlcerDisease :AllergyForAspirin)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
+  r:rule <#lemma38>.
+
+<#lemma37> a r:Inference;
+  r:gives {
+    :Joe :isPrescribed :betaBlocker.
+  };
+  r:evidence (
+    <#lemma29>
+    <#lemma22>
+    [ a r:Fact; r:gives {0.9 math:greaterThan 0.7}]
+    [ a r:Fact; r:gives {((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1) e:findall (_:sk_2 {:betaBlocker :excludedFor _:sk_2} (:SevereAsthma :ChronicObstructivePumonaryDisease))}]
+    [ a r:Fact; r:gives {((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1) e:findall (_:sk_2 {:betaBlocker :excludedFor _:sk_2.
+     (:Joe _:sk_2) fl:mu _:sk_3.
+     _:sk_3 math:notGreaterThan 0.01} (:SevereAsthma :ChronicObstructivePumonaryDisease))}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#betaBlocker"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#AcuteMyocardialInfarction"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 0.9];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://eulersharp.sourceforge.net/2006/02swap/med#Joe"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo ((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_2"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo (:SevereAsthma :ChronicObstructivePumonaryDisease)];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_3"]];
+  r:rule <#lemma38>.
+
+<#lemma38> a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5, var:x_6, var:x_7. {var:x_0 :prescribedFor var:x_1.
+     (var:x_2 var:x_1) fl:mu var:x_3.
+     var:x_3 math:greaterThan 0.7 .
+     var:x_4 e:findall (var:x_5 {var:x_0 :excludedFor var:x_5} var:x_6).
+     var:x_4 e:findall (var:x_5 {var:x_0 :excludedFor var:x_5.
+      (var:x_2 var:x_5) fl:mu var:x_7.
+      var:x_7 math:notGreaterThan 0.01} var:x_6)} => {var:x_2 :isPrescribed var:x_0}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
+
+#2022-07-29T15:18:15.382Z in=18 out=18 ent=20 step=96 brake=5 inf=96863 sec=0.059 inf/sec=1641746
+#ENDS
+

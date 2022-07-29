@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix pml: <http://provenanceweb.org/ns/pml#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix string: <http://www.w3.org/2000/10/swap/string#> .
+@prefix r: <http://www.w3.org/2000/10/swap/reason#> .
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix fl: <http://eulersharp.sourceforge.net/2003/03swap/fl-rules#>.
+@prefix x: <http://wvw.org/xai#> .
+@base <http://wvw.org/xai#> .
+
+#:x r:evidence [ a r:Fact; r:gives {((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1) e:findall (_:sk_2 {:betaBlocker :excludedFor _:sk_2} (:SevereAsthma :ChronicObstructivePumonaryDisease))}] .
+#:x r:evidence [ a r:Fact; r:gives { :a :b { :betaBlocker :excludedFor _:sk_2} } ] .
+
+<#lemma37> a r:Inference;
+  r:evidence (
+    #[ a r:Fact; r:gives {(( :a :b ) 1) e:findall (_:sk_2 {:betaBlocker :excludedFor _:sk_2} (:SevereAsthma :ChronicObstructivePumonaryDisease))}]
+    [ a r:Fact; r:gives {((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1) e:findall (_:sk_2 {:betaBlocker :excludedFor _:sk_2} (:SevereAsthma :ChronicObstructivePumonaryDisease))}]
+    #[ a r:Fact; r:gives {((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1) e:findall (_:sk_2 {:betaBlocker :excludedFor _:sk_2.
+    # (:Joe _:sk_2) fl:mu _:sk_3.
+    # _:sk_3 math:notGreaterThan 0.01} (:SevereAsthma :ChronicObstructivePumonaryDisease))}]
+  ) .

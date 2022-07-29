@@ -21,5 +21,13 @@
 #} <= { ?x x:conclusionStr ?conclStr } .
 
 
-{	?x x:description ?descr 
-} <= { ?x x:description ?descr } .
+#{	0 x:term ?term 
+#} <= { ?x x:term ?term . ?x log:rawType rdf:List } .
+
+
+#{	?x x:description ?descr 
+#} <= { ?x x:description ?descr } .
+
+
+{	?x x:conclusionStr ?str  
+} <= { ?x x:conclusionStr ?str } .
