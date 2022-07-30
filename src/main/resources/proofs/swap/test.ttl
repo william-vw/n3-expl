@@ -9,6 +9,8 @@
 @prefix var: <http://josd.github.io/var#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
+# lemma 19 won't have a conclStr
+
 <#lemma18> a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1. {var:x_0 :has02SaturationValue var:x_1.
@@ -19,3 +21,17 @@
   r:gives {
     @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :isStratified :RedZone}.
   } .
+  
+  
+# lemma 18 won't have a conclStr
+  
+#<#lemma19> a r:Extraction;
+#  r:gives {
+#    @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :isStratified :RedZone}.
+#  } .
+  
+#<#lemma18> a r:Extraction;
+#  r:gives {
+#    @forAll var:x_0, var:x_1. {var:x_0 :has02SaturationValue var:x_1.
+#     var:x_1 math:lessThan 88} => {var:x_0 :hasLow02Saturation true}.
+#  } .
