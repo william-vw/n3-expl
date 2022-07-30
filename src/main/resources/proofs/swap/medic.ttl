@@ -426,6 +426,6 @@
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
 
-#2022-07-29T15:18:15.382Z in=18 out=18 ent=20 step=96 brake=5 inf=96863 sec=0.059 inf/sec=1641746
+#2022-07-30T14:19:29.286Z in=18 out=18 ent=20 step=96 brake=5 inf=96863 sec=0.059 inf/sec=1641746
 #ENDS
 

@@ -10,6 +10,6 @@
 :Joe :isPrescribed :aspirinLowDose.
 :Joe :isPrescribed :betaBlocker.
 
-#2022-07-29T15:18:15.188Z in=18 out=2 ent=2 step=8 brake=4 inf=54879 sec=0.057 inf/sec=962789
+#2022-07-30T14:19:29.088Z in=18 out=2 ent=2 step=8 brake=4 inf=54879 sec=0.054 inf/sec=1016278
 #ENDS
 

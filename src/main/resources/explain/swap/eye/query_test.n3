@@ -12,17 +12,8 @@
 @base <http://wvw.org/xai#> .
 
 
-
-#{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr 
-#} <= { ?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr } .
-
-
-#{	?x x:conclusionStr ?conclStr 
-#} <= { ?x x:conclusionStr ?conclStr } .
-
-
-#{	0 x:term ?term 
-#} <= { ?x x:term ?term . ?x log:rawType rdf:List } .
+#{	?x x:term ?term 
+#} <= { ?x x:term ?term } .
 
 
 #{	?x x:description ?descr 
@@ -31,3 +22,7 @@
 
 {	?x x:conclusionStr ?str  
 } <= { ?x x:conclusionStr ?str } .
+
+
+#{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr 
+#} <= { ?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr } .

@@ -14,7 +14,8 @@
 
 {	?x x:output ?html 
 
-} <= {	?x a ?type .
+} <= {	
+	?x a ?type .
 	?type list:in ( r:Extraction r:Fact ) .
 	?x x:conclusionStr ?str .
 	
@@ -24,7 +25,8 @@
 
 {	?inf x:output ?html
 	
-} <= { ?inf a x:InferenceNode ;
+} <= { 
+	?inf a x:InferenceNode ;
 		r:evidence ?evidences .
 	?evidences list:removeDuplicates ?evidences2 .
 

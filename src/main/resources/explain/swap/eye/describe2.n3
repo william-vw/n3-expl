@@ -90,28 +90,6 @@
 
 # compound terms
 
-# (collect all "x:description"s of list terms and use to describe list itself)
-{   ?value x:term ?list .
-	?list log:rawType rdf:List .
-	?list e:labelvars ?listl .
-
-    ( ?td
-    {
-        ?listl list:member ?t .
-        ?t!e:labelvars!log:localN3String x:description ?td .
-
-    } ?strs ) log:collectAllIn _:x .
-    
-    ?strs!list:length math:equalTo ?list!list:length .
-    
-    ( ?strs " " ) string:join ?str2 .
-    ( "( " ?str2 " )" ) string:concatenation ?str3 .
-
-	?listl log:localN3String ?ls
-
-} => { ?ls x:description ?str3 } .
-
-
 # (collect all "x:description"s of formula terms and use to describe formula itself)
 {   ?value x:term ?form .
 	?form log:rawType log:Formula .
@@ -168,60 +146,3 @@
     } ?strs ) log:collectAllIn _:x .
     
 } => {	?x x:conclusionStr ?strs } .
-
-
-# (describe inference nodes in some more detail)
-{	?x a x:InferenceNode ; 
-		r:rule ?extraction .
-	
-	?extraction!r:gives log:localN3String ?ruleStr .
-	( ?ruleStr "(\\{.*?\\}\\s*=>\\s*\\{.*?\\})" ) string:scrape ?ruleStr2 . 
-	( ?ruleStr2 "<" "&lt;" ) string:replace ?ruleStr3 .
-	( ?ruleStr3 ">" "&gt;" ) string:replace ?ruleStr4 .
-	( ?ruleStr4 "(var:[^ ]*)" "<span class='var'>$1</span>" ) string:replace ?ruleStr5.
-	 
-	?extraction!r:because!r:source log:uri ?source .
-	
-	( ?assign
-	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?uri .
-		( ?uri ".*?#(.*)" ) string:scrape ?ln . ( ":" ?ln ) string:concatenation ?ln2 .
-		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "<div class='assign'><span class='var'>var:" ?var2 "</span> = <span class='val uri'>" ?ln2 "</span></div>" ) 
-			string:concatenation ?assign .
-		
-	} ?uriAssigns) log:collectAllIn _:x .
-	
-	( ?assign
-	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . 
-		?binding r:boundTo ?lit . ?lit log:rawType log:Literal . ( "\"" ?lit "\"" ) string:concatenation ?lit2 .
-		( ?var ".*#(.*)" ) string:scrape ?var2 .
-		( "<div class='assign'><span class='var'>var:" ?var2 "</span> = <span class='val lit'>" ?lit2 "</span></div>" ) 
-			string:concatenation ?assign .
-			
-	} ?litAssigns) log:collectAllIn _:x .
-	
-	( ?uriAssigns ?litAssigns ) list:append ?assigns .
-	?assigns e:sort ?assigns2 .
-	
-	?assigns2 string:concatenation ?bindingStr .
-	
-} => { ?x x:ruleStr ?ruleStr5 ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
-
-
-# auxillary
-
-{	?inf a x:InferenceNode 
-		
-} <= { ?inf a r:Inference .
-	_:x log:notIncludes { ?x r:component ?inf } 
-} .
-
-
-{	?inf a x:RootNode
-
-} <= { 
-	?inf a x:InferenceNode .
-	
-	( ?x { ?x a x:InferenceNode . ?x!r:evidence list:member ?inf } ?xs ) log:collectAllIn _:x .
-	?xs!list:length math:equalTo 0
-} .

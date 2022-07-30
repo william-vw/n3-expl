@@ -29,4 +29,3 @@
 		
 	) string:concatenation ?doc .
 } .
-
