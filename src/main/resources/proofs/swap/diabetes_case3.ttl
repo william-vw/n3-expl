@@ -187,7 +187,7 @@
 
 <#lemma13> a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
+    {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
   };
   r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
 
@@ -277,7 +277,7 @@
 
 <#lemma22> a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1, var:x_2, var:x_3. @forSome var:x_4. {var:x_0 a DMTO:DMTO_0000021.
+    {var:x_0 a DMTO:DMTO_0000021.
      var:x_0 DMTO:DMTO_0001667 var:x_1.
      var:x_1 DDO:DDO_0000140 <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0001939>.
      var:x_1 DDO:DDO_0000238 var:x_2.
@@ -290,7 +290,7 @@
 
 <#lemma23> a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1, var:x_2. @forSome var:x_3. {var:x_0 a DMTO:DMTO_0000021.
+    {var:x_0 a DMTO:DMTO_0000021.
      var:x_0 DMTO:DMTO_0001667 var:x_1.
      var:x_1 DDO:DDO_0000139 var:x_2.
      var:x_2 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>.
@@ -301,7 +301,7 @@
 
 <#lemma24> a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1, var:x_2. {var:x_0 a DMTO:DMTO_0000021.
+    {var:x_0 a DMTO:DMTO_0000021.
      var:x_0 DMTO:DMTO_0001667 var:x_1.
      var:x_1 DDO:DDO_0000140 var:x_2.
      var:x_2 list:in (<https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0001936> <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0001937> <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0001938> <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0001939> <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0001940>)} => {var:x_1 DDO:DDO_0000140 <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0001935>}.

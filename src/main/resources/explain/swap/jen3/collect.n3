@@ -9,34 +9,34 @@
 @prefix string: <http://www.w3.org/2000/10/swap/string#> .
 @prefix r: <http://www.w3.org/2000/10/swap/reason#> .
 @prefix : <http://wvw.org/xai#> .
-@base <http://wvw.org/xai#> .
 
 
 {	?x a ?type .
 	?type list:in ( r:Extraction r:Fact ) .
-	?x :conclusionStr ?conclStr .
+	?x :conclusionStr ?str .
 	
-} => { ?x :output ?conclStr } .
-
-
-{	?inf a r:Inference .
-	<> log:notIncludes { ?x r:component ?inf } .
-		
-} => { ?inf a :InferenceNode } .
+	( "<li class='fact'>" ?str "</li>" ) string:concatenation ?html .
+	
+} => { ?x :output ?html } .
 
 
 {	?inf a :InferenceNode ;
 		r:evidence ?evidences .
+	?evidences list:removeDuplicates ?evidences2 .
 
-	( ?html { ?evidence list:in ?evidences ; :output ?html } ?htmls ) log:collectAllIn <> .
+	( ?li {	?evidence list:in ?evidences2 ; x:output ?li } ?lis ) log:collectAllIn _:x .
+	?evidences2!list:length math:equalTo ?lis!list:length .
 	
-	?evidences list:length ?len .
-	?htmls!list:length math:equalTo ?len .
+	?lis string:concatenation ?lisStr .
 	
 	?inf :conclusionStr ?label .
+	( ?label "</span><span" "</span><br /><span" ) string:replace ?label2 .
 	
-	( ?htmls "</li><li>" ) string:join ?lis .
-	( "<b>" ?label "</b><ul><li>" ?lis "</li></ul>" ) string:concatenation ?html .
+	(	"<li class='inf'>" 
+			?label2 " "
+			"<ul>" ?lisStr "</ul>"
+		"</li>"
+	) string:concatenation ?html .
 
 } => { ?inf :output ?html } .
 
@@ -46,6 +46,16 @@
 	( ?x { ?x a :InferenceNode . ?x!r:evidence list:member ?inf } ?xs ) log:collectAllIn <> .
 	?xs!list:length math:equalTo 0 .
 	
-	?inf :output ?html
+	?inf :output ?html .
+	
+	( "<html>"
+		"<head>"
+			"<link rel='stylesheet' href='lib/style.css' />"
+			"<script type='text/javascript' src='lib/util.js'></script>"
+		"</head>"
+		"<body onload='loaded()'><ul>" ?html "</ul></body>"
+	"</html>"
+	
+	) string:concatenation ?doc .
 
-} => { <> :output ?html } .
+} => { ?inf log:outputString ?doc } .

@@ -11,45 +11,59 @@
 @prefix r: <http://www.w3.org/2000/10/swap/reason#> .
 @prefix x: <http://wvw.org/xai#> .
 @prefix : <http://wvw.org/xai#> .
-@base <http://wvw.org/xai#> .
 
 
-# (will spew out a skolemized IRI for blank nodes)
+# divide
+# (all terms to be described are indicated as "x:term"s)
+
+# (will generate a skolemized IRI for blank nodes)
 {	?x r:gives ?value . ?value log:includes { ?s ?p ?o } .
 
 } => { ?value x:term ?s , ?p , ?o } .
 
 
+{	?value x:term ?t .
+	?t log:rawType log:List .
+	?t list:member ?m .
+	
+	( ?t ) log:skolem ?ts .
+	
+} => { 	?ts x:term ?m } .
+
+
+# conquer
+# (generate strings for every "x:term" as "x:description"s)
+
+# atomic terms
+
 # blank nodes
 {	?value x:term ?t . 
 	?t log:rawType log:Uri .
-
 	?t log:uri ?uri .
 	# (check for skolemized IRI)
 	?uri string:matches "http://www.w3.org/2000/10/swap/genid#.*" .
+	( ?uri "http://www.w3.org/2000/10/swap/genid#(.*)" ) string:scrape ?id . 
 
-} => { ?t x:description ?uri } .
+} => { ?t x:description ?id } .
 
 
 # uris (with label)
 {	?value x:term ?t . 
 	?t log:rawType log:Uri .
-	
-	?t rdfs:label ?str .
+	?t rdfs:label ?l .
+	( "'" ?l "'" ) string:concatenation ?l2 .
 	
  	( ?t ) log:skolem ?ts .
 
-} => { ?ts x:description ?str } .
+} => { ?ts x:description ?l2 } .
 
 
 # uris (no label)
 {	?value x:term ?t . 
 	?t log:rawType log:Uri .
 	<> log:notIncludes { ?t rdfs:label ?l } . 
-	
 	?t log:uri ?uri .
 	?uri string:notMatches "http://www.w3.org/2000/10/swap/genid#.*" .
-	
  	?t log:localName ?str .
  	
  	( ?t ) log:skolem ?ts .
@@ -60,12 +74,39 @@
 # literals
 {	?value x:term ?t . 
 	?t log:rawType log:Literal . 
+	( "\"" ?t "\"" ) string:concatenation ?t2 .
 	
 	( ?t ) log:skolem ?ts .
 
-} => { ?ts x:description ?t } .
+} => { ?ts x:description ?t2 } .
+
+
+# compound terms
+
+# (collect all "x:description"s of list terms and use to describe list itself)
+{   ?value x:term ?list .
+	?list log:rawType log:List .
+
+    ( ?td
+    {
+        ?list list:member ?t .
+        ( ?t )!log:skolem x:description ?td .
+
+    } ?strs ) log:collectAllIn <> .
+    
+    ?strs!list:length math:equalTo ?list!list:length .
+    
+    ( ?strs " " ) string:join ?str2 .
+    ( "( " ?str2 " )" ) string:concatenation ?str3 .
+
+	( ?list ) log:skolem ?ls
+
+} => { ?ls x:description ?str3 } .
 
  
+# finalize
+
+# (using "x:description"s of terms, generate strings for "r:gives"s)
 {	?x!rdf:type list:in ( r:Extraction r:Inference r:Fact ) .
 	?x r:gives ?value .
 
@@ -73,15 +114,33 @@
 	{ 
 		?value graph:member ?m .
 		?m log:includes { ?s ?p ?o } .
-	
+		
 		( ?s )!log:skolem x:description ?sd .
         ( ?p )!log:skolem x:description ?pd .
         ( ?o )!log:skolem x:description ?od .
         
-        ( ?sd " " ?pd " " ?od ) string:concatenation ?str .
+        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span></span>" ) 
+        	string:concatenation ?str .
 		
-	} ?strs ) log:collectAllIn _:x .
+	} ?strs ) log:collectAllIn <> .
 	
-	( ?strs " , " ) string:join ?conclStr . 
+	?strs!list:length math:equalTo ?value!graph:length .
+	( ?strs "" ) string:join ?conclStr . 
 	
 } => { ?x x:conclusionStr ?conclStr } .
+
+
+# auxiliary
+
+{ 	?inf a r:Inference .
+	<> log:notIncludes { ?x r:component ?inf } 
+
+} => {	?inf a x:InferenceNode } .
+
+
+{	?inf a x:InferenceNode .
+	
+	( ?x { ?x a x:InferenceNode . ?x!r:evidence list:member ?inf } ?xs ) log:collectAllIn <> .
+	?xs!list:length math:equalTo 0
+	
+} => {	?inf a x:RootNode } .

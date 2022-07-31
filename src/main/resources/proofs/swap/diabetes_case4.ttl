@@ -353,7 +353,7 @@
 
 <#lemma25> a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
+    {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
   };
   r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
 
@@ -518,7 +518,7 @@
 
 <#lemma44> a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1, var:x_2, var:x_3. @forSome var:x_4. {var:x_0 a DMTO:DMTO_0000021.
+    {var:x_0 a DMTO:DMTO_0000021.
      var:x_0 DMTO:DMTO_0001667 var:x_1.
      var:x_1 DDO:DDO_0000238 var:x_2.
      var:x_2 a DDO:DDO_0000230.
@@ -531,7 +531,7 @@
 
 <#lemma45> a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5, var:x_6, var:x_7, var:x_8, var:x_9, var:x_10. @forSome var:x_11. {var:x_0 a DMTO:DMTO_0000021.
+    {var:x_0 a DMTO:DMTO_0000021.
      var:x_0 DMTO:DMTO_0001667 var:x_1.
      var:x_1 DDO:DDO_0000238 var:x_2.
      var:x_2 a DDO:DDO_0000233.

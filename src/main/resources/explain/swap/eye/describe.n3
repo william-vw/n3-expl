@@ -88,6 +88,7 @@
 
 } => { ?ts x:description ?t2 } .
 
+
 # compound terms
 
 # (collect all "x:description"s of list terms and use to describe list itself)
@@ -208,7 +209,7 @@
 } => { ?x x:ruleStr ?ruleStr5 ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
 
 
-# auxillary
+# auxiliary
 
 {	?inf a x:InferenceNode 
 		
