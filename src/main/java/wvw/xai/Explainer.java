@@ -1,6 +1,6 @@
 package wvw.xai;
 
-import java.io.File;
+import java.io.ByteArrayInputStream;
 
 import org.apache.jen3.n3.FeedbackActions;
 import org.apache.jen3.n3.FeedbackTypes;
@@ -10,7 +10,6 @@ import org.apache.jen3.n3.N3Model;
 import org.apache.jen3.n3.N3ModelSpec;
 import org.apache.jen3.n3.N3ModelSpec.Types;
 import org.apache.jen3.rdf.model.ModelFactory;
-import org.apache.jen3.rdf.model.Resource;
 import org.apache.jen3.util.IOUtils;
 
 public class Explainer {
@@ -36,10 +35,14 @@ public class Explainer {
 		String system = "jen3";
 
 //		String proofFile = "patient_red1.ttl";
-//		String labelFile = null;
+//		String proofFile = "diabetes_case3.ttl";
+//		String proofFile = "diabetes_case4.ttl";
+//		String proofFile = "witch.ttl";
+//		String proofFile = "medic.ttl";
+		String proofFile = "test2.ttl";
 
-		String proofFile = "diabetes_case2.ttl";
-		String labelFile = "cases/diabetes/labels.ttl";
+		String labelFile = null;
+//		String labelFile = "cases/diabetes/labels.ttl";
 
 		N3ModelSpec spec = N3ModelSpec.get(Types.N3_MEM_FP_INF);
 		spec.setFeedback(new N3Feedback(N3MistakeTypes.BUILTIN_WRONG_INPUT, FeedbackTypes.NONE, FeedbackActions.LOG));
@@ -49,7 +52,12 @@ public class Explainer {
 		if (labelFile != null)
 			model.read(IOUtils.getResourceInputStream(Explainer.class, labelFile), "N3");
 
-		model.read(IOUtils.getResourceInputStream(Explainer.class, "proofs/" + proofType + "/" + proofFile), "N3");
+		String proofPath = "proofs/" + proofType + "/" + proofFile;
+		String proof = IOUtils.readResourceString(Explainer.class, proofPath);
+		proof = proof.replaceAll("@forAll [^\\{]*", "");
+//		IOUtils.writeToResourceFile(proof, proofPath);
+
+		model.read(new ByteArrayInputStream(proof.getBytes()), "N3");
 
 		String explainFolder = "explain/" + proofType + "/" + system + "/";
 		model.read(IOUtils.getResourceInputStream(Explainer.class, explainFolder + "describe.n3"), "N3");
@@ -75,15 +83,12 @@ public class Explainer {
 
 		String html = model.outputString();
 //		System.out.println(html);
-		
-		String resDir = System.getProperty("user.dir") + "/src/main/resources/";
-		String htmlDir = resDir + "output/jen3/";
-		
+
 		String fileName = proofFile.substring(0, proofFile.indexOf(".ttl"));
-		File htmlFile = new File(htmlDir + fileName + ".html");
-		IOUtils.writeToFile(html, htmlFile);
-		System.out.println("written to " + htmlFile.getAbsolutePath());
-		
+		String htmlPath = "output/jen3/" + fileName + ".html";
+		IOUtils.writeToResourceFile(html, htmlPath);
+		System.out.println("written to " + htmlPath);
+
 //		model.write(System.out);
 		model.getDeductionsModel().write(System.out);
 	}

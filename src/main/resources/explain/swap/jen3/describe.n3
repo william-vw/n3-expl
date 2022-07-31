@@ -19,7 +19,9 @@
 # (will generate a skolemized IRI for blank nodes)
 {	?x r:gives ?value . ?value log:includes { ?s ?p ?o } .
 
-} => { ?value x:term ?s , ?p , ?o } .
+	( ?s ) log:skolem ?ss . ( ?p ) log:skolem ?ps . ( ?o ) log:skolem ?os .
+
+} => { ?value x:term ?s , ?p , ?o . ?value x:skolem ?ss , ?ps , ?os } .
 
 
 {	?value x:term ?t .
@@ -29,6 +31,17 @@
 	( ?t ) log:skolem ?ts .
 	
 } => { 	?ts x:term ?m } .
+
+
+{ 	?value x:term ?t .
+	?t log:rawType log:Formula .
+	?t graph:member ?m .
+	?m log:includes { ?s ?p ?o } .
+	
+	( ?t ) log:skolem ?ts .
+
+} => { 	?ts x:term ?s , ?p , ?o } . 
+
 
 
 # conquer
@@ -58,7 +71,7 @@
 } => { ?ts x:description ?l2 } .
 
 
-# uris (no label)
+# uris (without label)
 {	?value x:term ?t . 
 	?t log:rawType log:Uri .
 	<> log:notIncludes { ?t rdfs:label ?l } . 
@@ -82,8 +95,9 @@
 
 
 # compound terms
+# (collect all "x:description"s of constituents and use to describe compound itself)
 
-# (collect all "x:description"s of list terms and use to describe list itself)
+# list
 {   ?value x:term ?list .
 	?list log:rawType log:List .
 
@@ -94,7 +108,7 @@
 
     } ?strs ) log:collectAllIn <> .
     
-    ?strs!list:length math:equalTo ?list!list:length .
+    ?strs list:length ?list!list:length .
     
     ( ?strs " " ) string:join ?str2 .
     ( "( " ?str2 " )" ) string:concatenation ?str3 .
@@ -102,6 +116,33 @@
 	( ?list ) log:skolem ?ls
 
 } => { ?ls x:description ?str3 } .
+
+
+# formula
+{   ?value x:term ?form .
+	?form log:rawType log:Formula .
+
+    ( ?td
+    {
+        ?form graph:member ?m .
+		?m log:includes { ?s ?p ?o } .
+	
+        ( ?s )!log:skolem x:description ?sd .
+        ( ?p )!log:skolem x:description ?pd .
+        ( ?o )!log:skolem x:description ?od .
+        
+        ( ?sd " " ?pd " " ?od " ." ) string:concatenation ?td .
+
+    } ?strs ) log:collectAllIn _:x .
+    
+    ?form graph:length ?strs!list:length .
+    
+    ( ?strs " " ) string:join ?str2 .
+    ( "{ " ?str2 " }" ) string:concatenation ?str3 .
+
+	( ?form ) log:skolem ?fs .
+
+} => { ?fs x:description ?str3 } .
 
  
 # finalize

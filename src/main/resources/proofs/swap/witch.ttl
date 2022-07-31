@@ -144,7 +144,7 @@
 
 <#lemma11> a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
+    {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
   };
   r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
 
@@ -225,26 +225,26 @@
 
 <#lemma20> a r:Extraction;
   r:gives {
-    @forAll var:x_0. {var:x_0 a :FLOATS} => {var:x_0 a :ISMADEOFWOOD}.
+    {var:x_0 a :FLOATS} => {var:x_0 a :ISMADEOFWOOD}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/witch/witch.n3>].
 
 <#lemma21> a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1. {var:x_0 a :FLOATS.
+    {var:x_0 a :FLOATS.
      var:x_0 :SAMEWEIGHT var:x_1} => {var:x_1 a :FLOATS}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/witch/witch.n3>].
 
 <#lemma22> a r:Extraction;
   r:gives {
-    @forAll var:x_0. {var:x_0 a :ISMADEOFWOOD} => {var:x_0 a :BURNS}.
+    {var:x_0 a :ISMADEOFWOOD} => {var:x_0 a :BURNS}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/witch/witch.n3>].
 
 <#lemma23> a r:Extraction;
   r:gives {
-    @forAll var:x_0. {var:x_0 a :BURNS.
+    {var:x_0 a :BURNS.
      var:x_0 a :WOMAN} => {var:x_0 a :WITCH}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/witch/witch.n3>].

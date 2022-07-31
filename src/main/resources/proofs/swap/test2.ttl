@@ -1,25 +1,13 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/>.
-@prefix DMTO: <https://bioportal.bioontology.org/ontologies/DMTO.owl#>.
-@prefix DTO: <https://bioportal.bioontology.org/ontologies/DTO.owl#>.
-@prefix DDO: <http://purl.obolibrary.org/obo/DDO.owl#>.
-@prefix obo: <http://purl.obolibrary.org/obo#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix xml: <http://www.w3.org/XML/1998/namespace>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix cg: <http://niche.cs.dal.ca/codegen.owl#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
-@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix fl: <http://eulersharp.sourceforge.net/2003/03swap/fl-rules#>.
+@prefix : <http://eulersharp.sourceforge.net/2006/02swap/med#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix var: <http://josd.github.io/var#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
-<#lemma20> a r:Inference;
-  r:gives {
-    DMTO:patient0_profile DMTO:recommend_test _:sk_1.
-    _:sk_1 a DMTO:diabetes_screening.
-  }.
+<#lemma37> a r:Inference;
+  r:evidence (
+    [ a r:Fact; r:gives {((<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>) 1) e:findall (_:sk_2 {:betaBlocker :excludedFor _:sk_2} (:SevereAsthma :ChronicObstructivePumonaryDisease))}]
+  ) .
