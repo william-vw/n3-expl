@@ -1,4 +1,4 @@
-#Processed by EYE v22.0725.1110 josd
+#Processed by EYE v22.0801.1043 josd
 #eye --pass-only-new --nope --n3 cases/medic/medic.n3 cases/medic/medic.n3
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
@@ -10,6 +10,6 @@
 :Joe :isPrescribed :aspirinLowDose.
 :Joe :isPrescribed :betaBlocker.
 
-#2022-07-30T14:19:29.088Z in=18 out=2 ent=2 step=8 brake=4 inf=54879 sec=0.054 inf/sec=1016278
+#2022-08-03T13:17:00.631Z in=18 out=2 ent=2 step=8 brake=4 inf=54877 sec=0.057 inf/sec=962754
 #ENDS
 

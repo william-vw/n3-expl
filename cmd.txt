@@ -1,12 +1,10 @@
 - shell script:
 cd src/main/resources/
 ./explain.sh -d cases/copd/patient_red1.ttl -r cases/copd/rules.n3 -p proofs/swap/patient_red1.ttl -h output/eye/copd.html
-
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case1/example-data1.n3 -r cases/diabetes/case1/diabetes-case1-bnodes.n3 -p proofs/swap/diabetes_case1.ttl -h output/eye/diabetes_case1.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case2/example-data2.n3 -r cases/diabetes/case2/diabetes-case2.n3 -p proofs/swap/diabetes_case2.ttl -h output/eye/diabetes_case2.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case3/example-data3.n3 -r cases/diabetes/case3/diabetes-case3.n3 -p proofs/swap/diabetes_case3.ttl -h output/eye/diabetes_case3.html
 ./explain.sh -l cases/diabetes/labels.ttl -d cases/diabetes/case4/example-data4.n3 -r cases/diabetes/case4/diabetes-case4.n3 -p proofs/swap/diabetes_case4.ttl -h output/eye/diabetes_case4.html
-
 ./explain.sh -d cases/witch/witch.n3 -r cases/witch/witch.n3 -p proofs/swap/witch.ttl -h output/eye/witch.html
 ./explain.sh -d cases/medic/medic.n3 -r cases/medic/medic.n3 -p proofs/swap/medic.ttl -h output/eye/medic.html
 ./explain.sh -d cases/lldm/lldmD.n3 -r cases/lldm/lldmP.n3 -p proofs/swap/lldm.ttl -h output/eye/lldm.html

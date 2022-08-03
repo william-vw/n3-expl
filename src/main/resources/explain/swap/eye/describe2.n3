@@ -18,29 +18,27 @@
 # (all terms to be described are indicated as "x:term"s)
 
 {   ?x r:gives ?value . # formula
-	?value e:labelvars ?valuel.
-	?valuel log:includes { ?s ?p ?o } .
-	
-} => { 	?valuel x:term ?s , ?p , ?o } .
+        ?value e:labelvars ?valuel.
+        ?valuel log:includes { ?s ?p ?o } .
+
+} => {  ?valuel x:term ?s , ?p , ?o } .
 
 
-{	?value x:term ?t .
-	?t log:rawType rdf:List .
-	?t e:labelvars ?tl .
-	
-	?tl list:member ?m
-	
-} => { 	?tl x:term ?m } .
+{       ?value x:term ?t .
+        ?t log:rawType rdf:List .
+
+        ?t list:member ?m
+
+} => {  ?t x:term ?m } .
 
 
-{ 	?value x:term ?t .
-	?t log:rawType log:Formula .
-	?t e:labelvars ?tl .
-	
-	?tl e:graphMember ?m .
-	?m log:includes { ?s ?p ?o } .
+{       ?value x:term ?t .
+        ?t log:rawType log:Formula .
 
-} => { 	?tl x:term ?s , ?p , ?o } . 
+        ?t e:graphMember ?m .
+        ?m log:includes { ?s ?p ?o } .
+
+} => {  ?t x:term ?s , ?p , ?o } .
 
 
 # conquer
@@ -50,10 +48,10 @@
 
 {   ?value x:term ?t .
     ?t log:rawType log:Other .
-	_:x log:notIncludes { ?t rdfs:label ?l } .
+        _:x log:notIncludes { ?t rdfs:label ?l } .
     ?t log:uri ?uri .
     ( ?uri ".+#(.+)" ) string:scrape ?ln .
-	( ":" ?ln ) string:concatenation ?ln2 . 
+        ( ":" ?ln ) string:concatenation ?ln2 .
 
     ?t log:localN3String ?ts .
 
@@ -61,7 +59,7 @@
 
 
 {   ?value x:term ?t .
-	?t log:rawType log:Other .
+        ?t log:rawType log:Other .
     ?t log:uri ?uri .
     ?uri string:notMatches ".+#.+" .
 
@@ -72,19 +70,19 @@
 
 {   ?value x:term ?t .
     ?t log:rawType log:Other .
-	?t rdfs:label ?l .
-	( "'" ?l "'" ) string:concatenation ?l2 .
-		
-	?t!e:labelvars log:localN3String ?ts .
-	
+        ?t rdfs:label ?l .
+        ( "'" ?l "'" ) string:concatenation ?l2 .
+
+        ?t log:localN3String ?ts .
+
 } => { ?ts x:description ?l2 } .
 
 
-{ 	?value x:term ?t .
-	?t log:rawType log:Literal .
-	( "\"" ?t "\"" ) string:concatenation ?t2 .
+{       ?value x:term ?t .
+        ?t log:rawType log:Literal .
+        ( "\"" ?t "\"" ) string:concatenation ?t2 .
 
-	?t log:localN3String ?ts .
+        ?t log:localN3String ?ts .
 
 } => { ?ts x:description ?t2 } .
 
@@ -92,28 +90,27 @@
 
 # (collect all "x:description"s of formula terms and use to describe formula itself)
 {   ?value x:term ?form .
-	?form log:rawType log:Formula .
-	?form e:labelvars ?forml .
+        ?form log:rawType log:Formula .
 
     ( ?td
     {
-        ?forml e:graphMember ?m .
-		?m log:includes { ?s ?p ?o } .
-	
-        ?s!e:labelvars!log:localN3String x:description ?sd .
-        ?p!e:labelvars!log:localN3String x:description ?pd .
-        ?o!e:labelvars!log:localN3String x:description ?od .
-        
+        ?form e:graphMember ?m .
+                ?m log:includes { ?s ?p ?o } .
+
+        ?s!log:localN3String x:description ?sd .
+        ?p!log:localN3String x:description ?pd .
+        ?o!log:localN3String x:description ?od .
+
         ( ?sd " " ?pd " " ?od " ." ) string:concatenation ?td .
 
     } ?strs ) log:collectAllIn _:x .
-    
+
     ?form graph:length ?strs!list:length .
-    
+
     ( ?strs " " ) string:join ?str2 .
     ( "{ " ?str2 " }" ) string:concatenation ?str3 .
 
-	?forml log:localN3String ?fs
+        ?form log:localN3String ?fs
 
 } => { ?fs x:description ?str3 } .
 
@@ -121,28 +118,28 @@
 # finalize
 
 # (using "x:description"s of terms, generate strings for "r:gives"s)
-{	?x!rdf:type list:in ( r:Extraction r:Inference r:Fact ) .
+{       ?x!rdf:type list:in ( r:Extraction r:Inference r:Fact ) .
     ?x r:gives ?value .
     ?value e:labelvars ?valuel .
 
     ( ?str
-    {	?valuel e:graphMember ?m .
+    {   ?valuel e:graphMember ?m .
         ?m log:includes { ?s ?p ?o } .
-        
+
         # checking for x:description fails for last lemma in test.ttl
         # (regardless of which lemma; it just has to be listed as last)
-        
-        #?s!e:labelvars log:localN3String ?sd . 
-        ?s!e:labelvars!log:localN3String x:description ?sd .
-        
-        #?p!e:labelvars log:localN3String ?pd . 
-        ?p!e:labelvars!log:localN3String x:description ?pd .
-        
-        #?o!e:labelvars log:localN3String ?od . 
-        ?o!e:labelvars!log:localN3String x:description ?od .
-        
+
+        #?s!e:labelvars log:localN3String ?sd .
+        ?s!log:localN3String x:description ?sd .
+
+        #?p!e:labelvars log:localN3String ?pd .
+        ?p!log:localN3String x:description ?pd .
+
+        #?o!e:labelvars log:localN3String ?od .
+        ?o!log:localN3String x:description ?od .
+
         ( ?sd ?pd ?od ) log:equalTo ?str .
 
     } ?strs ) log:collectAllIn _:x .
-    
-} => {	?x x:conclusionStr ?strs } .
+
+} => {  ?x x:conclusionStr ?strs } .

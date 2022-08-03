@@ -26,3 +26,11 @@
 
 #{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr 
 #} <= { ?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr } .
+
+
+{	?x x:output ?output  
+} <= { ?x x:output ?output } .
+
+
+#{	1 log:outputString ?doc
+#} <= { 1 log:outputString ?doc } .

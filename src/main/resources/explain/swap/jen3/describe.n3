@@ -49,7 +49,7 @@
 
 # atomic terms
 
-# blank nodes
+# skolemized blank nodes
 {	?value x:term ?t . 
 	?t log:rawType log:Uri .
 	?t log:uri ?uri .
@@ -58,6 +58,16 @@
 	( ?uri "http://www.w3.org/2000/10/swap/genid#(.*)" ) string:scrape ?id . 
 
 } => { ?t x:description ?id } .
+
+
+# blank nodes
+{	?value x:term ?t .
+	?t log:rawType log:BlankNode .
+	?t log:label ?label .
+	
+	( ?t ) log:skolem ?ts 
+	
+} => { ?ts x:description ?label } .
 
 
 # uris (with label)

@@ -94,12 +94,11 @@
 # (collect all "x:description"s of list terms and use to describe list itself)
 {   ?value x:term ?list .
 	?list log:rawType rdf:List .
-	?list e:labelvars ?listl .
 
     ( ?td
     {
-        ?listl list:member ?t .
-        ?t!e:labelvars!log:localN3String x:description ?td .
+        ?list list:member ?t .
+        ?t!log:localN3String x:description ?td .
 
     } ?strs ) log:collectAllIn _:x .
     
@@ -108,7 +107,7 @@
     ( ?strs " " ) string:join ?str2 .
     ( "( " ?str2 " )" ) string:concatenation ?str3 .
 
-	?listl log:localN3String ?ls
+	?list log:localN3String ?ls
 
 } => { ?ls x:description ?str3 } .
 
@@ -116,16 +115,15 @@
 # (collect all "x:description"s of formula terms and use to describe formula itself)
 {   ?value x:term ?form .
 	?form log:rawType log:Formula .
-	?form e:labelvars ?forml .
 
     ( ?td
     {
-        ?forml e:graphMember ?m .
+        ?form e:graphMember ?m .
 		?m log:includes { ?s ?p ?o } .
 	
-        ?s!e:labelvars!log:localN3String x:description ?sd .
-        ?p!e:labelvars!log:localN3String x:description ?pd .
-        ?o!e:labelvars!log:localN3String x:description ?od .
+        ?s!log:localN3String x:description ?sd .
+        ?p!log:localN3String x:description ?pd .
+        ?o!log:localN3String x:description ?od .
         
         ( ?sd " " ?pd " " ?od " ." ) string:concatenation ?td .
 
@@ -136,7 +134,7 @@
     ( ?strs " " ) string:join ?str2 .
     ( "{ " ?str2 " }" ) string:concatenation ?str3 .
 
-	?forml log:localN3String ?fs
+	?form log:localN3String ?fs
 
 } => { ?fs x:description ?str3 } .
 
@@ -151,35 +149,28 @@
     ( ?str
     {	?valuel e:graphMember ?m .
         ?m log:includes { ?s ?p ?o } .
+         
+        ?s!log:localN3String x:description ?sd . 
+        ?p!log:localN3String x:description ?pd .
+        ?o!log:localN3String x:description ?od .
         
-        # checking for x:description fails for last lemma in test.ttl
-        # (regardless of which lemma; it just has to be listed as last)
-        
-        #?s!e:labelvars log:localN3String ?sd . 
-        ?s!e:labelvars!log:localN3String x:description ?sd .
-        
-        #?p!e:labelvars log:localN3String ?pd . 
-        ?p!e:labelvars!log:localN3String x:description ?pd .
-        
-        #?o!e:labelvars log:localN3String ?od . 
-        ?o!e:labelvars!log:localN3String x:description ?od .
-        
-        ( ?sd ?pd ?od ) log:equalTo ?str .
+        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span></span>" ) 
+        	string:concatenation ?str .
 
     } ?strs ) log:collectAllIn _:x .
     
-} => {	?x x:conclusionStr ?strs } .
+    ?strs!list:length math:equalTo ?value!graph:length .
+    
+    ( ?strs " " ) string:join ?str2 .
+    
+} => {	?x x:conclusionStr ?str2 } .
 
 
 # (describe inference nodes in some more detail)
 {	?x a x:InferenceNode ; 
 		r:rule ?extraction .
 	
-	?extraction!r:gives log:localN3String ?ruleStr .
-	( ?ruleStr "(\\{.*?\\}\\s*=>\\s*\\{.*?\\})" ) string:scrape ?ruleStr2 . 
-	( ?ruleStr2 "<" "&lt;" ) string:replace ?ruleStr3 .
-	( ?ruleStr3 ">" "&gt;" ) string:replace ?ruleStr4 .
-	( ?ruleStr4 "(var:[^ ]*)" "<span class='var'>$1</span>" ) string:replace ?ruleStr5.
+	?extraction x:conclusionStr ?ruleStr .
 	 
 	?extraction!r:because!r:source log:uri ?source .
 	
@@ -206,7 +197,7 @@
 	
 	?assigns2 string:concatenation ?bindingStr .
 	
-} => { ?x x:ruleStr ?ruleStr5 ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
+} => { ?x x:ruleStr ?ruleStr ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
 
 
 # auxiliary

@@ -1,4 +1,4 @@
-#Processed by EYE v22.0725.1110 josd
+#Processed by EYE v22.0801.1043 josd
 #eye --pass --n3 cases/medic/medic.n3 cases/medic/medic.n3
 
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
@@ -426,6 +426,6 @@
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3>].
 
-#2022-07-30T14:19:29.286Z in=18 out=18 ent=20 step=96 brake=5 inf=96863 sec=0.059 inf/sec=1641746
+#2022-08-03T13:17:00.827Z in=18 out=18 ent=20 step=96 brake=5 inf=97473 sec=0.058 inf/sec=1680569
 #ENDS
 
