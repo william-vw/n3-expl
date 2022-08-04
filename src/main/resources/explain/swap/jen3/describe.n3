@@ -21,7 +21,7 @@
 
 	( ?s ) log:skolem ?ss . ( ?p ) log:skolem ?ps . ( ?o ) log:skolem ?os .
 
-} => { ?value x:term ?s , ?p , ?o . ?value x:skolem ?ss , ?ps , ?os } .
+} => { ?value x:term ?s , ?p , ?o } . # ?value x:skolem ?ss , ?ps , ?os } .
 
 
 {	?value x:term ?t .
@@ -49,17 +49,6 @@
 
 # atomic terms
 
-# skolemized blank nodes
-{	?value x:term ?t . 
-	?t log:rawType log:Uri .
-	?t log:uri ?uri .
-	# (check for skolemized IRI)
-	?uri string:matches "http://www.w3.org/2000/10/swap/genid#.*" .
-	( ?uri "http://www.w3.org/2000/10/swap/genid#(.*)" ) string:scrape ?id . 
-
-} => { ?t x:description ?id } .
-
-
 # blank nodes
 {	?value x:term ?t .
 	?t log:rawType log:BlankNode .
@@ -82,12 +71,46 @@
 
 
 # uris (without label)
+
 {	?value x:term ?t . 
 	?t log:rawType log:Uri .
-	<> log:notIncludes { ?t rdfs:label ?l } . 
-	?t log:uri ?uri .
-	?uri string:notMatches "http://www.w3.org/2000/10/swap/genid#.*" .
- 	?t log:localName ?str .
+	<> log:notIncludes { ?t rdfs:label ?l } .
+	?t!log:uri string:notMatches ".*/.well-known/genid/.*" .
+	
+	?t log:nameSpace ?ns .
+	# TODO more generic solution here (cfr. e:optional?)
+	?ns log:hasPrefix true .
+	?ns log:prefix ?prefix .
+ 	?t log:localName ?ln .
+ 	( ?prefix ":" ?ln ) string:concatenation ?str .
+ 	
+ 	( ?t ) log:skolem ?ts .
+
+} => { ?ts x:description ?str } .
+
+
+{	?value x:term ?t . 
+	?t log:rawType log:Uri .
+	<> log:notIncludes { ?t rdfs:label ?l } .
+	?t!log:uri string:notMatches ".*/.well-known/genid/.*" .
+	
+	?t log:nameSpace ?ns .
+	?ns log:hasPrefix false .
+ 	?t log:localName ?ln .
+ 	( "#" ?ln ) string:concatenation ?str .
+ 	
+ 	( ?t ) log:skolem ?ts .
+
+} => { ?ts x:description ?str } .
+
+
+# skolemized uris
+{	?value x:term ?t . 
+	?t log:rawType log:Uri .
+	?t!log:uri string:matches ".*/.well-known/genid/.*" .
+	
+	?t log:localName ?ln .
+ 	( "_:" ?ln ) string:concatenation ?str .
  	
  	( ?t ) log:skolem ?ts .
 
@@ -141,7 +164,8 @@
         ( ?p )!log:skolem x:description ?pd .
         ( ?o )!log:skolem x:description ?od .
         
-        ( ?sd " " ?pd " " ?od " ." ) string:concatenation ?td .
+        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span> .</span>" ) 
+        	string:concatenation ?td .
 
     } ?strs ) log:collectAllIn _:x .
     
@@ -170,7 +194,7 @@
         ( ?p )!log:skolem x:description ?pd .
         ( ?o )!log:skolem x:description ?od .
         
-        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span></span>" ) 
+        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span> .</span>" ) 
         	string:concatenation ?str .
 		
 	} ?strs ) log:collectAllIn <> .
@@ -179,6 +203,39 @@
 	( ?strs "" ) string:join ?conclStr . 
 	
 } => { ?x x:conclusionStr ?conclStr } .
+
+
+# (describe inference nodes in some more detail)
+{	?x a x:InferenceNode ; 
+		r:rule ?extraction .
+	
+	?extraction x:conclusionStr ?ruleStr .
+	( ?ruleStr "log:implies" "<div class='implies'>=></div>" ) string:replace ?ruleStr2 .
+	 
+	?extraction!r:because!r:source log:uri ?source .
+	
+	( ?assign
+	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . ?binding!r:boundTo n3:uri ?uri .
+		( ?uri ".*?#(.*)" ) string:scrape ?ln . ( ":" ?ln ) string:concatenation ?ln2 .
+		( ?var ".*#(.*)" ) string:scrape ?var2 .
+		( "<div class='assign'><span class='var'>var:" ?var2 "</span> = <span class='val uri'>" ?ln2 "</span></div>" ) 
+			string:concatenation ?assign .
+		
+	} ?uriAssigns) log:collectAllIn <> .
+	
+	( ?assign
+	{	?x r:binding ?binding . ?binding!r:variable n3:uri ?var . 
+		?binding r:boundTo ?lit . ?lit log:rawType log:Literal . ( "\"" ?lit "\"" ) string:concatenation ?lit2 .
+		( ?var ".*#(.*)" ) string:scrape ?var2 .
+		( "<div class='assign'><span class='var'>var:" ?var2 "</span> = <span class='val lit'>" ?lit2 "</span></div>" ) 
+			string:concatenation ?assign .
+			
+	} ?litAssigns) log:collectAllIn <> .
+	
+	( ?uriAssigns ?litAssigns )!list:append list:sort ?assigns.	
+	?assigns string:concatenation ?bindingStr .
+	
+} => { ?x x:ruleStr ?ruleStr2 ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
 
 
 # auxiliary

@@ -63,6 +63,13 @@ body > ul > li:not(:first-child) {
 	padding: 5px;
 }
 
+.implies {
+	margin-left: 15px;
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*
 .var {
 	font-weight: bold;
-}
+}*/

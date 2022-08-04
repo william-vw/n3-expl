@@ -12,24 +12,24 @@
 @base <http://wvw.org/xai#> .
 
 
-#{	?x x:term ?term 
-#} <= { ?x x:term ?term } .
+{	0 x:term ?term 
+} <= { ?x x:term ?term } .
 
 
-#{	?x x:description ?descr 
-#} <= { ?x x:description ?descr } .
+{	?x x:description ?descr 
+} <= { ?x x:description ?descr } .
 
 
-{	?x x:conclusionStr ?str  
-} <= { ?x x:conclusionStr ?str } .
+#{	?x x:conclusionStr ?str  
+#} <= { ?x x:conclusionStr ?str } .
 
 
 #{	?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr 
 #} <= { ?x x:ruleStr ?ruleStr ; x:sourceStr ?sourceStr ; x:bindingStr ?bindingStr } .
 
 
-{	?x x:output ?output  
-} <= { ?x x:output ?output } .
+#{	?x x:output ?output  
+#} <= { ?x x:output ?output } .
 
 
 #{	1 log:outputString ?doc

@@ -35,11 +35,14 @@ public class Explainer {
 		String system = "jen3";
 
 //		String proofFile = "patient_red1.ttl";
+//		String proofFile = "diabetes_case1.ttl";
+//		String proofFile = "diabetes_case2.ttl";
 //		String proofFile = "diabetes_case3.ttl";
 //		String proofFile = "diabetes_case4.ttl";
 //		String proofFile = "witch.ttl";
-//		String proofFile = "medic.ttl";
-		String proofFile = "test2.ttl";
+		String proofFile = "medic.ttl";
+//		String proofFile = "lldm.ttl";
+//		String proofFile = "test2.ttl";
 
 		String labelFile = null;
 //		String labelFile = "cases/diabetes/labels.ttl";
@@ -90,6 +93,6 @@ public class Explainer {
 		System.out.println("written to " + htmlPath);
 
 //		model.write(System.out);
-		model.getDeductionsModel().write(System.out);
+//		model.getDeductionsModel().write(System.out);
 	}
 }

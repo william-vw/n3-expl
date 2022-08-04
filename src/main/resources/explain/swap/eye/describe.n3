@@ -52,7 +52,7 @@
     ?t log:rawType log:Other .
 	_:x log:notIncludes { ?t rdfs:label ?l } .
     ?t log:uri ?uri .
-    ( ?uri ".+#(.+)" ) string:scrape ?ln .
+    ( ?uri ".+(#|/)(.+)" ) string:search ( ?div ?ln ) .
 	( ":" ?ln ) string:concatenation ?ln2 . 
 
     ?t log:localN3String ?ts .
@@ -125,7 +125,7 @@
         ?p!log:localN3String x:description ?pd .
         ?o!log:localN3String x:description ?od .
         
-        ( ?sd " " ?pd " " ?od " ." ) string:concatenation ?td .
+        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span> .</span>" )
 
     } ?strs ) log:collectAllIn _:x .
     
@@ -154,7 +154,7 @@
         ?p!log:localN3String x:description ?pd .
         ?o!log:localN3String x:description ?od .
         
-        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span></span>" ) 
+        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span> .</span>" ) 
         	string:concatenation ?str .
 
     } ?strs ) log:collectAllIn _:x .
