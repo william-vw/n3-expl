@@ -1,4 +1,4 @@
-#Processed by EYE v22.0801.1043 josd
+#Processed by EYE v22.0804.2304 josd
 #eye --pass --n3 cases/copd/patient_red1.ttl cases/copd/rules.n3
 
 @prefix : <http://wvw.org/copd#>.
@@ -205,6 +205,6 @@
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
 
-#2022-08-03T13:12:48.225Z in=28 out=8 ent=10 step=36 brake=4 inf=72817 sec=0.055 inf/sec=1323945
+#2022-08-05T12:10:45.688Z in=28 out=8 ent=10 step=36 brake=4 inf=72817 sec=0.059 inf/sec=1234186
 #ENDS
 
