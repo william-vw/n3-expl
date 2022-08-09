@@ -24,7 +24,7 @@
 	?x log:includes { ?s ?p ?o } .
 	?s log:rawType ?type .
 	# "var:x" doesn't seem to return a uri
-	# ?s log:uri ?uri .
+	?s log:uri ?uri .
 
-} => { <> :output ?type } . # works
-#} => { <> :output ?uri } . # doesn't work (uncomment last triple in rule body)
+#} => { <> :output ?type } . # works
+} => { <> :output ?uri } . # doesn't work (uncomment last triple in rule body)
