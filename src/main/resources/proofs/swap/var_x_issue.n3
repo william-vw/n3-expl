@@ -1,0 +1,30 @@
+@prefix : <http://wvw.org/copd#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix pml: <http://provenanceweb.org/ns/pml#>.
+@prefix diary: <http://wvw.org/diary#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix var: <http://josd.github.io/var#>.
+@prefix n3: <http://www.w3.org/2004/06/rei#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+
+<#lemma19> a r:Extraction;
+  r:gives {
+    @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :isStratified :RedZone}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
+   
+   
+{	?lemma r:gives ?value .
+	?value e:labelvars ?valuel .
+	?valuel log:includes { ?x log:implies ?y } .
+	?x log:includes { ?s ?p ?o } .
+	?s log:rawType ?type .
+	# "var:x" doesn't seem to return a uri
+	?s log:uri ?uri .
+
+#} => { <> :output ?type } . # works
+} => { <> :output ?uri } . # doesn't work (uncomment last triple in rule body)
