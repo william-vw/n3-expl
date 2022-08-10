@@ -192,9 +192,10 @@
 		
 		( ?s )!log:skolem x:description ?sd .
         ( ?p )!log:skolem x:description ?pd .
+		( ?pd "log:implies" "<div class='implies'>=></div>" ) string:replace ?pd2 .
         ( ?o )!log:skolem x:description ?od .
         
-        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span> .</span>" ) 
+        ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd2 "</span> <span class='object'>" ?od "</span> .</span>" ) 
         	string:concatenation ?str .
 		
 	} ?strs ) log:collectAllIn <> .
@@ -210,7 +211,6 @@
 		r:rule ?extraction .
 	
 	?extraction x:conclusionStr ?ruleStr .
-	( ?ruleStr "log:implies" "<div class='implies'>=></div>" ) string:replace ?ruleStr2 .
 	 
 	?extraction!r:because!r:source log:uri ?source .
 	
@@ -235,7 +235,7 @@
 	( ?uriAssigns ?litAssigns )!list:append list:sort ?assigns.	
 	?assigns string:concatenation ?bindingStr .
 	
-} => { ?x x:ruleStr ?ruleStr2 ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
+} => { ?x x:ruleStr ?ruleStr ; x:sourceStr ?source ; x:bindingStr ?bindingStr } .
 
 
 # auxiliary

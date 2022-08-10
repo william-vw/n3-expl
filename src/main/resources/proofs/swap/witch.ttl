@@ -1,4 +1,4 @@
-#Processed by EYE v22.0801.1043 josd
+#Processed by EYE v22.0809.1553 josd
 #eye --pass --n3 cases/witch/witch.n3 cases/witch/witch.n3
 
 @prefix : <http://josd.github.io/eye/reasoning/witch#>.
@@ -249,6 +249,6 @@
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/witch/witch.n3>].
 
-#2022-08-03T13:12:55.784Z in=11 out=9 ent=15 step=69 brake=4 inf=53008 sec=0.051 inf/sec=1039373
+#2022-08-10T14:46:35.076Z in=11 out=9 ent=15 step=69 brake=4 inf=53011 sec=0.055 inf/sec=963836
 #ENDS
 

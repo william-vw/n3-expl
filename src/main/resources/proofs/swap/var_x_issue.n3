@@ -16,15 +16,21 @@
     @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :isStratified :RedZone}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
-   
-   
-{	?lemma r:gives ?value .
-	?value e:labelvars ?valuel .
-	?valuel log:includes { ?x log:implies ?y } .
-	?x log:includes { ?s ?p ?o } .
-	?s log:rawType ?type .
-	# "var:x" doesn't seem to return a uri
-	?s log:uri ?uri .
 
-#} => { <> :output ?type } . # works
-} => { <> :output ?uri } . # doesn't work (uncomment last triple in rule body)
+{   ?x r:gives ?value . # formula
+	?value e:labelvars ?valuel.
+	?valuel log:includes { ?s ?p ?o } .
+	
+} => { 	?valuel x:term ?s , ?p , ?o } .
+   
+   
+{   ?value x:term ?t .
+    ?t log:rawType log:Other .
+	_:x log:notIncludes { ?t rdfs:label ?l } .
+    ?t log:uri ?uri .
+    ( ?uri ".+(#|/)(.+)" ) string:search ( ?div ?ln ) .
+	( ":" ?ln ) string:concatenation ?ln2 . 
+
+    ?t log:localN3String ?ts .
+
+} => { ?ts x:description ?ln2 } .

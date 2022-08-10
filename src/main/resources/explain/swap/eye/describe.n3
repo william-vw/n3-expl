@@ -14,6 +14,16 @@
 @prefix x: <http://wvw.org/xai#> .
 @base <http://wvw.org/xai#> .
 
+# TODO initial "conquer" step should identify term (e.g., UnlabelledURI, VariableURI)
+# next step can then check for existence of prefix, log:implies, etc.)
+# 	(possible second "identify" step as well)
+# only last step should then generate descriptions
+# best way of annotating terms 
+# (string:replace in finalize wouldn't work if e.g., log:implies also occurs in string)
+
+# TODO
+# the above will allow keeping the "var" prefix of rule variables
+
 # divide
 # (all terms to be described are indicated as "x:term"s)
 
@@ -58,16 +68,6 @@
     ?t log:localN3String ?ts .
 
 } => { ?ts x:description ?ln2 } .
-
-
-{   ?value x:term ?t .
-	?t log:rawType log:Other .
-    ?t log:uri ?uri .
-    ?uri string:notMatches ".+#.+" .
-
-    ?t log:localN3String ?ts .
-
-} => { ?ts x:description ":" } .
 
 
 {   ?value x:term ?t .
@@ -124,8 +124,9 @@
         ?s!log:localN3String x:description ?sd .
         ?p!log:localN3String x:description ?pd .
         ?o!log:localN3String x:description ?od .
-        
+                
         ( "<span class='triple'><span class='subject'>" ?sd "</span> <span class='predicate'>" ?pd "</span> <span class='object'>" ?od "</span> .</span>" )
+        	string:concatenation ?td .
 
     } ?strs ) log:collectAllIn _:x .
     

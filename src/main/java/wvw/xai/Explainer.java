@@ -14,6 +14,9 @@ import org.apache.jen3.util.IOUtils;
 
 public class Explainer {
 
+	// TODO propagate feedback config to all subgraphs
+	// (builtin_static_data seems to be ignored in these tests)
+	
 	public static void main(String[] args) throws Exception {
 //		test();
 		explain();
@@ -40,15 +43,16 @@ public class Explainer {
 //		String proofFile = "diabetes_case3.ttl";
 //		String proofFile = "diabetes_case4.ttl";
 //		String proofFile = "witch.ttl";
-		String proofFile = "medic.ttl";
-//		String proofFile = "lldm.ttl";
+//		String proofFile = "medic.ttl";
+		String proofFile = "lldm.ttl";
 //		String proofFile = "test2.ttl";
 
 		String labelFile = null;
 //		String labelFile = "cases/diabetes/labels.ttl";
 
 		N3ModelSpec spec = N3ModelSpec.get(Types.N3_MEM_FP_INF);
-		spec.setFeedback(new N3Feedback(N3MistakeTypes.BUILTIN_WRONG_INPUT, FeedbackTypes.NONE, FeedbackActions.LOG));
+//		spec.setFeedback(new N3Feedback(N3MistakeTypes.BUILTIN_WRONG_INPUT, FeedbackTypes.NONE, FeedbackActions.LOG));
+		spec.setFeedback(new N3Feedback(N3MistakeTypes.BUILTIN_STATIC_DATA, FeedbackTypes.NONE, FeedbackActions.LOG));
 
 		N3Model model = ModelFactory.createN3Model(spec);
 

@@ -1,17 +1,15 @@
-#Processed by EYE v22.0804.2304 josd
-#eye --pass-only-new --nope --n3 cases/copd/patient_red1.ttl cases/copd/rules.n3
+#Processed by EYE v22.0809.1553 josd
+#eye --pass-only-new --nope --n3 cases/medic/medic.n3 cases/medic/medic.n3
 
-@prefix : <http://wvw.org/copd#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix prov: <http://www.w3.org/ns/prov#>.
-@prefix pml: <http://provenanceweb.org/ns/pml#>.
-@prefix diary: <http://wvw.org/diary#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix fl: <http://eulersharp.sourceforge.net/2003/03swap/fl-rules#>.
+@prefix : <http://eulersharp.sourceforge.net/2006/02swap/med#>.
 
-:patientA :hasLow02Saturation true.
-:patientA :isStratified :RedZone.
+:Joe :isPrescribed :aspirinLowDose.
+:Joe :isPrescribed :betaBlocker.
 
-#2022-08-05T12:10:45.490Z in=28 out=2 ent=2 step=5 brake=3 inf=55015 sec=0.051 inf/sec=1078725
+#2022-08-10T14:46:35.588Z in=18 out=2 ent=2 step=8 brake=4 inf=54881 sec=0.053 inf/sec=1035491
 #ENDS
 

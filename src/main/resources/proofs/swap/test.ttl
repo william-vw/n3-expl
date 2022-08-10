@@ -1,16 +1,13 @@
-@prefix : <http://wvw.org/copd#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix prov: <http://www.w3.org/ns/prov#>.
-@prefix pml: <http://provenanceweb.org/ns/pml#>.
-@prefix diary: <http://wvw.org/diary#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
+@prefix fl: <http://eulersharp.sourceforge.net/2003/03swap/fl-rules#>.
+@prefix : <http://eulersharp.sourceforge.net/2006/02swap/med#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix var: <http://josd.github.io/var#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
-<#lemma19> a r:Extraction;
-  r:gives {
-    @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :isStratified :RedZone}.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
+<#lemma37> a r:Inference;
+  r:evidence (
+    [ a r:Fact; r:gives { (<file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/medic/medic.n3> ) e:findall 1 }]
+  ).

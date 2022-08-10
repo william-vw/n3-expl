@@ -12,8 +12,8 @@
 @base <http://wvw.org/xai#> .
 
 
-{	0 x:term ?term 
-} <= { ?x x:term ?term } .
+#{	0 x:term ?term 
+#} <= { ?x x:term ?term } .
 
 
 {	?x x:description ?descr 
