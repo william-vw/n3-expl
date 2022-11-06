@@ -1,0 +1,455 @@
+@prefix : <http://swot.sisinflab.poliba.it/onto/rheumatology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix list: <http://www.w3.org/2000/10/swap/list#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix eo: <https://purl.org/heals/eo#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> . 
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ep: <http://linkedu.eu/dedalo/explanationPattern.owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Patient profile
+
+# I. Context information & Diagnosis
+
+:patientA
+	rdf:type :Patient ;
+	foaf:gender :Male ;
+	foaf:age 40 ; 
+	schema:height 170 ;
+	schema:weight 95 ;
+	:hasBehaviour :Smoker ;
+	:hasClinicalFinding :RheumatoidFactorPositive , :AntiCyclicCitrullinatedPeptideAntibodyPositive ;
+	:hasDisease :NonErosiveRheumatoidArthritis .
+
+# II. Clinical questionnaire data
+
+:patientA
+	:ghVasValue 40 ;
+	:ptGaDiseaseActivityValue 8 ;
+	:phGaDiseaseActivityValue 5 ;
+	:swollenJointCount 3 ;
+	:tenderJointCount 18 ;
+	:vasPainValue 8 ;
+	:morningStiffnessDuration 90 ;
+	:ratedTenderJointsValue 20 .
+
+# Recommendations & Outcomes
+
+# 1. Suspected Disease Activity
+
+:SuspectedDiseaseActivity
+	rdf:type eo:Contextual_Knowledge ;
+	rdfs:label "You have a suspected (moderate or high) disease activity" .
+
+# 2. Contact Rheumatologist Recommendation
+
+:TreatmentStrategyChange 
+	rdf:type prov:Plan ; 
+	rdfs:label "Treatment strategy change possibly needed" .
+
+:ContactRheumatologistRecommendation
+	rdf:type eo:SystemRecommendation ; 
+	rdfs:label "You should contact your rheumatologist" ;
+	prov:hadPlan :TreatmentStrategyChange .
+
+:Treat2targetApproach
+    rdf:type eo:ScientificExplanation ;
+    ep:isBasedOn :ContactRheumatologistRecommendation ;
+	rdfs:label "Treat-to-target approach aims at remission or low disease activity" ;
+	dcterms:source "Smolen et al., Ann Rheum Dis, 2009, PMID: 19772784" .
+
+:DiseaseActivityStudies
+    rdf:type eo:ScientificExplanation ;
+    ep:isBasedOn :ContactRheumatologistRecommendation ;
+	rdfs:label "A disease activity can be identified according to studies on CDAI and RADAI scales" ;
+	dcterms:source "Anderson et al., Arthritis Care Res., 2011. DOI: 10.1002/acr.20621" ;
+	dcterms:source "Leeb et al., Clin Exp Rheumatol, 2014. PMID: 25365090" .
+
+:LowerDiseaseIndexCondition
+    rdf:type eo:CounterfactualExplanation ;
+    ep:isBasedOn :ContactRheumatologistRecommendation ;
+    rdfs:label "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)" ;
+    eo:addresses :Q01 .
+
+:Q01 
+    rdf:type :Question ;
+    rdfs:label "What happens when your Clinical Disease Activity Index gets lower?" .
+
+# 3. Quit Smoking Recommendation
+
+:Smoker 
+	rdf:type eo:Contextual_Knowledge ;
+    rdfs:label "You have a smoking habit" .
+
+:RheumatoidFactorPositive 
+	rdf:type eo:Contextual_Knowledge ;
+    rdfs:label "You tested positive for rheumatoid factor" .
+
+:AntiCyclicCitrullinatedPeptideAntibodyPositive 
+	rdf:type eo:Contextual_Knowledge ;
+    rdfs:label "You tested positive for anti-CCP antibody" .
+
+:QuitSmokingRecommendation
+	rdf:type eo:SystemRecommendation ; 
+	rdfs:label "You should quit smoking" .
+
+:InterstitialLungDiseasePredictors
+    rdf:type eo:ScientificExplanation ;
+    ep:isBasedOn :QuitSmokingRecommendation ;
+    rdfs:label "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA" ;
+    dcterms:source "Cavagna et al., BioMed Research Int., 2013, DOI: 10.1155/2013/759760" .
+
+:StopSmoking
+    rdf:type eo:CounterfactualExplanation ;
+    ep:isBasedOn :QuitSmokingRecommendation ;
+    rdfs:label "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease" ;
+    eo:addresses :Q02 .
+
+:Q02 
+    rdf:type :Question ;
+    rdfs:label "What happens if you quit smoking?" .
+
+# 4. Lose Weight Recommendation
+
+:ObeseClass1 
+    rdf:type eo:Contextual_Knowledge ;
+    rdfs:label "You have obesity class I" .
+
+:NormalWeight
+    rdf:type eo:Contextual_Knowledge ;
+    rdfs:label "You have a normal weight" .
+
+:LoseWeightRecommendation
+	rdf:type eo:SystemRecommendation ; 
+	rdfs:label "You should lose weight" .
+
+:ObesityNegativeInfluence
+    rdf:type eo:ScientificExplanation ;
+    ep:isBasedOn :LoseWeightRecommendation ;
+    rdfs:label "Negative influence of obesity has been observed on arthritis drug therapies" ;
+    dc:description "Higher rheumatoid arthritis disease activity and disability have been observed in obese patients" ;
+    dcterms:source "Vidal et al., J Rheumatol., 2015. DOI: 10.3899/jrheum.150224" ;
+    dcterms:source "Moroni et al., Clin Rheumatol., 2020. DOI: 10.1007/s10067-020-04963-2" .
+
+:LowerWeightCondition
+    rdf:type eo:CounterfactualExplanation ;
+    ep:isBasedOn :LoseWeightRecommendation ;
+    rdfs:label "Lower weight could help improve RA disease activity and disability" ;
+    eo:addresses :Q03 .
+
+:Q03 
+    rdf:type :Question ;
+    rdfs:label "What happens when your weight gets lower?" .
+
+# 5. Careful Oral Hygiene Recommendation
+
+:NonErosiveRheumatoidArthritis
+	rdf:type eo:Contextual_Knowledge ;
+    rdfs:label "You have a non-erosive rheumatoid arthritis" .
+
+:CarefulOralHygieneRecommendation 
+	rdf:type eo:SystemRecommendation ; 
+	rdfs:label "You have to practice careful oral hygiene" .
+
+:AutoimmuneLesions
+    rdf:type eo:ScientificExplanation ;
+    ep:isBasedOn :CarefulOralHygieneRecommendation ;
+    rdfs:label "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions" ;
+    dcterms:source "Kriauciunas et al., Cureus, 2019. DOI: 10.7759/cureus.4775" .
+
+:GoodOralHygieneCondition
+    rdf:type eo:CounterfactualExplanation ;
+    ep:isBasedOn :CarefulOralHygieneRecommendation ;
+    rdfs:label "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis." ;
+    eo:addresses :Q04 .
+
+:Q04 
+    rdf:type :Question ;
+    rdfs:label "What are the benefits of practicing a good oral hygiene?" .
+
+# BMI Classification (adopted by WHO)
+# https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations
+
+{
+	?p schema:height ?h_cm . 
+	?p schema:weight ?w .
+	(?h_cm 100) math:quotient ?h_mt .
+	(?h_mt 2) math:exponentiation ?h_exp .
+	(?w ?h_exp) math:quotient ?bmi .
+} => {
+	?p :bmiValue ?bmi .
+} .
+
+{
+	?p :bmiValue ?v . ?v math:notGreaterThan 18.5 .
+} => {
+	?p :hasBmiClass :Underweight .
+} .
+
+{
+	?p :bmiValue ?v . ?v math:greaterThan 18.5 . ?v math:lessThan 25 .
+} => {
+	?p :hasBmiClass :NormalWeight .
+} .
+
+{
+	?p :bmiValue ?v . ?v math:greaterThan 24.9 . ?v math:lessThan 30 .
+} => {
+	?p :hasBmiClass :Overweight .
+} .
+
+{
+	?p :bmiValue ?v . ?v math:greaterThan 29.9 . ?v math:lessThan 35 .
+} => {
+	?p :hasBmiClass :ObeseClass1 .
+} .
+
+{
+	?p :bmiValue ?v . ?v math:greaterThan 34.9 . ?v math:lessThan 40 .
+} => {
+	?p :hasBmiClass :ObeseClass2 .
+} .
+
+{
+	?p :bmiValue ?v . ?v math:greaterThan 39.9 .
+} => {
+	?p :hasBmiClass :ObeseClass3 .
+} .
+
+# Clinical Disease Activity Index (CDAI)
+
+# CDAI = SJC + TJC + PtGA + PhGA
+# - SJC: Swollen Joint Count
+# - TJC: Tender Joint Count
+# - PtGA: Patient Global Assessment of Disease Activity
+# - PhGA: Physician Global Assessment of Disease Activity
+{
+	?p :swollenJointCount ?v1 .
+	?p :tenderJointCount ?v2 .
+	?p :ptGaDiseaseActivityValue ?v3 .
+	?p :phGaDiseaseActivityValue ?v4 .
+	(?v1 ?v2 ?v3 ?v4) math:sum ?index .
+} => {
+	?p :cdaiIndex ?index . 
+} .
+
+{
+	?p :cdaiIndex ?index . ?index math:lessThan 2.8 .
+} => {
+	?p :hasDiseaseActivity :Remission . 
+} .
+
+{
+	?p :cdaiIndex ?index . ?index math:notLessThan 2.8 . ?index math:lessThan 10 .
+} => {
+	?p :hasDiseaseActivity :LowDiseaseActivity . 
+} .
+
+{
+	?p :cdaiIndex ?index . ?index math:notLessThan 10 . ?index math:lessThan 22 .
+} => {
+	?p :hasDiseaseActivity :ModerateDiseaseActivity . 
+} .
+
+{
+	?p :cdaiIndex ?index . ?index math:notLessThan 22 . 
+} => {
+	?p :hasDiseaseActivity :HighDiseaseActivity . 
+} .
+
+# Morning Stiffness Level
+{
+	?p :morningStiffnessDuration 0 .
+} => {
+	?p :morningStiffnessLevel 0 . 
+} .
+
+{
+	?p :morningStiffnessDuration ?v . ?v math:notLessThan 0 . ?v math:lessThan 30 .
+} => {
+	?p :morningStiffnessLevel 1 . 
+} .
+
+{
+	?p :morningStiffnessDuration ?v . ?v math:notLessThan 30 . ?v math:lessThan 60 .
+} => {
+	?p :morningStiffnessLevel 2 . 
+} .
+
+{
+	?p :morningStiffnessDuration ?v . ?v math:notLessThan 60 . ?v math:lessThan 120 .
+} => {
+	?p :morningStiffnessLevel 3 . 
+} .
+
+{
+	?p :morningStiffnessDuration ?v . ?v math:notLessThan 120 . ?v math:lessThan 240 .
+} => {
+	?p :morningStiffnessLevel 4 . 
+} .
+
+{
+	?p :morningStiffnessDuration ?v . ?v math:notLessThan 240 . ?v math:lessThan 1440 .
+} => {
+	?p :morningStiffnessLevel 5 . 
+} .
+
+{
+	?p :morningStiffnessDuration ?v . ?v math:notLessThan 1440 .
+} => {
+	?p :morningStiffnessLevel 6 . 
+} .
+
+# Rheumatoid Arthritis Disease Activity Index (RADAI) 
+# https://academic.oup.com/rheumatology/article/39/3/321/1783816
+
+# RADAI = (nGH + nJC + AP + nMS + nRTL) / 5
+# - nGH: Global Health Assessment / 10 			[Normalized 0-10]
+# - nJC: (SJC + TJC) / 56 						[Normalized 0-10]
+# - AP: VAS Arthritis Pain						[0-10]
+# - nMS: (Morning Stiffness Level / 6) * 10 	[Normalized 0-10]
+# - nRTL: (Rated Tender joints List / 48) * 10 	[Normalized 0-10]
+
+{
+	?p :ghVasValue ?gh .
+	(?gh 10) math:quotient ?nGH . 
+
+	?p :swollenJointCount ?sjc .
+	?p :tenderJointCount ?tjc .
+	(?sjc ?tjc) math:sum ?jc . 
+	(?jc 56) math:quotient ?nJC . 
+
+	?p :vasPainValue ?AP .
+
+	?p :morningStiffnessLevel ?msl .
+	(?msl 6) math:quotient ?qmsl .
+	(?qmsl 10) math:product ?nMS .
+
+	?p :ratedTenderJointsValue ?rtl .
+	(?rtl 48) math:quotient ?qrtl .
+	(?qrtl 10) math:product ?nRTL .
+
+	(?nGH ?nJC ?AP ?nMS ?nRTL) math:sum ?sum .
+	(?sum 5) math:quotient ?index .
+} => {
+	?p :radaiIndex ?index . 
+} .
+
+{
+	?p :radaiIndex ?index . ?index math:lessThan 1.4 .
+} => {
+	?p :hasDiseaseActivity :Remission . 
+} .
+
+{
+	?p :radaiIndex ?index . ?index math:notLessThan 1.4 . ?index math:lessThan 3 .
+} => {
+	?p :hasDiseaseActivity :LowDiseaseActivity . 
+} .
+
+{
+	?p :radaiIndex ?index . ?index math:notLessThan 3 . ?index math:lessThan 5.4 .
+} => {
+	?p :hasDiseaseActivity :ModerateDiseaseActivity . 
+} .
+
+{
+	?p :radaiIndex ?index . ?index math:notLessThan 5.4 . 
+} => {
+	?p :hasDiseaseActivity :HighDiseaseActivity . 
+} .
+
+# Recommendation Rules
+
+# Rec0 - Moderate or high disease activity suspected
+{
+	?p :hasDiseaseActivity [ list:in ( :ModerateDiseaseActivity :HighDiseaseActivity ) ] .
+} => {
+	?p :hasOutcome :SuspectedDiseaseActivity . 
+} .
+
+# Rec1 - Contact your rheumatologist
+{
+	?p :hasOutcome :SuspectedDiseaseActivity . 
+} => {
+	?p :recommendation ?rec . 
+	?rec rdf:type :ContactRheumatologistRecommendation  .
+	?rec prov:used :SuspectedDiseaseActivity .
+} .
+
+# Rec2 - Quit smoking
+{
+	?p :hasBehaviour :Smoker . 
+	?p :hasClinicalFinding :RheumatoidFactorPositive . 
+	?p :hasClinicalFinding :AntiCyclicCitrullinatedPeptideAntibodyPositive  .
+} => {
+	?p :recommendation ?rec .
+	?rec rdf:type :QuitSmokingRecommendation . 
+	?rec prov:used :Smoker , :RheumatoidFactorPositive , :AntiCyclicCitrullinatedPeptideAntibodyPositive  .
+} .
+
+# Rec3 - Lose weight
+{
+	?p :hasBmiClass :ObeseClass1 .
+} => {
+	?p :recommendation ?rec . 
+	?rec rdf:type :LoseWeightRecommendation . 
+	?rec prov:used :ObeseClass1 .
+} .
+
+# Rec4 - Careful oral hygiene
+{
+	?p :hasDisease :NonErosiveRheumatoidArthritis .
+} => {
+	?p :recommendation ?rec . 
+	?rec rdf:type :CarefulOralHygieneRecommendation . 
+	?rec prov:used :NonErosiveRheumatoidArthritis .
+} .
+
+# XAI to Text - text can be also generated using in-app SPARQL queries
+
+# Text for ScientificExplanation
+{
+    ?p :recommendation ?rec .
+	?rec rdf:type ?sysrec .
+	?sysrec rdf:type eo:SystemRecommendation  .
+    ?sysrec rdfs:label ?l1  .
+    ?rec prov:used ?k .
+    ?k rdfs:label ?l2 .
+    ?exp rdf:type eo:ScientificExplanation .
+    ?exp ep:isBasedOn ?sysrec .
+    ?exp rdfs:label ?l3 .
+} => {
+	?l1 :since ?l2 .
+	?l1 :because ?l3 .
+} .
+
+# Text for Plan
+{
+    ?p :recommendation ?rec .
+	?rec rdf:type ?sysrec .
+	?sysrec rdf:type eo:SystemRecommendation  .
+	?sysrec rdfs:label ?l1 .
+	?sysrec prov:hadPlan ?plan .
+    ?plan rdfs:label ?l2 .
+} => {
+	?l1 :plan ?l2 .
+} .
+
+# Text for CounterfactualExplanation
+{
+    ?p :recommendation ?rec .
+	?rec rdf:type ?sysrec .
+	?sysrec rdf:type eo:SystemRecommendation  .
+    ?exp rdf:type eo:CounterfactualExplanation .
+    ?exp ep:isBasedOn ?sysrec .
+    ?exp rdfs:label ?l2 .
+    ?exp eo:addresses ?q .
+    ?q rdfs:label ?l3 .
+} => {
+	?l3 :hasResponse ?l2 .
+} .
