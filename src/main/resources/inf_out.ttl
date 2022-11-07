@@ -53,6 +53,6 @@ _:sk_3 prov:used :NonErosiveRheumatoidArthritis.
 "What happens when your weight gets lower?" :hasResponse "Lower weight could help improve RA disease activity and disability".
 "What are the benefits of practicing a good oral hygiene?" :hasResponse "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis.".
 
-#2022-11-07T14:39:50.000Z in=153 out=38 ent=41 step=100 brake=2 inf=336961 sec=0.052 inf/sec=6480019
+#2022-11-07T14:50:53.591Z in=153 out=38 ent=41 step=100 brake=2 inf=336961 sec=0.039 inf/sec=8640026
 #ENDS
 

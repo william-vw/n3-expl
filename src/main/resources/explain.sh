@@ -56,7 +56,17 @@ fi
 
 $(eye --pass-only-new --nope --n3 $data $rules > $inf_out)
 
-#$(eye --pass --n3 $data $rules > $pe_out)
+# print entire deductive closure. 
+# the proof file will include a lot of redundant lemmas.
+# (use describe0.n3, collect0.n3) 
+#if [ "$data" == "$rules" ]; then
+#	$(eye --pass --n3 $rules > $pe_out)
+#else
+#	$(eye --pass --n3 $data $rules > $pe_out)
+#fi
+
+# only print inferences by our rules.
+# (use describe.n3, collect.n3)
 if [ "$data" == "$rules" ]; then
 	$(eye --n3 $rules --query $rules > $pe_out)
 else

@@ -1,5 +1,5 @@
 #Processed by EYE v22.1105.2210 josd
-#eye --pass --n3 cases/rheumatology-xai.n3 cases/rheumatology-xai.n3
+#eye --n3 cases/rheumatology-xai.n3 --query cases/rheumatology-xai.n3
 
 @prefix : <http://swot.sisinflab.poliba.it/onto/rheumatology#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
@@ -15,7 +15,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix var: <http://josd.github.io/var#>.
-@prefix skolem: <http://josd.github.io/.well-known/genid/1570363719399510912#>.
+@prefix skolem: <http://josd.github.io/.well-known/genid/3533567284600076508#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
 skolem:proof a r:Proof, r:Conjunction;
@@ -43,231 +43,39 @@ skolem:proof a r:Proof, r:Conjunction;
   r:component skolem:lemma22;
   r:component skolem:lemma23;
   r:component skolem:lemma24;
-  r:component skolem:lemma25;
-  r:component skolem:lemma26;
-  r:component skolem:lemma27;
-  r:component skolem:lemma28;
-  r:component skolem:lemma29;
-  r:component skolem:lemma30;
-  r:component skolem:lemma31;
-  r:component skolem:lemma32;
-  r:component skolem:lemma33;
-  r:component skolem:lemma34;
-  r:component skolem:lemma35;
-  r:component skolem:lemma36;
-  r:component skolem:lemma37;
-  r:component skolem:lemma38;
-  r:component skolem:lemma39;
-  r:component skolem:lemma40;
-  r:component skolem:lemma41;
-  r:component skolem:lemma42;
-  r:component skolem:lemma43;
-  r:component skolem:lemma44;
-  r:component skolem:lemma45;
-  r:component skolem:lemma46;
-  r:component skolem:lemma47;
-  r:component skolem:lemma48;
-  r:component skolem:lemma49;
-  r:component skolem:lemma50;
-  r:component skolem:lemma51;
-  r:component skolem:lemma52;
-  r:component skolem:lemma53;
-  r:component skolem:lemma54;
-  r:component skolem:lemma55;
-  r:component skolem:lemma56;
-  r:component skolem:lemma57;
-  r:component skolem:lemma58;
-  r:component skolem:lemma59;
-  r:component skolem:lemma60;
-  r:component skolem:lemma61;
-  r:component skolem:lemma62;
-  r:component skolem:lemma63;
-  r:component skolem:lemma64;
-  r:component skolem:lemma65;
-  r:component skolem:lemma66;
-  r:component skolem:lemma67;
-  r:component skolem:lemma68;
-  r:component skolem:lemma69;
-  r:component skolem:lemma70;
-  r:component skolem:lemma71;
-  r:component skolem:lemma72;
-  r:component skolem:lemma73;
-  r:component skolem:lemma74;
-  r:component skolem:lemma75;
-  r:component skolem:lemma76;
-  r:component skolem:lemma77;
-  r:component skolem:lemma78;
-  r:component skolem:lemma79;
-  r:component skolem:lemma80;
-  r:component skolem:lemma81;
-  r:component skolem:lemma82;
-  r:component skolem:lemma83;
-  r:component skolem:lemma84;
-  r:component skolem:lemma85;
-  r:component skolem:lemma86;
-  r:component skolem:lemma87;
-  r:component skolem:lemma88;
-  r:component skolem:lemma89;
-  r:component skolem:lemma90;
-  r:component skolem:lemma91;
-  r:component skolem:lemma92;
-  r:component skolem:lemma93;
-  r:component skolem:lemma94;
-  r:component skolem:lemma95;
-  r:component skolem:lemma96;
-  r:component skolem:lemma97;
-  r:component skolem:lemma98;
-  r:component skolem:lemma99;
-  r:component skolem:lemma100;
-  r:component skolem:lemma101;
-  r:component skolem:lemma102;
-  r:component skolem:lemma103;
-  r:component skolem:lemma104;
-  r:component skolem:lemma105;
-  r:component skolem:lemma106;
-  r:component skolem:lemma107;
-  r:component skolem:lemma108;
-  r:component skolem:lemma109;
-  r:component skolem:lemma110;
-  r:component skolem:lemma111;
-  r:component skolem:lemma112;
-  r:component skolem:lemma113;
-  r:component skolem:lemma114;
-  r:component skolem:lemma115;
-  r:component skolem:lemma116;
-  r:component skolem:lemma117;
-  r:component skolem:lemma118;
-  r:component skolem:lemma119;
-  r:component skolem:lemma120;
-  r:component skolem:lemma121;
-  r:component skolem:lemma122;
-  r:component skolem:lemma123;
-  r:component skolem:lemma124;
-  r:component skolem:lemma125;
-  r:component skolem:lemma126;
-  r:component skolem:lemma127;
   r:gives {
-    :patientA a :Patient.
-    :SuspectedDiseaseActivity a eo:Contextual_Knowledge.
-    :TreatmentStrategyChange a prov:Plan.
-    :ContactRheumatologistRecommendation a eo:SystemRecommendation.
-    :Treat2targetApproach a eo:ScientificExplanation.
-    :DiseaseActivityStudies a eo:ScientificExplanation.
-    :LowerDiseaseIndexCondition a eo:CounterfactualExplanation.
-    :Q01 a :Question.
-    :Smoker a eo:Contextual_Knowledge.
-    :RheumatoidFactorPositive a eo:Contextual_Knowledge.
-    :AntiCyclicCitrullinatedPeptideAntibodyPositive a eo:Contextual_Knowledge.
-    :QuitSmokingRecommendation a eo:SystemRecommendation.
-    :InterstitialLungDiseasePredictors a eo:ScientificExplanation.
-    :StopSmoking a eo:CounterfactualExplanation.
-    :Q02 a :Question.
-    :ObeseClass1 a eo:Contextual_Knowledge.
-    :NormalWeight a eo:Contextual_Knowledge.
-    :LoseWeightRecommendation a eo:SystemRecommendation.
-    :ObesityNegativeInfluence a eo:ScientificExplanation.
-    :LowerWeightCondition a eo:CounterfactualExplanation.
-    :Q03 a :Question.
-    :NonErosiveRheumatoidArthritis a eo:Contextual_Knowledge.
-    :CarefulOralHygieneRecommendation a eo:SystemRecommendation.
-    :AutoimmuneLesions a eo:ScientificExplanation.
-    :GoodOralHygieneCondition a eo:CounterfactualExplanation.
-    :Q04 a :Question.
-    :patientA foaf:gender :Male.
-    :patientA foaf:age 40 .
-    :patientA schema:height 170 .
-    :patientA schema:weight 95 .
-    :patientA :hasBehaviour :Smoker.
-    :patientA :hasClinicalFinding :RheumatoidFactorPositive.
-    :patientA :hasClinicalFinding :AntiCyclicCitrullinatedPeptideAntibodyPositive.
-    :patientA :hasDisease :NonErosiveRheumatoidArthritis.
-    :patientA :ghVasValue 40 .
-    :patientA :ptGaDiseaseActivityValue 8 .
-    :patientA :phGaDiseaseActivityValue 5 .
-    :patientA :swollenJointCount 3 .
-    :patientA :tenderJointCount 18 .
-    :patientA :vasPainValue 8 .
-    :patientA :morningStiffnessDuration 90 .
-    :patientA :ratedTenderJointsValue 20 .
-    :SuspectedDiseaseActivity rdfs:label "You have a suspected (moderate or high) disease activity".
-    :TreatmentStrategyChange rdfs:label "Treatment strategy change possibly needed".
-    :ContactRheumatologistRecommendation rdfs:label "You should contact your rheumatologist".
-    :Treat2targetApproach rdfs:label "Treat-to-target approach aims at remission or low disease activity".
-    :DiseaseActivityStudies rdfs:label "A disease activity can be identified according to studies on CDAI and RADAI scales".
-    :LowerDiseaseIndexCondition rdfs:label "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)".
-    :Q01 rdfs:label "What happens when your Clinical Disease Activity Index gets lower?".
-    :Smoker rdfs:label "You have a smoking habit".
-    :RheumatoidFactorPositive rdfs:label "You tested positive for rheumatoid factor".
-    :AntiCyclicCitrullinatedPeptideAntibodyPositive rdfs:label "You tested positive for anti-CCP antibody".
-    :QuitSmokingRecommendation rdfs:label "You should quit smoking".
-    :InterstitialLungDiseasePredictors rdfs:label "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
-    :StopSmoking rdfs:label "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease".
-    :Q02 rdfs:label "What happens if you quit smoking?".
-    :ObeseClass1 rdfs:label "You have obesity class I".
-    :NormalWeight rdfs:label "You have a normal weight".
-    :LoseWeightRecommendation rdfs:label "You should lose weight".
-    :ObesityNegativeInfluence rdfs:label "Negative influence of obesity has been observed on arthritis drug therapies".
-    :LowerWeightCondition rdfs:label "Lower weight could help improve RA disease activity and disability".
-    :Q03 rdfs:label "What happens when your weight gets lower?".
-    :NonErosiveRheumatoidArthritis rdfs:label "You have a non-erosive rheumatoid arthritis".
-    :CarefulOralHygieneRecommendation rdfs:label "You have to practice careful oral hygiene".
-    :AutoimmuneLesions rdfs:label "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions".
-    :GoodOralHygieneCondition rdfs:label "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis.".
-    :Q04 rdfs:label "What are the benefits of practicing a good oral hygiene?".
-    :ContactRheumatologistRecommendation prov:hadPlan :TreatmentStrategyChange.
-    :Treat2targetApproach ep:isBasedOn :ContactRheumatologistRecommendation.
-    :DiseaseActivityStudies ep:isBasedOn :ContactRheumatologistRecommendation.
-    :LowerDiseaseIndexCondition ep:isBasedOn :ContactRheumatologistRecommendation.
-    :InterstitialLungDiseasePredictors ep:isBasedOn :QuitSmokingRecommendation.
-    :StopSmoking ep:isBasedOn :QuitSmokingRecommendation.
-    :ObesityNegativeInfluence ep:isBasedOn :LoseWeightRecommendation.
-    :LowerWeightCondition ep:isBasedOn :LoseWeightRecommendation.
-    :AutoimmuneLesions ep:isBasedOn :CarefulOralHygieneRecommendation.
-    :GoodOralHygieneCondition ep:isBasedOn :CarefulOralHygieneRecommendation.
-    :Treat2targetApproach dcterms:source "Smolen et al., Ann Rheum Dis, 2009, PMID: 19772784".
-    :DiseaseActivityStudies dcterms:source "Anderson et al., Arthritis Care Res., 2011. DOI: 10.1002/acr.20621".
-    :DiseaseActivityStudies dcterms:source "Leeb et al., Clin Exp Rheumatol, 2014. PMID: 25365090".
-    :InterstitialLungDiseasePredictors dcterms:source "Cavagna et al., BioMed Research Int., 2013, DOI: 10.1155/2013/759760".
-    :ObesityNegativeInfluence dcterms:source "Vidal et al., J Rheumatol., 2015. DOI: 10.3899/jrheum.150224".
-    :ObesityNegativeInfluence dcterms:source "Moroni et al., Clin Rheumatol., 2020. DOI: 10.1007/s10067-020-04963-2".
-    :AutoimmuneLesions dcterms:source "Kriauciunas et al., Cureus, 2019. DOI: 10.7759/cureus.4775".
-    :LowerDiseaseIndexCondition eo:addresses :Q01.
-    :StopSmoking eo:addresses :Q02.
-    :LowerWeightCondition eo:addresses :Q03.
-    :GoodOralHygieneCondition eo:addresses :Q04.
-    :ObesityNegativeInfluence dc:description "Higher rheumatoid arthritis disease activity and disability have been observed in obese patients".
-    _:sk_0 a :ContactRheumatologistRecommendation.
-    _:sk_1 a :QuitSmokingRecommendation.
-    _:sk_2 a :LoseWeightRecommendation.
-    _:sk_3 a :CarefulOralHygieneRecommendation.
     :patientA :bmiValue 32.871972318339104 .
     :patientA :hasBmiClass :ObeseClass1.
     :patientA :cdaiIndex 34 .
     :patientA :hasDiseaseActivity :HighDiseaseActivity.
-    :patientA :hasDiseaseActivity :ModerateDiseaseActivity.
     :patientA :morningStiffnessLevel 3 .
     :patientA :radaiIndex 4.308333333333334 .
+    :patientA :hasDiseaseActivity :ModerateDiseaseActivity.
     :patientA :hasOutcome :SuspectedDiseaseActivity.
-    :patientA :recommendation _:sk_0.
-    :patientA :recommendation _:sk_1.
-    :patientA :recommendation _:sk_2.
-    :patientA :recommendation _:sk_3.
-    _:sk_0 prov:used :SuspectedDiseaseActivity.
-    _:sk_1 prov:used :Smoker.
-    _:sk_1 prov:used :RheumatoidFactorPositive.
-    _:sk_1 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive.
-    _:sk_2 prov:used :ObeseClass1.
-    _:sk_3 prov:used :NonErosiveRheumatoidArthritis.
+    :patientA :recommendation _:sk_4.
+    _:sk_4 a :ContactRheumatologistRecommendation.
+    _:sk_4 prov:used :SuspectedDiseaseActivity.
+    :patientA :recommendation _:sk_5.
+    _:sk_5 a :QuitSmokingRecommendation.
+    _:sk_5 prov:used :Smoker.
+    _:sk_5 prov:used :RheumatoidFactorPositive.
+    _:sk_5 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive.
+    :patientA :recommendation _:sk_6.
+    _:sk_6 a :LoseWeightRecommendation.
+    _:sk_6 prov:used :ObeseClass1.
+    :patientA :recommendation _:sk_7.
+    _:sk_7 a :CarefulOralHygieneRecommendation.
+    _:sk_7 prov:used :NonErosiveRheumatoidArthritis.
     "You should contact your rheumatologist" :since "You have a suspected (moderate or high) disease activity".
+    "You should contact your rheumatologist" :because "Treat-to-target approach aims at remission or low disease activity".
+    "You should contact your rheumatologist" :because "A disease activity can be identified according to studies on CDAI and RADAI scales".
     "You should quit smoking" :since "You have a smoking habit".
+    "You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
     "You should quit smoking" :since "You tested positive for rheumatoid factor".
     "You should quit smoking" :since "You tested positive for anti-CCP antibody".
     "You should lose weight" :since "You have obesity class I".
-    "You have to practice careful oral hygiene" :since "You have a non-erosive rheumatoid arthritis".
-    "You should contact your rheumatologist" :because "Treat-to-target approach aims at remission or low disease activity".
-    "You should contact your rheumatologist" :because "A disease activity can be identified according to studies on CDAI and RADAI scales".
-    "You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
     "You should lose weight" :because "Negative influence of obesity has been observed on arthritis drug therapies".
+    "You have to practice careful oral hygiene" :since "You have a non-erosive rheumatoid arthritis".
     "You have to practice careful oral hygiene" :because "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions".
     "You should contact your rheumatologist" :plan "Treatment strategy change possibly needed".
     "What happens when your Clinical Disease Activity Index gets lower?" :hasResponse "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)".
@@ -278,2131 +86,11 @@ skolem:proof a r:Proof, r:Conjunction;
 
 skolem:lemma1 a r:Inference;
   r:gives {
-    :patientA a :Patient.
-  };
-  r:evidence (
-    skolem:lemma128
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Patient"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma2 a r:Inference;
-  r:gives {
-    :SuspectedDiseaseActivity a eo:Contextual_Knowledge.
-  };
-  r:evidence (
-    skolem:lemma130
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#SuspectedDiseaseActivity"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#Contextual_Knowledge"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma3 a r:Inference;
-  r:gives {
-    :TreatmentStrategyChange a prov:Plan.
-  };
-  r:evidence (
-    skolem:lemma131
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#TreatmentStrategyChange"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://www.w3.org/ns/prov#Plan"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma4 a r:Inference;
-  r:gives {
-    :ContactRheumatologistRecommendation a eo:SystemRecommendation.
-  };
-  r:evidence (
-    skolem:lemma132
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ContactRheumatologistRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#SystemRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma5 a r:Inference;
-  r:gives {
-    :Treat2targetApproach a eo:ScientificExplanation.
-  };
-  r:evidence (
-    skolem:lemma133
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Treat2targetApproach"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#ScientificExplanation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma6 a r:Inference;
-  r:gives {
-    :DiseaseActivityStudies a eo:ScientificExplanation.
-  };
-  r:evidence (
-    skolem:lemma134
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#DiseaseActivityStudies"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#ScientificExplanation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma7 a r:Inference;
-  r:gives {
-    :LowerDiseaseIndexCondition a eo:CounterfactualExplanation.
-  };
-  r:evidence (
-    skolem:lemma135
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LowerDiseaseIndexCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#CounterfactualExplanation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma8 a r:Inference;
-  r:gives {
-    :Q01 a :Question.
-  };
-  r:evidence (
-    skolem:lemma136
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q01"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Question"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma9 a r:Inference;
-  r:gives {
-    :Smoker a eo:Contextual_Knowledge.
-  };
-  r:evidence (
-    skolem:lemma137
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Smoker"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#Contextual_Knowledge"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma10 a r:Inference;
-  r:gives {
-    :RheumatoidFactorPositive a eo:Contextual_Knowledge.
-  };
-  r:evidence (
-    skolem:lemma138
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#RheumatoidFactorPositive"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#Contextual_Knowledge"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma11 a r:Inference;
-  r:gives {
-    :AntiCyclicCitrullinatedPeptideAntibodyPositive a eo:Contextual_Knowledge.
-  };
-  r:evidence (
-    skolem:lemma139
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AntiCyclicCitrullinatedPeptideAntibodyPositive"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#Contextual_Knowledge"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma12 a r:Inference;
-  r:gives {
-    :QuitSmokingRecommendation a eo:SystemRecommendation.
-  };
-  r:evidence (
-    skolem:lemma140
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#SystemRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma13 a r:Inference;
-  r:gives {
-    :InterstitialLungDiseasePredictors a eo:ScientificExplanation.
-  };
-  r:evidence (
-    skolem:lemma141
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#ScientificExplanation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma14 a r:Inference;
-  r:gives {
-    :StopSmoking a eo:CounterfactualExplanation.
-  };
-  r:evidence (
-    skolem:lemma142
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#StopSmoking"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#CounterfactualExplanation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma15 a r:Inference;
-  r:gives {
-    :Q02 a :Question.
-  };
-  r:evidence (
-    skolem:lemma143
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q02"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Question"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma16 a r:Inference;
-  r:gives {
-    :ObeseClass1 a eo:Contextual_Knowledge.
-  };
-  r:evidence (
-    skolem:lemma144
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObeseClass1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#Contextual_Knowledge"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma17 a r:Inference;
-  r:gives {
-    :NormalWeight a eo:Contextual_Knowledge.
-  };
-  r:evidence (
-    skolem:lemma145
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#NormalWeight"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#Contextual_Knowledge"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma18 a r:Inference;
-  r:gives {
-    :LoseWeightRecommendation a eo:SystemRecommendation.
-  };
-  r:evidence (
-    skolem:lemma146
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LoseWeightRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#SystemRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma19 a r:Inference;
-  r:gives {
-    :ObesityNegativeInfluence a eo:ScientificExplanation.
-  };
-  r:evidence (
-    skolem:lemma147
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObesityNegativeInfluence"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#ScientificExplanation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma20 a r:Inference;
-  r:gives {
-    :LowerWeightCondition a eo:CounterfactualExplanation.
-  };
-  r:evidence (
-    skolem:lemma148
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LowerWeightCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#CounterfactualExplanation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma21 a r:Inference;
-  r:gives {
-    :Q03 a :Question.
-  };
-  r:evidence (
-    skolem:lemma149
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q03"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Question"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma22 a r:Inference;
-  r:gives {
-    :NonErosiveRheumatoidArthritis a eo:Contextual_Knowledge.
-  };
-  r:evidence (
-    skolem:lemma150
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#NonErosiveRheumatoidArthritis"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#Contextual_Knowledge"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma23 a r:Inference;
-  r:gives {
-    :CarefulOralHygieneRecommendation a eo:SystemRecommendation.
-  };
-  r:evidence (
-    skolem:lemma151
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#CarefulOralHygieneRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#SystemRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma24 a r:Inference;
-  r:gives {
-    :AutoimmuneLesions a eo:ScientificExplanation.
-  };
-  r:evidence (
-    skolem:lemma152
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AutoimmuneLesions"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#ScientificExplanation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma25 a r:Inference;
-  r:gives {
-    :GoodOralHygieneCondition a eo:CounterfactualExplanation.
-  };
-  r:evidence (
-    skolem:lemma153
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#GoodOralHygieneCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#CounterfactualExplanation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma26 a r:Inference;
-  r:gives {
-    :Q04 a :Question.
-  };
-  r:evidence (
-    skolem:lemma154
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q04"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Question"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma27 a r:Inference;
-  r:gives {
-    :patientA foaf:gender :Male.
-  };
-  r:evidence (
-    skolem:lemma155
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://xmlns.com/foaf/0.1/gender"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Male"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma28 a r:Inference;
-  r:gives {
-    :patientA foaf:age 40 .
-  };
-  r:evidence (
-    skolem:lemma156
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://xmlns.com/foaf/0.1/age"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 40];
-  r:rule skolem:lemma129.
-
-skolem:lemma29 a r:Inference;
-  r:gives {
-    :patientA schema:height 170 .
-  };
-  r:evidence (
-    skolem:lemma157
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://schema.org/height"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 170];
-  r:rule skolem:lemma129.
-
-skolem:lemma30 a r:Inference;
-  r:gives {
-    :patientA schema:weight 95 .
-  };
-  r:evidence (
-    skolem:lemma158
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://schema.org/weight"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 95];
-  r:rule skolem:lemma129.
-
-skolem:lemma31 a r:Inference;
-  r:gives {
-    :patientA :hasBehaviour :Smoker.
-  };
-  r:evidence (
-    skolem:lemma159
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasBehaviour"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Smoker"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma32 a r:Inference;
-  r:gives {
-    :patientA :hasClinicalFinding :RheumatoidFactorPositive.
-  };
-  r:evidence (
-    skolem:lemma160
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasClinicalFinding"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#RheumatoidFactorPositive"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma33 a r:Inference;
-  r:gives {
-    :patientA :hasClinicalFinding :AntiCyclicCitrullinatedPeptideAntibodyPositive.
-  };
-  r:evidence (
-    skolem:lemma161
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasClinicalFinding"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AntiCyclicCitrullinatedPeptideAntibodyPositive"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma34 a r:Inference;
-  r:gives {
-    :patientA :hasDisease :NonErosiveRheumatoidArthritis.
-  };
-  r:evidence (
-    skolem:lemma162
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasDisease"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#NonErosiveRheumatoidArthritis"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma35 a r:Inference;
-  r:gives {
-    :patientA :ghVasValue 40 .
-  };
-  r:evidence (
-    skolem:lemma163
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ghVasValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 40];
-  r:rule skolem:lemma129.
-
-skolem:lemma36 a r:Inference;
-  r:gives {
-    :patientA :ptGaDiseaseActivityValue 8 .
-  };
-  r:evidence (
-    skolem:lemma164
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ptGaDiseaseActivityValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 8];
-  r:rule skolem:lemma129.
-
-skolem:lemma37 a r:Inference;
-  r:gives {
-    :patientA :phGaDiseaseActivityValue 5 .
-  };
-  r:evidence (
-    skolem:lemma165
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#phGaDiseaseActivityValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 5];
-  r:rule skolem:lemma129.
-
-skolem:lemma38 a r:Inference;
-  r:gives {
-    :patientA :swollenJointCount 3 .
-  };
-  r:evidence (
-    skolem:lemma166
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#swollenJointCount"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 3];
-  r:rule skolem:lemma129.
-
-skolem:lemma39 a r:Inference;
-  r:gives {
-    :patientA :tenderJointCount 18 .
-  };
-  r:evidence (
-    skolem:lemma167
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#tenderJointCount"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 18];
-  r:rule skolem:lemma129.
-
-skolem:lemma40 a r:Inference;
-  r:gives {
-    :patientA :vasPainValue 8 .
-  };
-  r:evidence (
-    skolem:lemma168
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#vasPainValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 8];
-  r:rule skolem:lemma129.
-
-skolem:lemma41 a r:Inference;
-  r:gives {
-    :patientA :morningStiffnessDuration 90 .
-  };
-  r:evidence (
-    skolem:lemma169
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#morningStiffnessDuration"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 90];
-  r:rule skolem:lemma129.
-
-skolem:lemma42 a r:Inference;
-  r:gives {
-    :patientA :ratedTenderJointsValue 20 .
-  };
-  r:evidence (
-    skolem:lemma170
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ratedTenderJointsValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 20];
-  r:rule skolem:lemma129.
-
-skolem:lemma43 a r:Inference;
-  r:gives {
-    :SuspectedDiseaseActivity rdfs:label "You have a suspected (moderate or high) disease activity".
-  };
-  r:evidence (
-    skolem:lemma171
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#SuspectedDiseaseActivity"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have a suspected (moderate or high) disease activity"];
-  r:rule skolem:lemma129.
-
-skolem:lemma44 a r:Inference;
-  r:gives {
-    :TreatmentStrategyChange rdfs:label "Treatment strategy change possibly needed".
-  };
-  r:evidence (
-    skolem:lemma172
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#TreatmentStrategyChange"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Treatment strategy change possibly needed"];
-  r:rule skolem:lemma129.
-
-skolem:lemma45 a r:Inference;
-  r:gives {
-    :ContactRheumatologistRecommendation rdfs:label "You should contact your rheumatologist".
-  };
-  r:evidence (
-    skolem:lemma173
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ContactRheumatologistRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You should contact your rheumatologist"];
-  r:rule skolem:lemma129.
-
-skolem:lemma46 a r:Inference;
-  r:gives {
-    :Treat2targetApproach rdfs:label "Treat-to-target approach aims at remission or low disease activity".
-  };
-  r:evidence (
-    skolem:lemma174
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Treat2targetApproach"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Treat-to-target approach aims at remission or low disease activity"];
-  r:rule skolem:lemma129.
-
-skolem:lemma47 a r:Inference;
-  r:gives {
-    :DiseaseActivityStudies rdfs:label "A disease activity can be identified according to studies on CDAI and RADAI scales".
-  };
-  r:evidence (
-    skolem:lemma175
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#DiseaseActivityStudies"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "A disease activity can be identified according to studies on CDAI and RADAI scales"];
-  r:rule skolem:lemma129.
-
-skolem:lemma48 a r:Inference;
-  r:gives {
-    :LowerDiseaseIndexCondition rdfs:label "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)".
-  };
-  r:evidence (
-    skolem:lemma176
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LowerDiseaseIndexCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)"];
-  r:rule skolem:lemma129.
-
-skolem:lemma49 a r:Inference;
-  r:gives {
-    :Q01 rdfs:label "What happens when your Clinical Disease Activity Index gets lower?".
-  };
-  r:evidence (
-    skolem:lemma177
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q01"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "What happens when your Clinical Disease Activity Index gets lower?"];
-  r:rule skolem:lemma129.
-
-skolem:lemma50 a r:Inference;
-  r:gives {
-    :Smoker rdfs:label "You have a smoking habit".
-  };
-  r:evidence (
-    skolem:lemma178
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Smoker"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have a smoking habit"];
-  r:rule skolem:lemma129.
-
-skolem:lemma51 a r:Inference;
-  r:gives {
-    :RheumatoidFactorPositive rdfs:label "You tested positive for rheumatoid factor".
-  };
-  r:evidence (
-    skolem:lemma179
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#RheumatoidFactorPositive"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You tested positive for rheumatoid factor"];
-  r:rule skolem:lemma129.
-
-skolem:lemma52 a r:Inference;
-  r:gives {
-    :AntiCyclicCitrullinatedPeptideAntibodyPositive rdfs:label "You tested positive for anti-CCP antibody".
-  };
-  r:evidence (
-    skolem:lemma180
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AntiCyclicCitrullinatedPeptideAntibodyPositive"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You tested positive for anti-CCP antibody"];
-  r:rule skolem:lemma129.
-
-skolem:lemma53 a r:Inference;
-  r:gives {
-    :QuitSmokingRecommendation rdfs:label "You should quit smoking".
-  };
-  r:evidence (
-    skolem:lemma181
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You should quit smoking"];
-  r:rule skolem:lemma129.
-
-skolem:lemma54 a r:Inference;
-  r:gives {
-    :InterstitialLungDiseasePredictors rdfs:label "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
-  };
-  r:evidence (
-    skolem:lemma182
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA"];
-  r:rule skolem:lemma129.
-
-skolem:lemma55 a r:Inference;
-  r:gives {
-    :StopSmoking rdfs:label "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease".
-  };
-  r:evidence (
-    skolem:lemma183
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#StopSmoking"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease"];
-  r:rule skolem:lemma129.
-
-skolem:lemma56 a r:Inference;
-  r:gives {
-    :Q02 rdfs:label "What happens if you quit smoking?".
-  };
-  r:evidence (
-    skolem:lemma184
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q02"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "What happens if you quit smoking?"];
-  r:rule skolem:lemma129.
-
-skolem:lemma57 a r:Inference;
-  r:gives {
-    :ObeseClass1 rdfs:label "You have obesity class I".
-  };
-  r:evidence (
-    skolem:lemma185
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObeseClass1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have obesity class I"];
-  r:rule skolem:lemma129.
-
-skolem:lemma58 a r:Inference;
-  r:gives {
-    :NormalWeight rdfs:label "You have a normal weight".
-  };
-  r:evidence (
-    skolem:lemma186
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#NormalWeight"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have a normal weight"];
-  r:rule skolem:lemma129.
-
-skolem:lemma59 a r:Inference;
-  r:gives {
-    :LoseWeightRecommendation rdfs:label "You should lose weight".
-  };
-  r:evidence (
-    skolem:lemma187
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LoseWeightRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You should lose weight"];
-  r:rule skolem:lemma129.
-
-skolem:lemma60 a r:Inference;
-  r:gives {
-    :ObesityNegativeInfluence rdfs:label "Negative influence of obesity has been observed on arthritis drug therapies".
-  };
-  r:evidence (
-    skolem:lemma188
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObesityNegativeInfluence"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Negative influence of obesity has been observed on arthritis drug therapies"];
-  r:rule skolem:lemma129.
-
-skolem:lemma61 a r:Inference;
-  r:gives {
-    :LowerWeightCondition rdfs:label "Lower weight could help improve RA disease activity and disability".
-  };
-  r:evidence (
-    skolem:lemma189
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LowerWeightCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Lower weight could help improve RA disease activity and disability"];
-  r:rule skolem:lemma129.
-
-skolem:lemma62 a r:Inference;
-  r:gives {
-    :Q03 rdfs:label "What happens when your weight gets lower?".
-  };
-  r:evidence (
-    skolem:lemma190
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q03"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "What happens when your weight gets lower?"];
-  r:rule skolem:lemma129.
-
-skolem:lemma63 a r:Inference;
-  r:gives {
-    :NonErosiveRheumatoidArthritis rdfs:label "You have a non-erosive rheumatoid arthritis".
-  };
-  r:evidence (
-    skolem:lemma191
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#NonErosiveRheumatoidArthritis"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have a non-erosive rheumatoid arthritis"];
-  r:rule skolem:lemma129.
-
-skolem:lemma64 a r:Inference;
-  r:gives {
-    :CarefulOralHygieneRecommendation rdfs:label "You have to practice careful oral hygiene".
-  };
-  r:evidence (
-    skolem:lemma192
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#CarefulOralHygieneRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have to practice careful oral hygiene"];
-  r:rule skolem:lemma129.
-
-skolem:lemma65 a r:Inference;
-  r:gives {
-    :AutoimmuneLesions rdfs:label "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions".
-  };
-  r:evidence (
-    skolem:lemma193
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AutoimmuneLesions"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions"];
-  r:rule skolem:lemma129.
-
-skolem:lemma66 a r:Inference;
-  r:gives {
-    :GoodOralHygieneCondition rdfs:label "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis.".
-  };
-  r:evidence (
-    skolem:lemma194
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#GoodOralHygieneCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis."];
-  r:rule skolem:lemma129.
-
-skolem:lemma67 a r:Inference;
-  r:gives {
-    :Q04 rdfs:label "What are the benefits of practicing a good oral hygiene?".
-  };
-  r:evidence (
-    skolem:lemma195
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#label"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q04"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "What are the benefits of practicing a good oral hygiene?"];
-  r:rule skolem:lemma129.
-
-skolem:lemma68 a r:Inference;
-  r:gives {
-    :ContactRheumatologistRecommendation prov:hadPlan :TreatmentStrategyChange.
-  };
-  r:evidence (
-    skolem:lemma196
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/ns/prov#hadPlan"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ContactRheumatologistRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#TreatmentStrategyChange"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma69 a r:Inference;
-  r:gives {
-    :Treat2targetApproach ep:isBasedOn :ContactRheumatologistRecommendation.
-  };
-  r:evidence (
-    skolem:lemma197
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Treat2targetApproach"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ContactRheumatologistRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma70 a r:Inference;
-  r:gives {
-    :DiseaseActivityStudies ep:isBasedOn :ContactRheumatologistRecommendation.
-  };
-  r:evidence (
-    skolem:lemma198
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#DiseaseActivityStudies"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ContactRheumatologistRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma71 a r:Inference;
-  r:gives {
-    :LowerDiseaseIndexCondition ep:isBasedOn :ContactRheumatologistRecommendation.
-  };
-  r:evidence (
-    skolem:lemma199
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LowerDiseaseIndexCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ContactRheumatologistRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma72 a r:Inference;
-  r:gives {
-    :InterstitialLungDiseasePredictors ep:isBasedOn :QuitSmokingRecommendation.
-  };
-  r:evidence (
-    skolem:lemma200
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma73 a r:Inference;
-  r:gives {
-    :StopSmoking ep:isBasedOn :QuitSmokingRecommendation.
-  };
-  r:evidence (
-    skolem:lemma201
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#StopSmoking"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma74 a r:Inference;
-  r:gives {
-    :ObesityNegativeInfluence ep:isBasedOn :LoseWeightRecommendation.
-  };
-  r:evidence (
-    skolem:lemma202
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObesityNegativeInfluence"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LoseWeightRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma75 a r:Inference;
-  r:gives {
-    :LowerWeightCondition ep:isBasedOn :LoseWeightRecommendation.
-  };
-  r:evidence (
-    skolem:lemma203
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LowerWeightCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LoseWeightRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma76 a r:Inference;
-  r:gives {
-    :AutoimmuneLesions ep:isBasedOn :CarefulOralHygieneRecommendation.
-  };
-  r:evidence (
-    skolem:lemma204
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AutoimmuneLesions"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#CarefulOralHygieneRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma77 a r:Inference;
-  r:gives {
-    :GoodOralHygieneCondition ep:isBasedOn :CarefulOralHygieneRecommendation.
-  };
-  r:evidence (
-    skolem:lemma205
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#GoodOralHygieneCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#CarefulOralHygieneRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma78 a r:Inference;
-  r:gives {
-    :Treat2targetApproach dcterms:source "Smolen et al., Ann Rheum Dis, 2009, PMID: 19772784".
-  };
-  r:evidence (
-    skolem:lemma206
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.org/dc/terms/source"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Treat2targetApproach"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Smolen et al., Ann Rheum Dis, 2009, PMID: 19772784"];
-  r:rule skolem:lemma129.
-
-skolem:lemma79 a r:Inference;
-  r:gives {
-    :DiseaseActivityStudies dcterms:source "Anderson et al., Arthritis Care Res., 2011. DOI: 10.1002/acr.20621".
-  };
-  r:evidence (
-    skolem:lemma207
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.org/dc/terms/source"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#DiseaseActivityStudies"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Anderson et al., Arthritis Care Res., 2011. DOI: 10.1002/acr.20621"];
-  r:rule skolem:lemma129.
-
-skolem:lemma80 a r:Inference;
-  r:gives {
-    :DiseaseActivityStudies dcterms:source "Leeb et al., Clin Exp Rheumatol, 2014. PMID: 25365090".
-  };
-  r:evidence (
-    skolem:lemma208
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.org/dc/terms/source"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#DiseaseActivityStudies"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Leeb et al., Clin Exp Rheumatol, 2014. PMID: 25365090"];
-  r:rule skolem:lemma129.
-
-skolem:lemma81 a r:Inference;
-  r:gives {
-    :InterstitialLungDiseasePredictors dcterms:source "Cavagna et al., BioMed Research Int., 2013, DOI: 10.1155/2013/759760".
-  };
-  r:evidence (
-    skolem:lemma209
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.org/dc/terms/source"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Cavagna et al., BioMed Research Int., 2013, DOI: 10.1155/2013/759760"];
-  r:rule skolem:lemma129.
-
-skolem:lemma82 a r:Inference;
-  r:gives {
-    :ObesityNegativeInfluence dcterms:source "Vidal et al., J Rheumatol., 2015. DOI: 10.3899/jrheum.150224".
-  };
-  r:evidence (
-    skolem:lemma210
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.org/dc/terms/source"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObesityNegativeInfluence"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Vidal et al., J Rheumatol., 2015. DOI: 10.3899/jrheum.150224"];
-  r:rule skolem:lemma129.
-
-skolem:lemma83 a r:Inference;
-  r:gives {
-    :ObesityNegativeInfluence dcterms:source "Moroni et al., Clin Rheumatol., 2020. DOI: 10.1007/s10067-020-04963-2".
-  };
-  r:evidence (
-    skolem:lemma211
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.org/dc/terms/source"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObesityNegativeInfluence"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Moroni et al., Clin Rheumatol., 2020. DOI: 10.1007/s10067-020-04963-2"];
-  r:rule skolem:lemma129.
-
-skolem:lemma84 a r:Inference;
-  r:gives {
-    :AutoimmuneLesions dcterms:source "Kriauciunas et al., Cureus, 2019. DOI: 10.7759/cureus.4775".
-  };
-  r:evidence (
-    skolem:lemma212
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.org/dc/terms/source"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AutoimmuneLesions"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Kriauciunas et al., Cureus, 2019. DOI: 10.7759/cureus.4775"];
-  r:rule skolem:lemma129.
-
-skolem:lemma85 a r:Inference;
-  r:gives {
-    :LowerDiseaseIndexCondition eo:addresses :Q01.
-  };
-  r:evidence (
-    skolem:lemma213
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#addresses"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LowerDiseaseIndexCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q01"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma86 a r:Inference;
-  r:gives {
-    :StopSmoking eo:addresses :Q02.
-  };
-  r:evidence (
-    skolem:lemma214
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#addresses"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#StopSmoking"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q02"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma87 a r:Inference;
-  r:gives {
-    :LowerWeightCondition eo:addresses :Q03.
-  };
-  r:evidence (
-    skolem:lemma215
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#addresses"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LowerWeightCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q03"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma88 a r:Inference;
-  r:gives {
-    :GoodOralHygieneCondition eo:addresses :Q04.
-  };
-  r:evidence (
-    skolem:lemma216
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://purl.org/heals/eo#addresses"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#GoodOralHygieneCondition"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q04"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma89 a r:Inference;
-  r:gives {
-    :ObesityNegativeInfluence dc:description "Higher rheumatoid arthritis disease activity and disability have been observed in obese patients".
-  };
-  r:evidence (
-    skolem:lemma217
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.org/dc/elements/1.1/description"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObesityNegativeInfluence"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Higher rheumatoid arthritis disease activity and disability have been observed in obese patients"];
-  r:rule skolem:lemma129.
-
-skolem:lemma90 a r:Inference;
-  r:gives {
-    _:sk_0 a :ContactRheumatologistRecommendation.
-  };
-  r:evidence (
-    skolem:lemma218
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ContactRheumatologistRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma91 a r:Inference;
-  r:gives {
-    _:sk_1 a :QuitSmokingRecommendation.
-  };
-  r:evidence (
-    skolem:lemma219
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma92 a r:Inference;
-  r:gives {
-    _:sk_2 a :LoseWeightRecommendation.
-  };
-  r:evidence (
-    skolem:lemma220
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_2"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LoseWeightRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma93 a r:Inference;
-  r:gives {
-    _:sk_3 a :CarefulOralHygieneRecommendation.
-  };
-  r:evidence (
-    skolem:lemma221
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_3"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#CarefulOralHygieneRecommendation"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma94 a r:Inference;
-  r:gives {
     :patientA :bmiValue 32.871972318339104 .
   };
   r:evidence (
-    skolem:lemma222
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#bmiValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 32.871972318339104];
-  r:rule skolem:lemma129.
-
-skolem:lemma95 a r:Inference;
-  r:gives {
-    :patientA :hasBmiClass :ObeseClass1.
-  };
-  r:evidence (
-    skolem:lemma223
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasBmiClass"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObeseClass1"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma96 a r:Inference;
-  r:gives {
-    :patientA :cdaiIndex 34 .
-  };
-  r:evidence (
-    skolem:lemma224
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#cdaiIndex"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 34];
-  r:rule skolem:lemma129.
-
-skolem:lemma97 a r:Inference;
-  r:gives {
-    :patientA :hasDiseaseActivity :HighDiseaseActivity.
-  };
-  r:evidence (
-    skolem:lemma225
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasDiseaseActivity"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#HighDiseaseActivity"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma98 a r:Inference;
-  r:gives {
-    :patientA :hasDiseaseActivity :ModerateDiseaseActivity.
-  };
-  r:evidence (
-    skolem:lemma226
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasDiseaseActivity"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ModerateDiseaseActivity"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma99 a r:Inference;
-  r:gives {
-    :patientA :morningStiffnessLevel 3 .
-  };
-  r:evidence (
-    skolem:lemma227
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#morningStiffnessLevel"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 3];
-  r:rule skolem:lemma129.
-
-skolem:lemma100 a r:Inference;
-  r:gives {
-    :patientA :radaiIndex 4.308333333333334 .
-  };
-  r:evidence (
-    skolem:lemma228
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#radaiIndex"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 4.308333333333334];
-  r:rule skolem:lemma129.
-
-skolem:lemma101 a r:Inference;
-  r:gives {
-    :patientA :hasOutcome :SuspectedDiseaseActivity.
-  };
-  r:evidence (
-    skolem:lemma229
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasOutcome"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#SuspectedDiseaseActivity"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma102 a r:Inference;
-  r:gives {
-    :patientA :recommendation _:sk_0.
-  };
-  r:evidence (
-    skolem:lemma218
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#recommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma103 a r:Inference;
-  r:gives {
-    :patientA :recommendation _:sk_1.
-  };
-  r:evidence (
-    skolem:lemma219
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#recommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma104 a r:Inference;
-  r:gives {
-    :patientA :recommendation _:sk_2.
-  };
-  r:evidence (
-    skolem:lemma220
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#recommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_2"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma105 a r:Inference;
-  r:gives {
-    :patientA :recommendation _:sk_3.
-  };
-  r:evidence (
-    skolem:lemma221
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#recommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_3"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma106 a r:Inference;
-  r:gives {
-    _:sk_0 prov:used :SuspectedDiseaseActivity.
-  };
-  r:evidence (
-    skolem:lemma218
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/ns/prov#used"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#SuspectedDiseaseActivity"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma107 a r:Inference;
-  r:gives {
-    _:sk_1 prov:used :Smoker.
-  };
-  r:evidence (
-    skolem:lemma219
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/ns/prov#used"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Smoker"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma108 a r:Inference;
-  r:gives {
-    _:sk_1 prov:used :RheumatoidFactorPositive.
-  };
-  r:evidence (
-    skolem:lemma219
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/ns/prov#used"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#RheumatoidFactorPositive"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma109 a r:Inference;
-  r:gives {
-    _:sk_1 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive.
-  };
-  r:evidence (
-    skolem:lemma219
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/ns/prov#used"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AntiCyclicCitrullinatedPeptideAntibodyPositive"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma110 a r:Inference;
-  r:gives {
-    _:sk_2 prov:used :ObeseClass1.
-  };
-  r:evidence (
-    skolem:lemma220
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/ns/prov#used"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_2"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObeseClass1"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma111 a r:Inference;
-  r:gives {
-    _:sk_3 prov:used :NonErosiveRheumatoidArthritis.
-  };
-  r:evidence (
-    skolem:lemma221
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/ns/prov#used"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_3"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#NonErosiveRheumatoidArthritis"]];
-  r:rule skolem:lemma129.
-
-skolem:lemma112 a r:Inference;
-  r:gives {
-    "You should contact your rheumatologist" :since "You have a suspected (moderate or high) disease activity".
-  };
-  r:evidence (
-    skolem:lemma230
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#since"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should contact your rheumatologist"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have a suspected (moderate or high) disease activity"];
-  r:rule skolem:lemma129.
-
-skolem:lemma113 a r:Inference;
-  r:gives {
-    "You should quit smoking" :since "You have a smoking habit".
-  };
-  r:evidence (
-    skolem:lemma231
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#since"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should quit smoking"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have a smoking habit"];
-  r:rule skolem:lemma129.
-
-skolem:lemma114 a r:Inference;
-  r:gives {
-    "You should quit smoking" :since "You tested positive for rheumatoid factor".
-  };
-  r:evidence (
-    skolem:lemma232
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#since"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should quit smoking"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You tested positive for rheumatoid factor"];
-  r:rule skolem:lemma129.
-
-skolem:lemma115 a r:Inference;
-  r:gives {
-    "You should quit smoking" :since "You tested positive for anti-CCP antibody".
-  };
-  r:evidence (
-    skolem:lemma233
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#since"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should quit smoking"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You tested positive for anti-CCP antibody"];
-  r:rule skolem:lemma129.
-
-skolem:lemma116 a r:Inference;
-  r:gives {
-    "You should lose weight" :since "You have obesity class I".
-  };
-  r:evidence (
-    skolem:lemma234
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#since"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should lose weight"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have obesity class I"];
-  r:rule skolem:lemma129.
-
-skolem:lemma117 a r:Inference;
-  r:gives {
-    "You have to practice careful oral hygiene" :since "You have a non-erosive rheumatoid arthritis".
-  };
-  r:evidence (
-    skolem:lemma235
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#since"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You have to practice careful oral hygiene"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "You have a non-erosive rheumatoid arthritis"];
-  r:rule skolem:lemma129.
-
-skolem:lemma118 a r:Inference;
-  r:gives {
-    "You should contact your rheumatologist" :because "Treat-to-target approach aims at remission or low disease activity".
-  };
-  r:evidence (
-    skolem:lemma230
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#because"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should contact your rheumatologist"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Treat-to-target approach aims at remission or low disease activity"];
-  r:rule skolem:lemma129.
-
-skolem:lemma119 a r:Inference;
-  r:gives {
-    "You should contact your rheumatologist" :because "A disease activity can be identified according to studies on CDAI and RADAI scales".
-  };
-  r:evidence (
-    skolem:lemma236
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#because"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should contact your rheumatologist"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "A disease activity can be identified according to studies on CDAI and RADAI scales"];
-  r:rule skolem:lemma129.
-
-skolem:lemma120 a r:Inference;
-  r:gives {
-    "You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
-  };
-  r:evidence (
-    skolem:lemma231
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#because"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should quit smoking"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA"];
-  r:rule skolem:lemma129.
-
-skolem:lemma121 a r:Inference;
-  r:gives {
-    "You should lose weight" :because "Negative influence of obesity has been observed on arthritis drug therapies".
-  };
-  r:evidence (
-    skolem:lemma234
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#because"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should lose weight"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Negative influence of obesity has been observed on arthritis drug therapies"];
-  r:rule skolem:lemma129.
-
-skolem:lemma122 a r:Inference;
-  r:gives {
-    "You have to practice careful oral hygiene" :because "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions".
-  };
-  r:evidence (
-    skolem:lemma235
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#because"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You have to practice careful oral hygiene"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions"];
-  r:rule skolem:lemma129.
-
-skolem:lemma123 a r:Inference;
-  r:gives {
-    "You should contact your rheumatologist" :plan "Treatment strategy change possibly needed".
-  };
-  r:evidence (
-    skolem:lemma237
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#plan"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "You should contact your rheumatologist"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Treatment strategy change possibly needed"];
-  r:rule skolem:lemma129.
-
-skolem:lemma124 a r:Inference;
-  r:gives {
-    "What happens when your Clinical Disease Activity Index gets lower?" :hasResponse "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)".
-  };
-  r:evidence (
-    skolem:lemma238
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasResponse"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "What happens when your Clinical Disease Activity Index gets lower?"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)"];
-  r:rule skolem:lemma129.
-
-skolem:lemma125 a r:Inference;
-  r:gives {
-    "What happens if you quit smoking?" :hasResponse "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease".
-  };
-  r:evidence (
-    skolem:lemma239
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasResponse"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "What happens if you quit smoking?"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease"];
-  r:rule skolem:lemma129.
-
-skolem:lemma126 a r:Inference;
-  r:gives {
-    "What happens when your weight gets lower?" :hasResponse "Lower weight could help improve RA disease activity and disability".
-  };
-  r:evidence (
-    skolem:lemma240
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasResponse"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "What happens when your weight gets lower?"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Lower weight could help improve RA disease activity and disability"];
-  r:rule skolem:lemma129.
-
-skolem:lemma127 a r:Inference;
-  r:gives {
-    "What are the benefits of practicing a good oral hygiene?" :hasResponse "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis.".
-  };
-  r:evidence (
-    skolem:lemma241
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#hasResponse"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo "What are the benefits of practicing a good oral hygiene?"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis."];
-  r:rule skolem:lemma129.
-
-skolem:lemma128 a r:Extraction;
-  r:gives {
-    :patientA a :Patient.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma129 a r:Extraction;
-  r:gives {
-    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
-  };
-  r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
-
-skolem:lemma130 a r:Extraction;
-  r:gives {
-    :SuspectedDiseaseActivity a eo:Contextual_Knowledge.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma131 a r:Extraction;
-  r:gives {
-    :TreatmentStrategyChange a prov:Plan.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma132 a r:Extraction;
-  r:gives {
-    :ContactRheumatologistRecommendation a eo:SystemRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma133 a r:Extraction;
-  r:gives {
-    :Treat2targetApproach a eo:ScientificExplanation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma134 a r:Extraction;
-  r:gives {
-    :DiseaseActivityStudies a eo:ScientificExplanation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma135 a r:Extraction;
-  r:gives {
-    :LowerDiseaseIndexCondition a eo:CounterfactualExplanation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma136 a r:Extraction;
-  r:gives {
-    :Q01 a :Question.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma137 a r:Extraction;
-  r:gives {
-    :Smoker a eo:Contextual_Knowledge.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma138 a r:Extraction;
-  r:gives {
-    :RheumatoidFactorPositive a eo:Contextual_Knowledge.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma139 a r:Extraction;
-  r:gives {
-    :AntiCyclicCitrullinatedPeptideAntibodyPositive a eo:Contextual_Knowledge.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma140 a r:Extraction;
-  r:gives {
-    :QuitSmokingRecommendation a eo:SystemRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma141 a r:Extraction;
-  r:gives {
-    :InterstitialLungDiseasePredictors a eo:ScientificExplanation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma142 a r:Extraction;
-  r:gives {
-    :StopSmoking a eo:CounterfactualExplanation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma143 a r:Extraction;
-  r:gives {
-    :Q02 a :Question.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma144 a r:Extraction;
-  r:gives {
-    :ObeseClass1 a eo:Contextual_Knowledge.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma145 a r:Extraction;
-  r:gives {
-    :NormalWeight a eo:Contextual_Knowledge.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma146 a r:Extraction;
-  r:gives {
-    :LoseWeightRecommendation a eo:SystemRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma147 a r:Extraction;
-  r:gives {
-    :ObesityNegativeInfluence a eo:ScientificExplanation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma148 a r:Extraction;
-  r:gives {
-    :LowerWeightCondition a eo:CounterfactualExplanation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma149 a r:Extraction;
-  r:gives {
-    :Q03 a :Question.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma150 a r:Extraction;
-  r:gives {
-    :NonErosiveRheumatoidArthritis a eo:Contextual_Knowledge.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma151 a r:Extraction;
-  r:gives {
-    :CarefulOralHygieneRecommendation a eo:SystemRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma152 a r:Extraction;
-  r:gives {
-    :AutoimmuneLesions a eo:ScientificExplanation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma153 a r:Extraction;
-  r:gives {
-    :GoodOralHygieneCondition a eo:CounterfactualExplanation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma154 a r:Extraction;
-  r:gives {
-    :Q04 a :Question.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma155 a r:Extraction;
-  r:gives {
-    :patientA foaf:gender :Male.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma156 a r:Extraction;
-  r:gives {
-    :patientA foaf:age 40 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma157 a r:Extraction;
-  r:gives {
-    :patientA schema:height 170 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma158 a r:Extraction;
-  r:gives {
-    :patientA schema:weight 95 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma159 a r:Extraction;
-  r:gives {
-    :patientA :hasBehaviour :Smoker.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma160 a r:Extraction;
-  r:gives {
-    :patientA :hasClinicalFinding :RheumatoidFactorPositive.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma161 a r:Extraction;
-  r:gives {
-    :patientA :hasClinicalFinding :AntiCyclicCitrullinatedPeptideAntibodyPositive.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma162 a r:Extraction;
-  r:gives {
-    :patientA :hasDisease :NonErosiveRheumatoidArthritis.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma163 a r:Extraction;
-  r:gives {
-    :patientA :ghVasValue 40 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma164 a r:Extraction;
-  r:gives {
-    :patientA :ptGaDiseaseActivityValue 8 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma165 a r:Extraction;
-  r:gives {
-    :patientA :phGaDiseaseActivityValue 5 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma166 a r:Extraction;
-  r:gives {
-    :patientA :swollenJointCount 3 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma167 a r:Extraction;
-  r:gives {
-    :patientA :tenderJointCount 18 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma168 a r:Extraction;
-  r:gives {
-    :patientA :vasPainValue 8 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma169 a r:Extraction;
-  r:gives {
-    :patientA :morningStiffnessDuration 90 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma170 a r:Extraction;
-  r:gives {
-    :patientA :ratedTenderJointsValue 20 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma171 a r:Extraction;
-  r:gives {
-    :SuspectedDiseaseActivity rdfs:label "You have a suspected (moderate or high) disease activity".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma172 a r:Extraction;
-  r:gives {
-    :TreatmentStrategyChange rdfs:label "Treatment strategy change possibly needed".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma173 a r:Extraction;
-  r:gives {
-    :ContactRheumatologistRecommendation rdfs:label "You should contact your rheumatologist".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma174 a r:Extraction;
-  r:gives {
-    :Treat2targetApproach rdfs:label "Treat-to-target approach aims at remission or low disease activity".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma175 a r:Extraction;
-  r:gives {
-    :DiseaseActivityStudies rdfs:label "A disease activity can be identified according to studies on CDAI and RADAI scales".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma176 a r:Extraction;
-  r:gives {
-    :LowerDiseaseIndexCondition rdfs:label "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma177 a r:Extraction;
-  r:gives {
-    :Q01 rdfs:label "What happens when your Clinical Disease Activity Index gets lower?".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma178 a r:Extraction;
-  r:gives {
-    :Smoker rdfs:label "You have a smoking habit".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma179 a r:Extraction;
-  r:gives {
-    :RheumatoidFactorPositive rdfs:label "You tested positive for rheumatoid factor".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma180 a r:Extraction;
-  r:gives {
-    :AntiCyclicCitrullinatedPeptideAntibodyPositive rdfs:label "You tested positive for anti-CCP antibody".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma181 a r:Extraction;
-  r:gives {
-    :QuitSmokingRecommendation rdfs:label "You should quit smoking".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma182 a r:Extraction;
-  r:gives {
-    :InterstitialLungDiseasePredictors rdfs:label "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma183 a r:Extraction;
-  r:gives {
-    :StopSmoking rdfs:label "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma184 a r:Extraction;
-  r:gives {
-    :Q02 rdfs:label "What happens if you quit smoking?".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma185 a r:Extraction;
-  r:gives {
-    :ObeseClass1 rdfs:label "You have obesity class I".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma186 a r:Extraction;
-  r:gives {
-    :NormalWeight rdfs:label "You have a normal weight".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma187 a r:Extraction;
-  r:gives {
-    :LoseWeightRecommendation rdfs:label "You should lose weight".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma188 a r:Extraction;
-  r:gives {
-    :ObesityNegativeInfluence rdfs:label "Negative influence of obesity has been observed on arthritis drug therapies".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma189 a r:Extraction;
-  r:gives {
-    :LowerWeightCondition rdfs:label "Lower weight could help improve RA disease activity and disability".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma190 a r:Extraction;
-  r:gives {
-    :Q03 rdfs:label "What happens when your weight gets lower?".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma191 a r:Extraction;
-  r:gives {
-    :NonErosiveRheumatoidArthritis rdfs:label "You have a non-erosive rheumatoid arthritis".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma192 a r:Extraction;
-  r:gives {
-    :CarefulOralHygieneRecommendation rdfs:label "You have to practice careful oral hygiene".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma193 a r:Extraction;
-  r:gives {
-    :AutoimmuneLesions rdfs:label "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma194 a r:Extraction;
-  r:gives {
-    :GoodOralHygieneCondition rdfs:label "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis.".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma195 a r:Extraction;
-  r:gives {
-    :Q04 rdfs:label "What are the benefits of practicing a good oral hygiene?".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma196 a r:Extraction;
-  r:gives {
-    :ContactRheumatologistRecommendation prov:hadPlan :TreatmentStrategyChange.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma197 a r:Extraction;
-  r:gives {
-    :Treat2targetApproach ep:isBasedOn :ContactRheumatologistRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma198 a r:Extraction;
-  r:gives {
-    :DiseaseActivityStudies ep:isBasedOn :ContactRheumatologistRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma199 a r:Extraction;
-  r:gives {
-    :LowerDiseaseIndexCondition ep:isBasedOn :ContactRheumatologistRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma200 a r:Extraction;
-  r:gives {
-    :InterstitialLungDiseasePredictors ep:isBasedOn :QuitSmokingRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma201 a r:Extraction;
-  r:gives {
-    :StopSmoking ep:isBasedOn :QuitSmokingRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma202 a r:Extraction;
-  r:gives {
-    :ObesityNegativeInfluence ep:isBasedOn :LoseWeightRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma203 a r:Extraction;
-  r:gives {
-    :LowerWeightCondition ep:isBasedOn :LoseWeightRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma204 a r:Extraction;
-  r:gives {
-    :AutoimmuneLesions ep:isBasedOn :CarefulOralHygieneRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma205 a r:Extraction;
-  r:gives {
-    :GoodOralHygieneCondition ep:isBasedOn :CarefulOralHygieneRecommendation.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma206 a r:Extraction;
-  r:gives {
-    :Treat2targetApproach dcterms:source "Smolen et al., Ann Rheum Dis, 2009, PMID: 19772784".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma207 a r:Extraction;
-  r:gives {
-    :DiseaseActivityStudies dcterms:source "Anderson et al., Arthritis Care Res., 2011. DOI: 10.1002/acr.20621".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma208 a r:Extraction;
-  r:gives {
-    :DiseaseActivityStudies dcterms:source "Leeb et al., Clin Exp Rheumatol, 2014. PMID: 25365090".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma209 a r:Extraction;
-  r:gives {
-    :InterstitialLungDiseasePredictors dcterms:source "Cavagna et al., BioMed Research Int., 2013, DOI: 10.1155/2013/759760".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma210 a r:Extraction;
-  r:gives {
-    :ObesityNegativeInfluence dcterms:source "Vidal et al., J Rheumatol., 2015. DOI: 10.3899/jrheum.150224".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma211 a r:Extraction;
-  r:gives {
-    :ObesityNegativeInfluence dcterms:source "Moroni et al., Clin Rheumatol., 2020. DOI: 10.1007/s10067-020-04963-2".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma212 a r:Extraction;
-  r:gives {
-    :AutoimmuneLesions dcterms:source "Kriauciunas et al., Cureus, 2019. DOI: 10.7759/cureus.4775".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma213 a r:Extraction;
-  r:gives {
-    :LowerDiseaseIndexCondition eo:addresses :Q01.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma214 a r:Extraction;
-  r:gives {
-    :StopSmoking eo:addresses :Q02.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma215 a r:Extraction;
-  r:gives {
-    :LowerWeightCondition eo:addresses :Q03.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma216 a r:Extraction;
-  r:gives {
-    :GoodOralHygieneCondition eo:addresses :Q04.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma217 a r:Extraction;
-  r:gives {
-    :ObesityNegativeInfluence dc:description "Higher rheumatoid arthritis disease activity and disability have been observed in obese patients".
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma218 a r:Inference;
-  r:gives {
-    :patientA :recommendation _:sk_0.
-    _:sk_0 a :ContactRheumatologistRecommendation.
-    _:sk_0 prov:used :SuspectedDiseaseActivity.
-  };
-  r:evidence (
-    skolem:lemma229
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
-  r:rule skolem:lemma242.
-
-skolem:lemma219 a r:Inference;
-  r:gives {
-    :patientA :recommendation _:sk_1.
-    _:sk_1 a :QuitSmokingRecommendation.
-    _:sk_1 prov:used :Smoker.
-    _:sk_1 prov:used :RheumatoidFactorPositive.
-    _:sk_1 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive.
-  };
-  r:evidence (
-    skolem:lemma159
-    skolem:lemma160
-    skolem:lemma161
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
-  r:rule skolem:lemma243.
-
-skolem:lemma220 a r:Inference;
-  r:gives {
-    :patientA :recommendation _:sk_2.
-    _:sk_2 a :LoseWeightRecommendation.
-    _:sk_2 prov:used :ObeseClass1.
-  };
-  r:evidence (
-    skolem:lemma223
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_2"]];
-  r:rule skolem:lemma244.
-
-skolem:lemma221 a r:Inference;
-  r:gives {
-    :patientA :recommendation _:sk_3.
-    _:sk_3 a :CarefulOralHygieneRecommendation.
-    _:sk_3 prov:used :NonErosiveRheumatoidArthritis.
-  };
-  r:evidence (
-    skolem:lemma162
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_3"]];
-  r:rule skolem:lemma245.
-
-skolem:lemma222 a r:Inference;
-  r:gives {
-    :patientA :bmiValue 32.871972318339104 .
-  };
-  r:evidence (
-    skolem:lemma157
-    skolem:lemma158
+    skolem:lemma25
+    skolem:lemma26
     [ a r:Fact; r:gives {(170 100) math:quotient 1.7}]
     [ a r:Fact; r:gives {(1.7 2) math:exponentiation 2.8899999999999997}]
     [ a r:Fact; r:gives {(95 2.8899999999999997) math:quotient 32.871972318339104}]
@@ -2413,30 +101,30 @@ skolem:lemma222 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 1.7];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo 2.8899999999999997];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo 32.871972318339104];
-  r:rule skolem:lemma246.
+  r:rule skolem:lemma27.
 
-skolem:lemma223 a r:Inference;
+skolem:lemma2 a r:Inference;
   r:gives {
     :patientA :hasBmiClass :ObeseClass1.
   };
   r:evidence (
-    skolem:lemma222
+    skolem:lemma28
     [ a r:Fact; r:gives {32.871972318339104 math:greaterThan 29.9}]
     [ a r:Fact; r:gives {32.871972318339104 math:lessThan 35}]
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 32.871972318339104];
-  r:rule skolem:lemma247.
+  r:rule skolem:lemma29.
 
-skolem:lemma224 a r:Inference;
+skolem:lemma3 a r:Inference;
   r:gives {
     :patientA :cdaiIndex 34 .
   };
   r:evidence (
-    skolem:lemma166
-    skolem:lemma167
-    skolem:lemma164
-    skolem:lemma165
+    skolem:lemma30
+    skolem:lemma31
+    skolem:lemma32
+    skolem:lemma33
     [ a r:Fact; r:gives {(3 18 8 5) math:sum 34}]
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
@@ -2445,62 +133,49 @@ skolem:lemma224 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 8];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo 5];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo 34];
-  r:rule skolem:lemma248.
+  r:rule skolem:lemma34.
 
-skolem:lemma225 a r:Inference;
+skolem:lemma4 a r:Inference;
   r:gives {
     :patientA :hasDiseaseActivity :HighDiseaseActivity.
   };
   r:evidence (
-    skolem:lemma224
+    skolem:lemma35
     [ a r:Fact; r:gives {34 math:notLessThan 22}]
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 34];
-  r:rule skolem:lemma249.
+  r:rule skolem:lemma36.
 
-skolem:lemma226 a r:Inference;
-  r:gives {
-    :patientA :hasDiseaseActivity :ModerateDiseaseActivity.
-  };
-  r:evidence (
-    skolem:lemma228
-    [ a r:Fact; r:gives {4.308333333333334 math:notLessThan 3}]
-    [ a r:Fact; r:gives {4.308333333333334 math:lessThan 5.4}]
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 4.308333333333334];
-  r:rule skolem:lemma250.
-
-skolem:lemma227 a r:Inference;
+skolem:lemma5 a r:Inference;
   r:gives {
     :patientA :morningStiffnessLevel 3 .
   };
   r:evidence (
-    skolem:lemma169
+    skolem:lemma37
     [ a r:Fact; r:gives {90 math:notLessThan 60}]
     [ a r:Fact; r:gives {90 math:lessThan 120}]
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 90];
-  r:rule skolem:lemma251.
+  r:rule skolem:lemma38.
 
-skolem:lemma228 a r:Inference;
+skolem:lemma6 a r:Inference;
   r:gives {
     :patientA :radaiIndex 4.308333333333334 .
   };
   r:evidence (
-    skolem:lemma163
+    skolem:lemma39
     [ a r:Fact; r:gives {(40 10) math:quotient 4}]
-    skolem:lemma166
-    skolem:lemma167
+    skolem:lemma30
+    skolem:lemma31
     [ a r:Fact; r:gives {(3 18) math:sum 21}]
     [ a r:Fact; r:gives {(21 56) math:quotient 0.375}]
-    skolem:lemma168
-    skolem:lemma227
+    skolem:lemma40
+    skolem:lemma41
     [ a r:Fact; r:gives {(3 6) math:quotient 0.5}]
     [ a r:Fact; r:gives {(0.5 10) math:product 5.0}]
-    skolem:lemma170
+    skolem:lemma42
     [ a r:Fact; r:gives {(20 48) math:quotient 0.4166666666666667}]
     [ a r:Fact; r:gives {(0.4166666666666667 10) math:product 4.166666666666667}]
     [ a r:Fact; r:gives {(4 0.375 8 5.0 4.166666666666667) math:sum 21.541666666666668}]
@@ -2522,35 +197,100 @@ skolem:lemma228 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_13"]; r:boundTo 4.166666666666667];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_14"]; r:boundTo 21.541666666666668];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_15"]; r:boundTo 4.308333333333334];
-  r:rule skolem:lemma252.
+  r:rule skolem:lemma43.
 
-skolem:lemma229 a r:Inference;
+skolem:lemma7 a r:Inference;
+  r:gives {
+    :patientA :hasDiseaseActivity :ModerateDiseaseActivity.
+  };
+  r:evidence (
+    skolem:lemma44
+    [ a r:Fact; r:gives {4.308333333333334 math:notLessThan 3}]
+    [ a r:Fact; r:gives {4.308333333333334 math:lessThan 5.4}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 4.308333333333334];
+  r:rule skolem:lemma45.
+
+skolem:lemma8 a r:Inference;
   r:gives {
     :patientA :hasOutcome :SuspectedDiseaseActivity.
   };
   r:evidence (
-    skolem:lemma225
+    skolem:lemma46
     [ a r:Fact; r:gives {:HighDiseaseActivity list:in (:ModerateDiseaseActivity :HighDiseaseActivity)}]
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#HighDiseaseActivity"]];
-  r:rule skolem:lemma253.
+  r:rule skolem:lemma47.
 
-skolem:lemma230 a r:Inference;
+skolem:lemma9 a r:Inference;
+  r:gives {
+    :patientA :recommendation _:sk_4.
+    _:sk_4 a :ContactRheumatologistRecommendation.
+    _:sk_4 prov:used :SuspectedDiseaseActivity.
+  };
+  r:evidence (
+    skolem:lemma48
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:rule skolem:lemma49.
+
+skolem:lemma10 a r:Inference;
+  r:gives {
+    :patientA :recommendation _:sk_5.
+    _:sk_5 a :QuitSmokingRecommendation.
+    _:sk_5 prov:used :Smoker.
+    _:sk_5 prov:used :RheumatoidFactorPositive.
+    _:sk_5 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive.
+  };
+  r:evidence (
+    skolem:lemma50
+    skolem:lemma51
+    skolem:lemma52
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:rule skolem:lemma53.
+
+skolem:lemma11 a r:Inference;
+  r:gives {
+    :patientA :recommendation _:sk_6.
+    _:sk_6 a :LoseWeightRecommendation.
+    _:sk_6 prov:used :ObeseClass1.
+  };
+  r:evidence (
+    skolem:lemma54
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:rule skolem:lemma55.
+
+skolem:lemma12 a r:Inference;
+  r:gives {
+    :patientA :recommendation _:sk_7.
+    _:sk_7 a :CarefulOralHygieneRecommendation.
+    _:sk_7 prov:used :NonErosiveRheumatoidArthritis.
+  };
+  r:evidence (
+    skolem:lemma56
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:rule skolem:lemma57.
+
+skolem:lemma13 a r:Inference;
   r:gives {
     "You should contact your rheumatologist" :since "You have a suspected (moderate or high) disease activity".
     "You should contact your rheumatologist" :because "Treat-to-target approach aims at remission or low disease activity".
   };
   r:evidence (
-    skolem:lemma218
-    skolem:lemma218
-    skolem:lemma132
-    skolem:lemma173
-    skolem:lemma218
-    skolem:lemma171
-    skolem:lemma133
-    skolem:lemma197
-    skolem:lemma174
+    skolem:lemma58
+    skolem:lemma58
+    skolem:lemma59
+    skolem:lemma60
+    skolem:lemma58
+    skolem:lemma61
+    skolem:lemma62
+    skolem:lemma63
+    skolem:lemma64
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
@@ -2560,153 +300,23 @@ skolem:lemma230 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You have a suspected (moderate or high) disease activity"];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Treat2targetApproach"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Treat-to-target approach aims at remission or low disease activity"];
-  r:rule skolem:lemma254.
+  r:rule skolem:lemma65.
 
-skolem:lemma231 a r:Inference;
-  r:gives {
-    "You should quit smoking" :since "You have a smoking habit".
-    "You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
-  };
-  r:evidence (
-    skolem:lemma219
-    skolem:lemma219
-    skolem:lemma140
-    skolem:lemma181
-    skolem:lemma219
-    skolem:lemma178
-    skolem:lemma141
-    skolem:lemma200
-    skolem:lemma182
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You should quit smoking"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Smoker"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You have a smoking habit"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA"];
-  r:rule skolem:lemma254.
-
-skolem:lemma232 a r:Inference;
-  r:gives {
-    "You should quit smoking" :since "You tested positive for rheumatoid factor".
-    "You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
-  };
-  r:evidence (
-    skolem:lemma219
-    skolem:lemma219
-    skolem:lemma140
-    skolem:lemma181
-    skolem:lemma219
-    skolem:lemma179
-    skolem:lemma141
-    skolem:lemma200
-    skolem:lemma182
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You should quit smoking"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#RheumatoidFactorPositive"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You tested positive for rheumatoid factor"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA"];
-  r:rule skolem:lemma254.
-
-skolem:lemma233 a r:Inference;
-  r:gives {
-    "You should quit smoking" :since "You tested positive for anti-CCP antibody".
-    "You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
-  };
-  r:evidence (
-    skolem:lemma219
-    skolem:lemma219
-    skolem:lemma140
-    skolem:lemma181
-    skolem:lemma219
-    skolem:lemma180
-    skolem:lemma141
-    skolem:lemma200
-    skolem:lemma182
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You should quit smoking"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AntiCyclicCitrullinatedPeptideAntibodyPositive"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You tested positive for anti-CCP antibody"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA"];
-  r:rule skolem:lemma254.
-
-skolem:lemma234 a r:Inference;
-  r:gives {
-    "You should lose weight" :since "You have obesity class I".
-    "You should lose weight" :because "Negative influence of obesity has been observed on arthritis drug therapies".
-  };
-  r:evidence (
-    skolem:lemma220
-    skolem:lemma220
-    skolem:lemma146
-    skolem:lemma187
-    skolem:lemma220
-    skolem:lemma185
-    skolem:lemma147
-    skolem:lemma202
-    skolem:lemma188
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_2"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LoseWeightRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You should lose weight"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObeseClass1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You have obesity class I"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObesityNegativeInfluence"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Negative influence of obesity has been observed on arthritis drug therapies"];
-  r:rule skolem:lemma254.
-
-skolem:lemma235 a r:Inference;
-  r:gives {
-    "You have to practice careful oral hygiene" :since "You have a non-erosive rheumatoid arthritis".
-    "You have to practice careful oral hygiene" :because "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions".
-  };
-  r:evidence (
-    skolem:lemma221
-    skolem:lemma221
-    skolem:lemma151
-    skolem:lemma192
-    skolem:lemma221
-    skolem:lemma191
-    skolem:lemma152
-    skolem:lemma204
-    skolem:lemma193
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_3"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#CarefulOralHygieneRecommendation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You have to practice careful oral hygiene"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#NonErosiveRheumatoidArthritis"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You have a non-erosive rheumatoid arthritis"];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AutoimmuneLesions"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions"];
-  r:rule skolem:lemma254.
-
-skolem:lemma236 a r:Inference;
+skolem:lemma14 a r:Inference;
   r:gives {
     "You should contact your rheumatologist" :since "You have a suspected (moderate or high) disease activity".
     "You should contact your rheumatologist" :because "A disease activity can be identified according to studies on CDAI and RADAI scales".
   };
   r:evidence (
-    skolem:lemma218
-    skolem:lemma218
-    skolem:lemma132
-    skolem:lemma173
-    skolem:lemma218
-    skolem:lemma171
-    skolem:lemma134
-    skolem:lemma198
-    skolem:lemma175
+    skolem:lemma58
+    skolem:lemma58
+    skolem:lemma59
+    skolem:lemma60
+    skolem:lemma58
+    skolem:lemma61
+    skolem:lemma66
+    skolem:lemma67
+    skolem:lemma68
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
@@ -2716,19 +326,149 @@ skolem:lemma236 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You have a suspected (moderate or high) disease activity"];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#DiseaseActivityStudies"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "A disease activity can be identified according to studies on CDAI and RADAI scales"];
-  r:rule skolem:lemma254.
+  r:rule skolem:lemma65.
 
-skolem:lemma237 a r:Inference;
+skolem:lemma15 a r:Inference;
+  r:gives {
+    "You should quit smoking" :since "You have a smoking habit".
+    "You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
+  };
+  r:evidence (
+    skolem:lemma69
+    skolem:lemma69
+    skolem:lemma70
+    skolem:lemma71
+    skolem:lemma69
+    skolem:lemma72
+    skolem:lemma73
+    skolem:lemma74
+    skolem:lemma75
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You should quit smoking"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Smoker"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You have a smoking habit"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA"];
+  r:rule skolem:lemma65.
+
+skolem:lemma16 a r:Inference;
+  r:gives {
+    "You should quit smoking" :since "You tested positive for rheumatoid factor".
+    "You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
+  };
+  r:evidence (
+    skolem:lemma69
+    skolem:lemma69
+    skolem:lemma70
+    skolem:lemma71
+    skolem:lemma69
+    skolem:lemma76
+    skolem:lemma73
+    skolem:lemma74
+    skolem:lemma75
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You should quit smoking"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#RheumatoidFactorPositive"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You tested positive for rheumatoid factor"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA"];
+  r:rule skolem:lemma65.
+
+skolem:lemma17 a r:Inference;
+  r:gives {
+    "You should quit smoking" :since "You tested positive for anti-CCP antibody".
+    "You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
+  };
+  r:evidence (
+    skolem:lemma69
+    skolem:lemma69
+    skolem:lemma70
+    skolem:lemma71
+    skolem:lemma69
+    skolem:lemma77
+    skolem:lemma73
+    skolem:lemma74
+    skolem:lemma75
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#QuitSmokingRecommendation"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You should quit smoking"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AntiCyclicCitrullinatedPeptideAntibodyPositive"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You tested positive for anti-CCP antibody"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#InterstitialLungDiseasePredictors"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA"];
+  r:rule skolem:lemma65.
+
+skolem:lemma18 a r:Inference;
+  r:gives {
+    "You should lose weight" :since "You have obesity class I".
+    "You should lose weight" :because "Negative influence of obesity has been observed on arthritis drug therapies".
+  };
+  r:evidence (
+    skolem:lemma78
+    skolem:lemma78
+    skolem:lemma79
+    skolem:lemma80
+    skolem:lemma78
+    skolem:lemma81
+    skolem:lemma82
+    skolem:lemma83
+    skolem:lemma84
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_2"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#LoseWeightRecommendation"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You should lose weight"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObeseClass1"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You have obesity class I"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#ObesityNegativeInfluence"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Negative influence of obesity has been observed on arthritis drug therapies"];
+  r:rule skolem:lemma65.
+
+skolem:lemma19 a r:Inference;
+  r:gives {
+    "You have to practice careful oral hygiene" :since "You have a non-erosive rheumatoid arthritis".
+    "You have to practice careful oral hygiene" :because "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions".
+  };
+  r:evidence (
+    skolem:lemma85
+    skolem:lemma85
+    skolem:lemma86
+    skolem:lemma87
+    skolem:lemma85
+    skolem:lemma88
+    skolem:lemma89
+    skolem:lemma90
+    skolem:lemma91
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_3"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#CarefulOralHygieneRecommendation"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You have to practice careful oral hygiene"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#NonErosiveRheumatoidArthritis"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "You have a non-erosive rheumatoid arthritis"];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#AutoimmuneLesions"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions"];
+  r:rule skolem:lemma65.
+
+skolem:lemma20 a r:Inference;
   r:gives {
     "You should contact your rheumatologist" :plan "Treatment strategy change possibly needed".
   };
   r:evidence (
-    skolem:lemma218
-    skolem:lemma218
-    skolem:lemma132
-    skolem:lemma173
-    skolem:lemma196
-    skolem:lemma172
+    skolem:lemma58
+    skolem:lemma58
+    skolem:lemma59
+    skolem:lemma60
+    skolem:lemma92
+    skolem:lemma93
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
@@ -2736,21 +476,21 @@ skolem:lemma237 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo "You should contact your rheumatologist"];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#TreatmentStrategyChange"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo "Treatment strategy change possibly needed"];
-  r:rule skolem:lemma255.
+  r:rule skolem:lemma94.
 
-skolem:lemma238 a r:Inference;
+skolem:lemma21 a r:Inference;
   r:gives {
     "What happens when your Clinical Disease Activity Index gets lower?" :hasResponse "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)".
   };
   r:evidence (
-    skolem:lemma218
-    skolem:lemma218
-    skolem:lemma132
-    skolem:lemma135
-    skolem:lemma199
-    skolem:lemma176
-    skolem:lemma213
-    skolem:lemma177
+    skolem:lemma58
+    skolem:lemma58
+    skolem:lemma59
+    skolem:lemma95
+    skolem:lemma96
+    skolem:lemma97
+    skolem:lemma98
+    skolem:lemma99
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
@@ -2759,21 +499,21 @@ skolem:lemma238 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)"];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q01"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo "What happens when your Clinical Disease Activity Index gets lower?"];
-  r:rule skolem:lemma256.
+  r:rule skolem:lemma100.
 
-skolem:lemma239 a r:Inference;
+skolem:lemma22 a r:Inference;
   r:gives {
     "What happens if you quit smoking?" :hasResponse "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease".
   };
   r:evidence (
-    skolem:lemma219
-    skolem:lemma219
-    skolem:lemma140
-    skolem:lemma142
-    skolem:lemma201
-    skolem:lemma183
-    skolem:lemma214
-    skolem:lemma184
+    skolem:lemma69
+    skolem:lemma69
+    skolem:lemma70
+    skolem:lemma101
+    skolem:lemma102
+    skolem:lemma103
+    skolem:lemma104
+    skolem:lemma105
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
@@ -2782,21 +522,21 @@ skolem:lemma239 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease"];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q02"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo "What happens if you quit smoking?"];
-  r:rule skolem:lemma256.
+  r:rule skolem:lemma100.
 
-skolem:lemma240 a r:Inference;
+skolem:lemma23 a r:Inference;
   r:gives {
     "What happens when your weight gets lower?" :hasResponse "Lower weight could help improve RA disease activity and disability".
   };
   r:evidence (
-    skolem:lemma220
-    skolem:lemma220
-    skolem:lemma146
-    skolem:lemma148
-    skolem:lemma203
-    skolem:lemma189
-    skolem:lemma215
-    skolem:lemma190
+    skolem:lemma78
+    skolem:lemma78
+    skolem:lemma79
+    skolem:lemma106
+    skolem:lemma107
+    skolem:lemma108
+    skolem:lemma109
+    skolem:lemma110
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_2"]];
@@ -2805,21 +545,21 @@ skolem:lemma240 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo "Lower weight could help improve RA disease activity and disability"];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q03"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo "What happens when your weight gets lower?"];
-  r:rule skolem:lemma256.
+  r:rule skolem:lemma100.
 
-skolem:lemma241 a r:Inference;
+skolem:lemma24 a r:Inference;
   r:gives {
     "What are the benefits of practicing a good oral hygiene?" :hasResponse "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis.".
   };
   r:evidence (
-    skolem:lemma221
-    skolem:lemma221
-    skolem:lemma151
-    skolem:lemma153
-    skolem:lemma205
-    skolem:lemma194
-    skolem:lemma216
-    skolem:lemma195
+    skolem:lemma85
+    skolem:lemma85
+    skolem:lemma86
+    skolem:lemma111
+    skolem:lemma112
+    skolem:lemma113
+    skolem:lemma114
+    skolem:lemma115
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_3"]];
@@ -2828,45 +568,21 @@ skolem:lemma241 a r:Inference;
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis."];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#Q04"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo "What are the benefits of practicing a good oral hygiene?"];
-  r:rule skolem:lemma256.
+  r:rule skolem:lemma100.
 
-skolem:lemma242 a r:Extraction;
+skolem:lemma25 a r:Extraction;
   r:gives {
-    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasOutcome :SuspectedDiseaseActivity} => {var:x_0 :recommendation var:x_1.
-     var:x_1 a :ContactRheumatologistRecommendation.
-     var:x_1 prov:used :SuspectedDiseaseActivity}.
+    :patientA schema:height 170 .
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma243 a r:Extraction;
+skolem:lemma26 a r:Extraction;
   r:gives {
-    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasBehaviour :Smoker.
-     var:x_0 :hasClinicalFinding :RheumatoidFactorPositive.
-     var:x_0 :hasClinicalFinding :AntiCyclicCitrullinatedPeptideAntibodyPositive} => {var:x_0 :recommendation var:x_1.
-     var:x_1 a :QuitSmokingRecommendation.
-     var:x_1 prov:used :Smoker.
-     var:x_1 prov:used :RheumatoidFactorPositive.
-     var:x_1 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive}.
+    :patientA schema:weight 95 .
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma244 a r:Extraction;
-  r:gives {
-    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasBmiClass :ObeseClass1} => {var:x_0 :recommendation var:x_1.
-     var:x_1 a :LoseWeightRecommendation.
-     var:x_1 prov:used :ObeseClass1}.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma245 a r:Extraction;
-  r:gives {
-    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasDisease :NonErosiveRheumatoidArthritis} => {var:x_0 :recommendation var:x_1.
-     var:x_1 a :CarefulOralHygieneRecommendation.
-     var:x_1 prov:used :NonErosiveRheumatoidArthritis}.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
-
-skolem:lemma246 a r:Extraction;
+skolem:lemma27 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5. {var:x_0 schema:height var:x_1.
      var:x_0 schema:weight var:x_2.
@@ -2876,7 +592,26 @@ skolem:lemma246 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma247 a r:Extraction;
+skolem:lemma28 a r:Inference;
+  r:gives {
+    :patientA :bmiValue 32.871972318339104 .
+  };
+  r:evidence (
+    skolem:lemma25
+    skolem:lemma26
+    [ a r:Fact; r:gives {(170 100) math:quotient 1.7}]
+    [ a r:Fact; r:gives {(1.7 2) math:exponentiation 2.8899999999999997}]
+    [ a r:Fact; r:gives {(95 2.8899999999999997) math:quotient 32.871972318339104}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 170];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 95];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 1.7];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo 2.8899999999999997];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo 32.871972318339104];
+  r:rule skolem:lemma116.
+
+skolem:lemma29 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1. {var:x_0 :bmiValue var:x_1.
      var:x_1 math:greaterThan 29.9 .
@@ -2884,7 +619,31 @@ skolem:lemma247 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma248 a r:Extraction;
+skolem:lemma30 a r:Extraction;
+  r:gives {
+    :patientA :swollenJointCount 3 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma31 a r:Extraction;
+  r:gives {
+    :patientA :tenderJointCount 18 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma32 a r:Extraction;
+  r:gives {
+    :patientA :ptGaDiseaseActivityValue 8 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma33 a r:Extraction;
+  r:gives {
+    :patientA :phGaDiseaseActivityValue 5 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma34 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5. {var:x_0 :swollenJointCount var:x_1.
      var:x_0 :tenderJointCount var:x_2.
@@ -2894,22 +653,39 @@ skolem:lemma248 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma249 a r:Extraction;
+skolem:lemma35 a r:Inference;
+  r:gives {
+    :patientA :cdaiIndex 34 .
+  };
+  r:evidence (
+    skolem:lemma30
+    skolem:lemma31
+    skolem:lemma32
+    skolem:lemma33
+    [ a r:Fact; r:gives {(3 18 8 5) math:sum 34}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 3];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 18];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 8];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo 5];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo 34];
+  r:rule skolem:lemma117.
+
+skolem:lemma36 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1. {var:x_0 :cdaiIndex var:x_1.
      var:x_1 math:notLessThan 22} => {var:x_0 :hasDiseaseActivity :HighDiseaseActivity}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma250 a r:Extraction;
+skolem:lemma37 a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1. {var:x_0 :radaiIndex var:x_1.
-     var:x_1 math:notLessThan 3 .
-     var:x_1 math:lessThan 5.4} => {var:x_0 :hasDiseaseActivity :ModerateDiseaseActivity}.
+    :patientA :morningStiffnessDuration 90 .
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma251 a r:Extraction;
+skolem:lemma38 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1. {var:x_0 :morningStiffnessDuration var:x_1.
      var:x_1 math:notLessThan 60 .
@@ -2917,7 +693,38 @@ skolem:lemma251 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma252 a r:Extraction;
+skolem:lemma39 a r:Extraction;
+  r:gives {
+    :patientA :ghVasValue 40 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma40 a r:Extraction;
+  r:gives {
+    :patientA :vasPainValue 8 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma41 a r:Inference;
+  r:gives {
+    :patientA :morningStiffnessLevel 3 .
+  };
+  r:evidence (
+    skolem:lemma37
+    [ a r:Fact; r:gives {90 math:notLessThan 60}]
+    [ a r:Fact; r:gives {90 math:lessThan 120}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 90];
+  r:rule skolem:lemma118.
+
+skolem:lemma42 a r:Extraction;
+  r:gives {
+    :patientA :ratedTenderJointsValue 20 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma43 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5, var:x_6, var:x_7, var:x_8, var:x_9, var:x_10, var:x_11, var:x_12, var:x_13, var:x_14, var:x_15. {var:x_0 :ghVasValue var:x_1.
      (var:x_1 10) math:quotient var:x_2.
@@ -2937,14 +744,207 @@ skolem:lemma252 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma253 a r:Extraction;
+skolem:lemma44 a r:Inference;
+  r:gives {
+    :patientA :radaiIndex 4.308333333333334 .
+  };
+  r:evidence (
+    skolem:lemma39
+    [ a r:Fact; r:gives {(40 10) math:quotient 4}]
+    skolem:lemma30
+    skolem:lemma31
+    [ a r:Fact; r:gives {(3 18) math:sum 21}]
+    [ a r:Fact; r:gives {(21 56) math:quotient 0.375}]
+    skolem:lemma40
+    skolem:lemma41
+    [ a r:Fact; r:gives {(3 6) math:quotient 0.5}]
+    [ a r:Fact; r:gives {(0.5 10) math:product 5.0}]
+    skolem:lemma42
+    [ a r:Fact; r:gives {(20 48) math:quotient 0.4166666666666667}]
+    [ a r:Fact; r:gives {(0.4166666666666667 10) math:product 4.166666666666667}]
+    [ a r:Fact; r:gives {(4 0.375 8 5.0 4.166666666666667) math:sum 21.541666666666668}]
+    [ a r:Fact; r:gives {(21.541666666666668 5) math:quotient 4.308333333333334}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 40];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 4];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo 3];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo 18];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_5"]; r:boundTo 21];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_6"]; r:boundTo 0.375];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_7"]; r:boundTo 8];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_8"]; r:boundTo 3];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_9"]; r:boundTo 0.5];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_10"]; r:boundTo 5.0];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_11"]; r:boundTo 20];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_12"]; r:boundTo 0.4166666666666667];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_13"]; r:boundTo 4.166666666666667];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_14"]; r:boundTo 21.541666666666668];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_15"]; r:boundTo 4.308333333333334];
+  r:rule skolem:lemma119.
+
+skolem:lemma45 a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1. {var:x_0 :radaiIndex var:x_1.
+     var:x_1 math:notLessThan 3 .
+     var:x_1 math:lessThan 5.4} => {var:x_0 :hasDiseaseActivity :ModerateDiseaseActivity}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma46 a r:Inference;
+  r:gives {
+    :patientA :hasDiseaseActivity :HighDiseaseActivity.
+  };
+  r:evidence (
+    skolem:lemma35
+    [ a r:Fact; r:gives {34 math:notLessThan 22}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 34];
+  r:rule skolem:lemma120.
+
+skolem:lemma47 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1. {var:x_0 :hasDiseaseActivity var:x_1.
      var:x_1 list:in (:ModerateDiseaseActivity :HighDiseaseActivity)} => {var:x_0 :hasOutcome :SuspectedDiseaseActivity}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma254 a r:Extraction;
+skolem:lemma48 a r:Inference;
+  r:gives {
+    :patientA :hasOutcome :SuspectedDiseaseActivity.
+  };
+  r:evidence (
+    skolem:lemma46
+    [ a r:Fact; r:gives {:HighDiseaseActivity list:in (:ModerateDiseaseActivity :HighDiseaseActivity)}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#HighDiseaseActivity"]];
+  r:rule skolem:lemma121.
+
+skolem:lemma49 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasOutcome :SuspectedDiseaseActivity} => {var:x_0 :recommendation var:x_1.
+     var:x_1 a :ContactRheumatologistRecommendation.
+     var:x_1 prov:used :SuspectedDiseaseActivity}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma50 a r:Extraction;
+  r:gives {
+    :patientA :hasBehaviour :Smoker.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma51 a r:Extraction;
+  r:gives {
+    :patientA :hasClinicalFinding :RheumatoidFactorPositive.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma52 a r:Extraction;
+  r:gives {
+    :patientA :hasClinicalFinding :AntiCyclicCitrullinatedPeptideAntibodyPositive.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma53 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasBehaviour :Smoker.
+     var:x_0 :hasClinicalFinding :RheumatoidFactorPositive.
+     var:x_0 :hasClinicalFinding :AntiCyclicCitrullinatedPeptideAntibodyPositive} => {var:x_0 :recommendation var:x_1.
+     var:x_1 a :QuitSmokingRecommendation.
+     var:x_1 prov:used :Smoker.
+     var:x_1 prov:used :RheumatoidFactorPositive.
+     var:x_1 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma54 a r:Inference;
+  r:gives {
+    :patientA :hasBmiClass :ObeseClass1.
+  };
+  r:evidence (
+    skolem:lemma28
+    [ a r:Fact; r:gives {32.871972318339104 math:greaterThan 29.9}]
+    [ a r:Fact; r:gives {32.871972318339104 math:lessThan 35}]
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 32.871972318339104];
+  r:rule skolem:lemma122.
+
+skolem:lemma55 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasBmiClass :ObeseClass1} => {var:x_0 :recommendation var:x_1.
+     var:x_1 a :LoseWeightRecommendation.
+     var:x_1 prov:used :ObeseClass1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma56 a r:Extraction;
+  r:gives {
+    :patientA :hasDisease :NonErosiveRheumatoidArthritis.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma57 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasDisease :NonErosiveRheumatoidArthritis} => {var:x_0 :recommendation var:x_1.
+     var:x_1 a :CarefulOralHygieneRecommendation.
+     var:x_1 prov:used :NonErosiveRheumatoidArthritis}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma58 a r:Inference;
+  r:gives {
+    :patientA :recommendation _:sk_0.
+    _:sk_0 a :ContactRheumatologistRecommendation.
+    _:sk_0 prov:used :SuspectedDiseaseActivity.
+  };
+  r:evidence (
+    skolem:lemma48
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
+  r:rule skolem:lemma123.
+
+skolem:lemma59 a r:Extraction;
+  r:gives {
+    :ContactRheumatologistRecommendation a eo:SystemRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma60 a r:Extraction;
+  r:gives {
+    :ContactRheumatologistRecommendation rdfs:label "You should contact your rheumatologist".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma61 a r:Extraction;
+  r:gives {
+    :SuspectedDiseaseActivity rdfs:label "You have a suspected (moderate or high) disease activity".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma62 a r:Extraction;
+  r:gives {
+    :Treat2targetApproach a eo:ScientificExplanation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma63 a r:Extraction;
+  r:gives {
+    :Treat2targetApproach ep:isBasedOn :ContactRheumatologistRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma64 a r:Extraction;
+  r:gives {
+    :Treat2targetApproach rdfs:label "Treat-to-target approach aims at remission or low disease activity".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma65 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5, var:x_6, var:x_7. {var:x_0 :recommendation var:x_1.
      var:x_1 a var:x_2.
@@ -2959,7 +959,200 @@ skolem:lemma254 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma255 a r:Extraction;
+skolem:lemma66 a r:Extraction;
+  r:gives {
+    :DiseaseActivityStudies a eo:ScientificExplanation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma67 a r:Extraction;
+  r:gives {
+    :DiseaseActivityStudies ep:isBasedOn :ContactRheumatologistRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma68 a r:Extraction;
+  r:gives {
+    :DiseaseActivityStudies rdfs:label "A disease activity can be identified according to studies on CDAI and RADAI scales".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma69 a r:Inference;
+  r:gives {
+    :patientA :recommendation _:sk_1.
+    _:sk_1 a :QuitSmokingRecommendation.
+    _:sk_1 prov:used :Smoker.
+    _:sk_1 prov:used :RheumatoidFactorPositive.
+    _:sk_1 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive.
+  };
+  r:evidence (
+    skolem:lemma50
+    skolem:lemma51
+    skolem:lemma52
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_1"]];
+  r:rule skolem:lemma124.
+
+skolem:lemma70 a r:Extraction;
+  r:gives {
+    :QuitSmokingRecommendation a eo:SystemRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma71 a r:Extraction;
+  r:gives {
+    :QuitSmokingRecommendation rdfs:label "You should quit smoking".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma72 a r:Extraction;
+  r:gives {
+    :Smoker rdfs:label "You have a smoking habit".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma73 a r:Extraction;
+  r:gives {
+    :InterstitialLungDiseasePredictors a eo:ScientificExplanation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma74 a r:Extraction;
+  r:gives {
+    :InterstitialLungDiseasePredictors ep:isBasedOn :QuitSmokingRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma75 a r:Extraction;
+  r:gives {
+    :InterstitialLungDiseasePredictors rdfs:label "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma76 a r:Extraction;
+  r:gives {
+    :RheumatoidFactorPositive rdfs:label "You tested positive for rheumatoid factor".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma77 a r:Extraction;
+  r:gives {
+    :AntiCyclicCitrullinatedPeptideAntibodyPositive rdfs:label "You tested positive for anti-CCP antibody".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma78 a r:Inference;
+  r:gives {
+    :patientA :recommendation _:sk_2.
+    _:sk_2 a :LoseWeightRecommendation.
+    _:sk_2 prov:used :ObeseClass1.
+  };
+  r:evidence (
+    skolem:lemma54
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_2"]];
+  r:rule skolem:lemma125.
+
+skolem:lemma79 a r:Extraction;
+  r:gives {
+    :LoseWeightRecommendation a eo:SystemRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma80 a r:Extraction;
+  r:gives {
+    :LoseWeightRecommendation rdfs:label "You should lose weight".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma81 a r:Extraction;
+  r:gives {
+    :ObeseClass1 rdfs:label "You have obesity class I".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma82 a r:Extraction;
+  r:gives {
+    :ObesityNegativeInfluence a eo:ScientificExplanation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma83 a r:Extraction;
+  r:gives {
+    :ObesityNegativeInfluence ep:isBasedOn :LoseWeightRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma84 a r:Extraction;
+  r:gives {
+    :ObesityNegativeInfluence rdfs:label "Negative influence of obesity has been observed on arthritis drug therapies".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma85 a r:Inference;
+  r:gives {
+    :patientA :recommendation _:sk_3.
+    _:sk_3 a :CarefulOralHygieneRecommendation.
+    _:sk_3 prov:used :NonErosiveRheumatoidArthritis.
+  };
+  r:evidence (
+    skolem:lemma56
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://swot.sisinflab.poliba.it/onto/rheumatology#patientA"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_3"]];
+  r:rule skolem:lemma126.
+
+skolem:lemma86 a r:Extraction;
+  r:gives {
+    :CarefulOralHygieneRecommendation a eo:SystemRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma87 a r:Extraction;
+  r:gives {
+    :CarefulOralHygieneRecommendation rdfs:label "You have to practice careful oral hygiene".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma88 a r:Extraction;
+  r:gives {
+    :NonErosiveRheumatoidArthritis rdfs:label "You have a non-erosive rheumatoid arthritis".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma89 a r:Extraction;
+  r:gives {
+    :AutoimmuneLesions a eo:ScientificExplanation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma90 a r:Extraction;
+  r:gives {
+    :AutoimmuneLesions ep:isBasedOn :CarefulOralHygieneRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma91 a r:Extraction;
+  r:gives {
+    :AutoimmuneLesions rdfs:label "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma92 a r:Extraction;
+  r:gives {
+    :ContactRheumatologistRecommendation prov:hadPlan :TreatmentStrategyChange.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma93 a r:Extraction;
+  r:gives {
+    :TreatmentStrategyChange rdfs:label "Treatment strategy change possibly needed".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma94 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5. {var:x_0 :recommendation var:x_1.
      var:x_1 a var:x_2.
@@ -2970,7 +1163,37 @@ skolem:lemma255 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-skolem:lemma256 a r:Extraction;
+skolem:lemma95 a r:Extraction;
+  r:gives {
+    :LowerDiseaseIndexCondition a eo:CounterfactualExplanation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma96 a r:Extraction;
+  r:gives {
+    :LowerDiseaseIndexCondition ep:isBasedOn :ContactRheumatologistRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma97 a r:Extraction;
+  r:gives {
+    :LowerDiseaseIndexCondition rdfs:label "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma98 a r:Extraction;
+  r:gives {
+    :LowerDiseaseIndexCondition eo:addresses :Q01.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma99 a r:Extraction;
+  r:gives {
+    :Q01 rdfs:label "What happens when your Clinical Disease Activity Index gets lower?".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma100 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5, var:x_6. {var:x_0 :recommendation var:x_1.
      var:x_1 a var:x_2.
@@ -2983,6 +1206,202 @@ skolem:lemma256 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-#2022-11-06T14:53:37.124Z in=153 out=127 ent=168 step=493 brake=3 inf=608575 sec=0.057 inf/sec=10676754
+skolem:lemma101 a r:Extraction;
+  r:gives {
+    :StopSmoking a eo:CounterfactualExplanation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma102 a r:Extraction;
+  r:gives {
+    :StopSmoking ep:isBasedOn :QuitSmokingRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma103 a r:Extraction;
+  r:gives {
+    :StopSmoking rdfs:label "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma104 a r:Extraction;
+  r:gives {
+    :StopSmoking eo:addresses :Q02.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma105 a r:Extraction;
+  r:gives {
+    :Q02 rdfs:label "What happens if you quit smoking?".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma106 a r:Extraction;
+  r:gives {
+    :LowerWeightCondition a eo:CounterfactualExplanation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma107 a r:Extraction;
+  r:gives {
+    :LowerWeightCondition ep:isBasedOn :LoseWeightRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma108 a r:Extraction;
+  r:gives {
+    :LowerWeightCondition rdfs:label "Lower weight could help improve RA disease activity and disability".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma109 a r:Extraction;
+  r:gives {
+    :LowerWeightCondition eo:addresses :Q03.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma110 a r:Extraction;
+  r:gives {
+    :Q03 rdfs:label "What happens when your weight gets lower?".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma111 a r:Extraction;
+  r:gives {
+    :GoodOralHygieneCondition a eo:CounterfactualExplanation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma112 a r:Extraction;
+  r:gives {
+    :GoodOralHygieneCondition ep:isBasedOn :CarefulOralHygieneRecommendation.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma113 a r:Extraction;
+  r:gives {
+    :GoodOralHygieneCondition rdfs:label "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis.".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma114 a r:Extraction;
+  r:gives {
+    :GoodOralHygieneCondition eo:addresses :Q04.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma115 a r:Extraction;
+  r:gives {
+    :Q04 rdfs:label "What are the benefits of practicing a good oral hygiene?".
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma116 a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5. {var:x_0 schema:height var:x_1.
+     var:x_0 schema:weight var:x_2.
+     (var:x_1 100) math:quotient var:x_3.
+     (var:x_3 2) math:exponentiation var:x_4.
+     (var:x_2 var:x_4) math:quotient var:x_5} => {var:x_0 :bmiValue var:x_5}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma117 a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5. {var:x_0 :swollenJointCount var:x_1.
+     var:x_0 :tenderJointCount var:x_2.
+     var:x_0 :ptGaDiseaseActivityValue var:x_3.
+     var:x_0 :phGaDiseaseActivityValue var:x_4.
+     (var:x_1 var:x_2 var:x_3 var:x_4) math:sum var:x_5} => {var:x_0 :cdaiIndex var:x_5}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma118 a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1. {var:x_0 :morningStiffnessDuration var:x_1.
+     var:x_1 math:notLessThan 60 .
+     var:x_1 math:lessThan 120} => {var:x_0 :morningStiffnessLevel 3}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma119 a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1, var:x_2, var:x_3, var:x_4, var:x_5, var:x_6, var:x_7, var:x_8, var:x_9, var:x_10, var:x_11, var:x_12, var:x_13, var:x_14, var:x_15. {var:x_0 :ghVasValue var:x_1.
+     (var:x_1 10) math:quotient var:x_2.
+     var:x_0 :swollenJointCount var:x_3.
+     var:x_0 :tenderJointCount var:x_4.
+     (var:x_3 var:x_4) math:sum var:x_5.
+     (var:x_5 56) math:quotient var:x_6.
+     var:x_0 :vasPainValue var:x_7.
+     var:x_0 :morningStiffnessLevel var:x_8.
+     (var:x_8 6) math:quotient var:x_9.
+     (var:x_9 10) math:product var:x_10.
+     var:x_0 :ratedTenderJointsValue var:x_11.
+     (var:x_11 48) math:quotient var:x_12.
+     (var:x_12 10) math:product var:x_13.
+     (var:x_2 var:x_6 var:x_7 var:x_10 var:x_13) math:sum var:x_14.
+     (var:x_14 5) math:quotient var:x_15} => {var:x_0 :radaiIndex var:x_15}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma120 a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1. {var:x_0 :cdaiIndex var:x_1.
+     var:x_1 math:notLessThan 22} => {var:x_0 :hasDiseaseActivity :HighDiseaseActivity}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma121 a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1. {var:x_0 :hasDiseaseActivity var:x_1.
+     var:x_1 list:in (:ModerateDiseaseActivity :HighDiseaseActivity)} => {var:x_0 :hasOutcome :SuspectedDiseaseActivity}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma122 a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1. {var:x_0 :bmiValue var:x_1.
+     var:x_1 math:greaterThan 29.9 .
+     var:x_1 math:lessThan 35} => {var:x_0 :hasBmiClass :ObeseClass1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma123 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasOutcome :SuspectedDiseaseActivity} => {var:x_0 :recommendation var:x_1.
+     var:x_1 a :ContactRheumatologistRecommendation.
+     var:x_1 prov:used :SuspectedDiseaseActivity}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma124 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasBehaviour :Smoker.
+     var:x_0 :hasClinicalFinding :RheumatoidFactorPositive.
+     var:x_0 :hasClinicalFinding :AntiCyclicCitrullinatedPeptideAntibodyPositive} => {var:x_0 :recommendation var:x_1.
+     var:x_1 a :QuitSmokingRecommendation.
+     var:x_1 prov:used :Smoker.
+     var:x_1 prov:used :RheumatoidFactorPositive.
+     var:x_1 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma125 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasBmiClass :ObeseClass1} => {var:x_0 :recommendation var:x_1.
+     var:x_1 a :LoseWeightRecommendation.
+     var:x_1 prov:used :ObeseClass1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+skolem:lemma126 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. @forSome var:x_1. {var:x_0 :hasDisease :NonErosiveRheumatoidArthritis} => {var:x_0 :recommendation var:x_1.
+     var:x_1 a :CarefulOralHygieneRecommendation.
+     var:x_1 prov:used :NonErosiveRheumatoidArthritis}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
+
+#2022-11-07T14:50:53.656Z in=153 out=38 ent=82 step=100 brake=2 inf=458163 sec=0.050 inf/sec=9163260
 #ENDS
 
