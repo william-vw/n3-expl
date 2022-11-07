@@ -27,7 +27,7 @@ public class Explainer {
 		spec.setFeedback(new N3Feedback(N3MistakeTypes.BUILTIN_WRONG_INPUT, FeedbackTypes.WARN, FeedbackActions.LOG));
 
 		N3Model model = ModelFactory.createN3Model(N3ModelSpec.get(Types.N3_MEM_FP_INF));
-		model.read(IOUtils.getResourceInputStream(Explainer.class, "cases/diabetes/case1/test_jen3.n3"), "N3");
+		model.read(IOUtils.getResourceInputStream(Explainer.class, "cases/rheumatology-xai.n3"), "N3");
 
 		model.getDeductionsModel().write(System.out);
 	}
@@ -44,8 +44,9 @@ public class Explainer {
 //		String proofFile = "diabetes_case4.ttl";
 //		String proofFile = "witch.ttl";
 //		String proofFile = "medic.ttl";
-		String proofFile = "lldm.ttl";
+//		String proofFile = "lldm.ttl";
 //		String proofFile = "test2.ttl";
+		String proofFile = "rheumatology-xai.ttl";
 
 		String labelFile = null;
 //		String labelFile = "cases/diabetes/labels.ttl";

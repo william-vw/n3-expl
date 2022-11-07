@@ -15,7 +15,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 @prefix var: <http://josd.github.io/var#>.
-@prefix skolem: <http://josd.github.io/.well-known/genid/1652777709393832545#>.
+@prefix skolem: <http://josd.github.io/.well-known/genid/1570363719399510912#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
 skolem:proof a r:Proof, r:Conjunction;
@@ -2983,6 +2983,6 @@ skolem:lemma256 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/rheumatology-xai.n3>].
 
-#2022-11-06T14:03:30.453Z in=153 out=127 ent=168 step=493 brake=3 inf=608574 sec=0.056 inf/sec=10867393
+#2022-11-06T14:53:37.124Z in=153 out=127 ent=168 step=493 brake=3 inf=608575 sec=0.057 inf/sec=10676754
 #ENDS
 

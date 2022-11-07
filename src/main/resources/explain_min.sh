@@ -11,8 +11,8 @@ if [ "$1" == "" ]; then
 	exit 1
 fi
 
-describe_in=explain/swap/eye/describe.n3
-html_in=explain/swap/eye/collect.n3
+describe_in=explain/swap/eye/describe_min.n3
+html_in=explain/swap/eye/collect_min.n3
 query_in=explain/swap/eye/query.n3
 
 inf_out=inf_out.ttl
@@ -54,15 +54,8 @@ if [ -z "$data" ] || [ -z "$rules" ]; then
 	exit 1
 fi
 
-$(eye --pass-only-new --nope --n3 $data $rules > $inf_out)
-
+#$(eye --pass-only-new --nope --n3 $data $rules > $inf_out)
 #$(eye --pass --n3 $data $rules > $pe_out)
-if [ "$data" == "$rules" ]; then
-	$(eye --n3 $rules --query $rules > $pe_out)
-else
-	$(eye --n3 $data $rules --query $rules > $pe_out)
-fi
 
 $(eye --strings --n3 $labels $pe_out $describe_in $html_in --query $query_in > $html_out)
-
 #eye --pass-only-new --n3 $labels $pe_out $describe_in
