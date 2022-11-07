@@ -11,8 +11,8 @@ if [ "$1" == "" ]; then
 	exit 1
 fi
 
-describe_in=explain/swap/eye/describe0.n3
-html_in=explain/swap/eye/collect0.n3
+describe_in=explain/swap/eye/describe.n3
+html_in=explain/swap/eye/collect.n3
 query_in=explain/swap/eye/query.n3
 
 inf_out=inf_out.ttl
@@ -59,19 +59,21 @@ $(eye --pass-only-new --nope --n3 $data $rules > $inf_out)
 # print entire deductive closure. 
 # the proof file will include a lot of redundant lemmas.
 # (use describe0.n3, collect0.n3) 
-if [ "$data" == "$rules" ]; then
-	$(eye --pass --n3 $rules > $pe_out)
-else
-	$(eye --pass --n3 $data $rules > $pe_out)
-fi
+#if [ "$data" == "$rules" ]; then
+#	$(eye --pass --n3 $rules > $pe_out)
+#else
+#	$(eye --pass --n3 $data $rules > $pe_out)
+#fi
 
 # only print inferences by our rules.
 # (use describe.n3, collect.n3)
-#if [ "$data" == "$rules" ]; then
-#	$(eye --n3 $rules --query $rules > $pe_out)
-#else
-#	$(eye --n3 $data $rules --query $rules > $pe_out)
-#fi
+if [ "$data" == "$rules" ]; then
+	$(eye --n3 $rules --query $rules > $pe_out)
+else
+	$(eye --n3 $data $rules --query $rules > $pe_out)
+fi
+
+#$(eye --query $rules > $pe_out)
 
 $(eye --strings --n3 $labels $pe_out $describe_in $html_in --query $query_in > $html_out)
 

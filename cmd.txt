@@ -11,7 +11,6 @@ cd src/main/resources/
 ./explain.sh -d cases/socrates.n3 -r cases/socrates.n3 -p proofs/swap/socrates.ttl -h output/eye/socrates.html
 
 ./explain.sh -d cases/rheumatology-xai.n3 -r cases/rheumatology-xai.n3 -p proofs/swap/rheumatology-xai.ttl -h output/eye/rheumatology-xai.html
-./explain_min.sh -d cases/rheumatology-xai.n3 -r cases/rheumatology-xai.n3 -p proofs/swap/rheumatology-xai_min.ttl -h output/eye/rheumatology-xai_min.html
 
 - debugging:
 cd src/main/resources/
