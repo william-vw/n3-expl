@@ -16,8 +16,8 @@
 #} <= { ?x x:term ?term } .
 
 
-{	?x x:description ?descr 
-} <= { ?x x:description ?descr } .
+#{	?x x:description ?descr 
+#} <= { ?x x:description ?descr } .
 
 
 #{	?x x:conclusionStr ?str  
@@ -34,3 +34,7 @@
 
 #{	1 log:outputString ?doc
 #} <= { 1 log:outputString ?doc } .
+
+
+{	?x a x:RootNode 
+} <= { ?x a x:RootNode } .

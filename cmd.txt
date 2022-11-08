@@ -19,3 +19,4 @@ eye --nope --n3 proofs/swap/diabetes_case1.ttl explain/swap/eye/describe.n3 expl
 eye --nope --n3 proofs/swap/medic.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query_test.n3
 eye --nope --n3 proofs/swap/test.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query_test.n3
 eye --nope --n3 proofs/swap/witch.ttl explain/swap/eye/describe.n3 explain/swap/eye/collect.n3 --query explain/swap/eye/query_test.n3
+eye --nope --n3 proofs/swap/rheumatology-xai.ttl explain/swap/eye/describe2.n3 explain/swap/eye/collect2.n3 --query explain/swap/eye/query_test.n3

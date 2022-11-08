@@ -26,7 +26,7 @@
 {	?inf x:output ?html
 	
 } <= { 
-	?inf a r:Inference ;
+	?inf a x:InferenceNode ;
 		r:evidence ?evidences .
 	?evidences list:removeDuplicates ?evidences2 .
 

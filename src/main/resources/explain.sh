@@ -3,7 +3,7 @@
 #!/bin/bash
 usage()
 {
-	echo -e "usage: explain.sh [-d|--data] [-r|--rules] ([-l|--labels]) [-i|--inf_out] [-p|--pe_out] [-h|--html_out]\n"
+	echo -e "usage: explain.sh [-d|--data]* [-r|--rules]* ([-l|--labels]) [-q|--query_proof] [-i|--inf_out] [-p|--pe_out] [-h|--html_out]\n"
 }
 
 if [ "$1" == "" ]; then
@@ -11,9 +11,9 @@ if [ "$1" == "" ]; then
 	exit 1
 fi
 
-describe_in=explain/swap/eye/describe.n3
-html_in=explain/swap/eye/collect.n3
-query_in=explain/swap/eye/query.n3
+describe=explain/swap/eye/describe.n3
+collect=explain/swap/eye/collect.n3
+query_html=explain/swap/eye/query.n3
 
 inf_out=inf_out.ttl
 pe_out=pe_out.ttl
@@ -30,6 +30,9 @@ while [ "$1" != "" ]; do
 								;;
 	-l | --labels ) 			shift
 								labels=$1
+								;;
+	-q | --query_proof ) 		shift
+								query_proof=$1
 								;;
 	-i | --inf_out )			shift
 								inf_out=$1
@@ -54,27 +57,38 @@ if [ -z "$data" ] || [ -z "$rules" ]; then
 	exit 1
 fi
 
+# - print inferences
 $(eye --pass-only-new --nope --n3 $data $rules > $inf_out)
 
-# print entire deductive closure. 
-# the proof file will include a lot of redundant lemmas.
-# (use describe0.n3, collect0.n3) 
-#if [ "$data" == "$rules" ]; then
-#	$(eye --pass --n3 $rules > $pe_out)
-#else
-#	$(eye --pass --n3 $data $rules > $pe_out)
-#fi
 
-# only print inferences by our rules.
-# (use describe.n3, collect.n3)
-if [ "$data" == "$rules" ]; then
-	$(eye --n3 $rules --query $rules > $pe_out)
-else
-	$(eye --n3 $data $rules --query $rules > $pe_out)
+# - print proof
+
+if [ "$data" != "$rules" ]; then
+	rules="$data\n$rules"
 fi
 
-#$(eye --query $rules > $pe_out)
+# (1) print entire deductive closure. 
+# (the proof file will include a lot of redundant lemmas)
+#$(eye --pass --n3 $rules > $pe_out)
+
+# (2) use query
+
+# (2.1) only print inferences by our rules
+
+# (2.2) only print inferences matching the query_proof
+# (has duplicates; also, lemmas for query will list other lemmas multiple times)
+
+if [ -z "$query_proof" ]; then	
+	query_proof=$rules
+fi
+
+$(eye --n3 $rules --query $query_proof > $pe_out)
+
+# - print html
 
 $(eye --strings --n3 $labels $pe_out $describe_in $html_in --query $query_in > $html_out)
+
+
+# - tests
 
 #eye --pass-only-new --n3 $labels $pe_out $describe_in
