@@ -3,7 +3,7 @@
 #!/bin/bash
 usage()
 {
-	echo -e "usage: explain.sh [-d|--data]* [-r|--rules]* ([-l|--labels]) [-q|--query_proof] [-i|--inf_out] [-p|--pe_out] [-h|--html_out]\n"
+	echo -e "usage: explain.sh [-r|--rules]* [-d|--data] ([-l|--labels]) [-q|--query_proof] [-i|--inf_out] [-p|--pe_out] [-h|--html_out]\n"
 }
 
 if [ "$1" == "" ]; then
@@ -11,6 +11,8 @@ if [ "$1" == "" ]; then
 	exit 1
 fi
 
+aux_all=explain/swap/eye/aux_all.n3
+aux_query=explain/swap/eye/aux_query.n3
 describe=explain/swap/eye/describe.n3
 collect=explain/swap/eye/collect.n3
 query_html=explain/swap/eye/query.n3
@@ -52,7 +54,7 @@ while [ "$1" != "" ]; do
     shift
 done
 
-if [ -z "$data" ] || [ -z "$rules" ]; then
+if [ -z "$rules" ]; then
 	usage
 	exit 1
 fi
@@ -63,7 +65,7 @@ $(eye --pass-only-new --nope --n3 $data $rules > $inf_out)
 
 # - print proof
 
-if [ "$data" != "$rules" ]; then
+if [ ! -z "$data" ]; then
 	rules="$data\n$rules"
 fi
 
@@ -73,20 +75,30 @@ fi
 
 # (2) use query
 
-# (2.1) only print inferences by our rules
+# (2.1) if proof_query is not given: only print inferences by our rules
+#if [ -z "$query_proof" ]; then
+#	aux=$aux_query_all
+#	$(eye --pass --n3 $rules > $pe_out)
+#else
+#	aux=$aux_query_target
+#	$(eye --n3 $rules --query $query_proof > $pe_out)
+#fi
 
-# (2.2) only print inferences matching the query_proof
+# (2.2) else: only print inferences matching the query_proof
 # (has duplicates; also, lemmas for query will list other lemmas multiple times)
-
 if [ -z "$query_proof" ]; then	
 	query_proof=$rules
+	aux=$aux_all
+else
+	aux=$aux_query
 fi
-
 $(eye --n3 $rules --query $query_proof > $pe_out)
+
+
 
 # - print html
 
-$(eye --strings --n3 $labels $pe_out $describe_in $html_in --query $query_in > $html_out)
+$(eye --strings --n3 $labels $pe_out $aux $describe $collect --query $query_html > $html_out)
 
 
 # - tests

@@ -25,35 +25,6 @@
 # the above will allow keeping the "var" prefix of rule variables
 
 
-# auxiliary
-
-# ignore "inferences" that prove the query; 
-# these are listed as r:component's of the main "proof"
-{	?inf a x:InferenceNode 
-		
-} <= { 
-	?inf a r:Inference .
-	_:t log:notIncludes { ?x r:component ?inf } 
-} .
-
-# ignore all top-level lemmas that prove the query
-# but use the lemmas used by those lemmas
-{	?i a x:RootNode
-
-} <= {	
-	?x r:component ?c .
-	?c!r:evidence list:member ?i
-} .
-
-# (these would be top-level lemmas that prove the query)
-#{	?inf a x:RootNode
-#
-#} <= { 
-#	?inf a x:InferenceNode .
-#	_:t log:notIncludes { ?x!r:evidence list:member ?inf }
-#} .
-
-
 # divide
 # (all terms to be described are indicated as "x:term"s)
 

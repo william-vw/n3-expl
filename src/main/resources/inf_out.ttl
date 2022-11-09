@@ -1,5 +1,5 @@
 #Processed by EYE v22.1105.2210 josd
-#eye --pass-only-new --nope --n3 cases/rheumatology-xai.n3 cases/rheumatology-xai.n3
+#eye --pass-only-new --nope --n3 cases/rheumatology-xai.n3
 
 @prefix : <http://swot.sisinflab.poliba.it/onto/rheumatology#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
@@ -53,6 +53,6 @@ _:sk_3 prov:used :NonErosiveRheumatoidArthritis.
 "What happens when your weight gets lower?" :hasResponse "Lower weight could help improve RA disease activity and disability".
 "What are the benefits of practicing a good oral hygiene?" :hasResponse "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis.".
 
-#2022-11-08T17:43:45.714Z in=153 out=38 ent=41 step=100 brake=2 inf=336961 sec=0.038 inf/sec=8867395
+#2022-11-09T14:41:38.390Z in=121 out=38 ent=41 step=50 brake=2 inf=181841 sec=0.043 inf/sec=4228860
 #ENDS
 
