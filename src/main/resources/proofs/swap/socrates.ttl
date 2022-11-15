@@ -1,20 +1,27 @@
 #Processed by EYE v22.1105.2210 josd
-#eye --pass --n3 cases/socrates.n3 cases/socrates.n3
+#eye --n3 cases/socrates.n3 cases/socrates.n3 --query target_out.ttl
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix : <http://example.org/socrates#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix pml: <http://provenanceweb.org/ns/pml#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+@prefix x: <http://wvw.org/xai#>.
 @prefix var: <http://josd.github.io/var#>.
-@prefix skolem: <http://josd.github.io/.well-known/genid/2341855362751083874#>.
+@prefix skolem: <http://josd.github.io/.well-known/genid/617941633214362032#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
 skolem:proof a r:Proof, r:Conjunction;
   r:component skolem:lemma1;
   r:component skolem:lemma2;
-  r:component skolem:lemma3;
   r:gives {
     :Socrates a :Human.
-    :Human rdfs:subClassOf :Mortal.
     :Socrates a :Mortal.
   }.
 
@@ -23,48 +30,47 @@ skolem:lemma1 a r:Inference;
     :Socrates a :Human.
   };
   r:evidence (
-    skolem:lemma4
+    skolem:lemma3
   );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://example.org/socrates#Socrates"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://example.org/socrates#Human"]];
-  r:rule skolem:lemma5.
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://example.org/socrates#Socrates"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://example.org/socrates#Human"]];
+  r:rule skolem:lemma4.
 
 skolem:lemma2 a r:Inference;
-  r:gives {
-    :Human rdfs:subClassOf :Mortal.
-  };
-  r:evidence (
-    skolem:lemma6
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/2000/01/rdf-schema#subClassOf"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://example.org/socrates#Human"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://example.org/socrates#Mortal"]];
-  r:rule skolem:lemma5.
-
-skolem:lemma3 a r:Inference;
   r:gives {
     :Socrates a :Mortal.
   };
   r:evidence (
-    skolem:lemma7
+    skolem:lemma5
   );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://example.org/socrates#Socrates"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://example.org/socrates#Mortal"]];
-  r:rule skolem:lemma5.
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://example.org/socrates#Socrates"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://example.org/socrates#Mortal"]];
+  r:rule skolem:lemma4.
 
-skolem:lemma4 a r:Extraction;
+skolem:lemma3 a r:Extraction;
   r:gives {
     :Socrates a :Human.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/socrates.n3>].
 
-skolem:lemma5 a r:Extraction;
+skolem:lemma4 a r:Extraction;
   r:gives {
-    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
+    @forAll var:x_0, var:x_1. {var:x_0 a var:x_1} => {var:x_0 a var:x_1}.
   };
-  r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/target_out.ttl>].
+
+skolem:lemma5 a r:Inference;
+  r:gives {
+    :Socrates a :Mortal.
+  };
+  r:evidence (
+    skolem:lemma6
+    skolem:lemma3
+  );
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://example.org/socrates#Human"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://example.org/socrates#Mortal"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://example.org/socrates#Socrates"]];
+  r:rule skolem:lemma7.
 
 skolem:lemma6 a r:Extraction;
   r:gives {
@@ -72,26 +78,13 @@ skolem:lemma6 a r:Extraction;
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/socrates.n3>].
 
-skolem:lemma7 a r:Inference;
-  r:gives {
-    :Socrates a :Mortal.
-  };
-  r:evidence (
-    skolem:lemma6
-    skolem:lemma4
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://example.org/socrates#Human"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://example.org/socrates#Mortal"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://example.org/socrates#Socrates"]];
-  r:rule skolem:lemma8.
-
-skolem:lemma8 a r:Extraction;
+skolem:lemma7 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1, var:x_2. {var:x_0 rdfs:subClassOf var:x_1.
      var:x_2 a var:x_0} => {var:x_2 a var:x_1}.
   };
   r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/socrates.n3>].
 
-#2022-11-06T13:21:38.944Z in=4 out=3 ent=4 step=14 brake=3 inf=30729 sec=0.023 inf/sec=1336043
+#2022-11-15T16:14:55.614Z in=5 out=2 ent=3 step=8 brake=2 inf=36134 sec=0.022 inf/sec=1642455
 #ENDS
 

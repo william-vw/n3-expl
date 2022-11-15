@@ -146,7 +146,7 @@
 # finalize
 
 # (using "x:description"s of terms, generate strings for "r:gives"s)
-{	?x!rdf:type list:in ( r:Extraction r:Inference r:Fact ) .
+{	?x!rdf:type list:in ( x:InferenceNode r:Extraction r:Fact ) .
     ?x r:gives ?value .
     ?value e:labelvars ?valuel .
 

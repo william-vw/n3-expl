@@ -1,5 +1,5 @@
-#Processed by EYE v22.0809.1553 josd
-#eye --pass --n3 cases/diabetes/case1/example-data1.n3 cases/diabetes/case1/diabetes-case1-bnodes.n3
+#Processed by EYE v22.1105.2210 josd
+#eye --n3 cases/diabetes/case1/example-data1.n3 cases/diabetes/case1/diabetes-case1-bnodes.n3 --query target_out.ttl
 
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
 @prefix DMTO: <https://bioportal.bioontology.org/ontologies/DMTO.owl#>.
@@ -15,238 +15,100 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
 @prefix cg: <http://niche.cs.dal.ca/codegen.owl#>.
+@prefix ns1: <http://purl.org/dc/terms/>.
+@prefix pml: <http://provenanceweb.org/ns/pml#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix x: <http://wvw.org/xai#>.
 @prefix var: <http://josd.github.io/var#>.
+@prefix skolem: <http://josd.github.io/.well-known/genid/495981187572990936#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
-[] a r:Proof, r:Conjunction;
-  r:component <#lemma1>;
-  r:component <#lemma2>;
-  r:component <#lemma3>;
-  r:component <#lemma4>;
-  r:component <#lemma5>;
-  r:component <#lemma6>;
-  r:component <#lemma7>;
-  r:component <#lemma8>;
-  r:component <#lemma9>;
-  r:component <#lemma10>;
+skolem:proof a r:Proof, r:Conjunction;
+  r:component skolem:lemma1;
   r:gives {
-    DMTO:exam0 a DDO:DDO_0000230.
-    DMTO:patient0 a DMTO:DMTO_0000021.
-    <http://josd.github.io/.well-known/genid/74755714498609242#bn_2> a DDO:DDO_0003905.
-    DMTO:exam0 DDO:DDO_0000134 27 .
-    DMTO:patient0 DMTO:DMTO_0001667 DMTO:patient0_profile.
-    DMTO:patient0_profile DDO:DDO_0000114 <http://josd.github.io/.well-known/genid/74755714498609242#bn_1>.
-    <http://josd.github.io/.well-known/genid/74755714498609242#bn_1> DMTO:DMTO_0001673 <http://josd.github.io/.well-known/genid/74755714498609242#bn_2>.
-    DMTO:patient0_profile DMTO:DMTO_0001671 DMTO:patient0_plan.
-    _:sk_0 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>.
     DMTO:patient0_profile DDO:DDO_0000139 _:sk_0.
+    _:sk_0 a DTO:DTO:0002078.
   }.
 
-<#lemma1> a r:Inference;
+skolem:lemma1 a r:Inference;
   r:gives {
-    DMTO:exam0 a DDO:DDO_0000230.
+    DMTO:patient0_profile DDO:DDO_0000139 _:sk_0.
+    _:sk_0 a DTO:DTO:0002078.
   };
   r:evidence (
-    <#lemma11>
+    skolem:lemma2
+    skolem:lemma2
   );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#exam0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://purl.obolibrary.org/obo/DDO.owl#DDO_0000230"]];
-  r:rule <#lemma12>.
-
-<#lemma2> a r:Inference;
-  r:gives {
-    DMTO:patient0 a DMTO:DMTO_0000021.
-  };
-  r:evidence (
-    <#lemma13>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0000021"]];
-  r:rule <#lemma12>.
-
-<#lemma3> a r:Inference;
-  r:gives {
-    <http://josd.github.io/.well-known/genid/74755714498609242#bn_2> a DDO:DDO_0003905.
-  };
-  r:evidence (
-    <#lemma14>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/74755714498609242#bn_2"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://purl.obolibrary.org/obo/DDO.owl#DDO_0003905"]];
-  r:rule <#lemma12>.
-
-<#lemma4> a r:Inference;
-  r:gives {
-    DMTO:exam0 DDO:DDO_0000134 27 .
-  };
-  r:evidence (
-    <#lemma15>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.obolibrary.org/obo/DDO.owl#DDO_0000134"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#exam0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 27];
-  r:rule <#lemma12>.
-
-<#lemma5> a r:Inference;
-  r:gives {
-    DMTO:patient0 DMTO:DMTO_0001667 DMTO:patient0_profile.
-  };
-  r:evidence (
-    <#lemma16>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001667"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0_profile"]];
-  r:rule <#lemma12>.
-
-<#lemma6> a r:Inference;
-  r:gives {
-    DMTO:patient0_profile DDO:DDO_0000114 <http://josd.github.io/.well-known/genid/74755714498609242#bn_1>.
-  };
-  r:evidence (
-    <#lemma17>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.obolibrary.org/obo/DDO.owl#DDO_0000114"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0_profile"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/74755714498609242#bn_1"]];
-  r:rule <#lemma12>.
-
-<#lemma7> a r:Inference;
-  r:gives {
-    <http://josd.github.io/.well-known/genid/74755714498609242#bn_1> DMTO:DMTO_0001673 <http://josd.github.io/.well-known/genid/74755714498609242#bn_2>.
-  };
-  r:evidence (
-    <#lemma18>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001673"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/74755714498609242#bn_1"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "http://josd.github.io/.well-known/genid/74755714498609242#bn_2"]];
-  r:rule <#lemma12>.
-
-<#lemma8> a r:Inference;
-  r:gives {
-    DMTO:patient0_profile DMTO:DMTO_0001671 DMTO:patient0_plan.
-  };
-  r:evidence (
-    <#lemma19>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#DMTO_0001671"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0_profile"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0_plan"]];
-  r:rule <#lemma12>.
-
-<#lemma9> a r:Inference;
-  r:gives {
-    _:sk_0 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>.
-  };
-  r:evidence (
-    <#lemma20>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]];
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0_profile"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078"]];
-  r:rule <#lemma12>.
+  r:rule skolem:lemma3.
 
-<#lemma10> a r:Inference;
+skolem:lemma2 a r:Inference;
   r:gives {
     DMTO:patient0_profile DDO:DDO_0000139 _:sk_0.
+    _:sk_0 a DTO:DTO:0002078.
   };
   r:evidence (
-    <#lemma20>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://purl.obolibrary.org/obo/DDO.owl#DDO_0000139"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0_profile"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
-  r:rule <#lemma12>.
-
-<#lemma11> a r:Extraction;
-  r:gives {
-    DMTO:exam0 a DDO:DDO_0000230.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case1/example-data1.n3>].
-
-<#lemma12> a r:Extraction;
-  r:gives {
-    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
-  };
-  r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
-
-<#lemma13> a r:Extraction;
-  r:gives {
-    DMTO:patient0 a DMTO:DMTO_0000021.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case1/example-data1.n3>].
-
-<#lemma14> a r:Extraction;
-  r:gives {
-    <http://josd.github.io/.well-known/genid/74755714498609242#bn_2> a DDO:DDO_0003905.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case1/example-data1.n3>].
-
-<#lemma15> a r:Extraction;
-  r:gives {
-    DMTO:exam0 DDO:DDO_0000134 27 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case1/example-data1.n3>].
-
-<#lemma16> a r:Extraction;
-  r:gives {
-    DMTO:patient0 DMTO:DMTO_0001667 DMTO:patient0_profile.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case1/example-data1.n3>].
-
-<#lemma17> a r:Extraction;
-  r:gives {
-    DMTO:patient0_profile DDO:DDO_0000114 <http://josd.github.io/.well-known/genid/74755714498609242#bn_1>.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case1/example-data1.n3>].
-
-<#lemma18> a r:Extraction;
-  r:gives {
-    <http://josd.github.io/.well-known/genid/74755714498609242#bn_1> DMTO:DMTO_0001673 <http://josd.github.io/.well-known/genid/74755714498609242#bn_2>.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case1/example-data1.n3>].
-
-<#lemma19> a r:Extraction;
-  r:gives {
-    DMTO:patient0_profile DMTO:DMTO_0001671 DMTO:patient0_plan.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case1/example-data1.n3>].
-
-<#lemma20> a r:Inference;
-  r:gives {
-    DMTO:patient0_profile DDO:DDO_0000139 _:sk_0.
-    _:sk_0 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>.
-  };
-  r:evidence (
-    <#lemma11>
-    <#lemma15>
+    skolem:lemma4
+    skolem:lemma5
     [ a r:Fact; r:gives {27 math:notLessThan 25}]
-    <#lemma13>
-    <#lemma16>
+    skolem:lemma6
+    skolem:lemma7
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#exam0"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 27];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_3"]; r:boundTo [ n3:uri "https://bioportal.bioontology.org/ontologies/DMTO.owl#patient0_profile"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_4"]; r:boundTo [ a r:Existential; n3:nodeId "_:sk_0"]];
-  r:rule <#lemma21>.
+  r:rule skolem:lemma8.
 
-<#lemma21> a r:Extraction;
+skolem:lemma3 a r:Extraction;
+  r:gives {
+    @forAll var:x_0, var:x_1. {var:x_0 DDO:DDO_0000139 var:x_1.
+     var:x_1 a DTO:DTO:0002078} => {var:x_0 DDO:DDO_0000139 var:x_1.
+     var:x_1 a DTO:DTO:0002078}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/target_out.ttl>].
+
+skolem:lemma4 a r:Extraction;
+  r:gives {
+    DMTO:exam0 a DDO:DDO_0000230.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/diabetes/case1/example-data1.n3>].
+
+skolem:lemma5 a r:Extraction;
+  r:gives {
+    DMTO:exam0 DDO:DDO_0000134 27 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/diabetes/case1/example-data1.n3>].
+
+skolem:lemma6 a r:Extraction;
+  r:gives {
+    DMTO:patient0 a DMTO:DMTO_0000021.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/diabetes/case1/example-data1.n3>].
+
+skolem:lemma7 a r:Extraction;
+  r:gives {
+    DMTO:patient0 DMTO:DMTO_0001667 DMTO:patient0_profile.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/diabetes/case1/example-data1.n3>].
+
+skolem:lemma8 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1, var:x_2, var:x_3. @forSome var:x_4. {var:x_0 a DDO:DDO_0000230.
      var:x_0 DDO:DDO_0000134 var:x_1.
      var:x_1 math:notLessThan 25 .
      var:x_2 a DMTO:DMTO_0000021.
      var:x_2 DMTO:DMTO_0001667 var:x_3} => {var:x_3 DDO:DDO_0000139 var:x_4.
-     var:x_4 a <https://bioportal.bioontology.org/ontologies/DTO.owl#DTO:0002078>}.
+     var:x_4 a DTO:DTO:0002078}.
   };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/diabetes/case1/diabetes-case1-bnodes.n3>].
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/diabetes/case1/diabetes-case1-bnodes.n3>].
 
-#2022-08-10T14:46:28.085Z in=9 out=10 ent=12 step=31 brake=3 inf=60560 sec=0.056 inf/sec=1081429
+#2022-11-15T16:14:37.821Z in=10 out=2 ent=4 step=4 brake=2 inf=59639 sec=0.024 inf/sec=2484958
 #ENDS
 

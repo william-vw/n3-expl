@@ -1,5 +1,5 @@
-#Processed by EYE v22.0809.1553 josd
-#eye --pass --n3 cases/copd/patient_red1.ttl cases/copd/rules.n3
+#Processed by EYE v22.1105.2210 josd
+#eye --n3 cases/copd/patient_red1.ttl cases/copd/rules.n3 --query target_out.ttl
 
 @prefix : <http://wvw.org/copd#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
@@ -8,203 +8,98 @@
 @prefix pml: <http://provenanceweb.org/ns/pml#>.
 @prefix diary: <http://wvw.org/diary#>.
 @prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
 @prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix x: <http://wvw.org/xai#>.
 @prefix var: <http://josd.github.io/var#>.
+@prefix skolem: <http://josd.github.io/.well-known/genid/1659089523962854127#>.
 @prefix n3: <http://www.w3.org/2004/06/rei#>.
 
-[] a r:Proof, r:Conjunction;
-  r:component <#lemma1>;
-  r:component <#lemma2>;
-  r:component <#lemma3>;
-  r:component <#lemma4>;
-  r:component <#lemma5>;
-  r:component <#lemma6>;
-  r:component <#lemma7>;
-  r:component <#lemma8>;
+skolem:proof a r:Proof, r:Conjunction;
+  r:component skolem:lemma1;
+  r:component skolem:lemma2;
   r:gives {
-    :patientA :hasPhlemAmountValue 4 .
-    :patientA :hasColoredPhlem false.
-    :patientA :hasActivityExertionValue 3 .
-    :patientA :hasCoughValue 4 .
-    :patientA :has02SaturationValue 86 .
-    :patientA :hasFeverValue 36 .
     :patientA :hasLow02Saturation true.
     :patientA :isStratified :RedZone.
   }.
 
-<#lemma1> a r:Inference;
-  r:gives {
-    :patientA :hasPhlemAmountValue 4 .
-  };
-  r:evidence (
-    <#lemma9>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#hasPhlemAmountValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 4];
-  r:rule <#lemma10>.
-
-<#lemma2> a r:Inference;
-  r:gives {
-    :patientA :hasColoredPhlem false.
-  };
-  r:evidence (
-    <#lemma11>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#hasColoredPhlem"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo false];
-  r:rule <#lemma10>.
-
-<#lemma3> a r:Inference;
-  r:gives {
-    :patientA :hasActivityExertionValue 3 .
-  };
-  r:evidence (
-    <#lemma12>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#hasActivityExertionValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 3];
-  r:rule <#lemma10>.
-
-<#lemma4> a r:Inference;
-  r:gives {
-    :patientA :hasCoughValue 4 .
-  };
-  r:evidence (
-    <#lemma13>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#hasCoughValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 4];
-  r:rule <#lemma10>.
-
-<#lemma5> a r:Inference;
-  r:gives {
-    :patientA :has02SaturationValue 86 .
-  };
-  r:evidence (
-    <#lemma14>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#has02SaturationValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 86];
-  r:rule <#lemma10>.
-
-<#lemma6> a r:Inference;
-  r:gives {
-    :patientA :hasFeverValue 36 .
-  };
-  r:evidence (
-    <#lemma15>
-  );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#hasFeverValue"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo 36];
-  r:rule <#lemma10>.
-
-<#lemma7> a r:Inference;
+skolem:lemma1 a r:Inference;
   r:gives {
     :patientA :hasLow02Saturation true.
   };
   r:evidence (
-    <#lemma16>
+    skolem:lemma3
   );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#hasLow02Saturation"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo true];
-  r:rule <#lemma10>.
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
+  r:rule skolem:lemma4.
 
-<#lemma8> a r:Inference;
+skolem:lemma2 a r:Inference;
   r:gives {
     :patientA :isStratified :RedZone.
   };
   r:evidence (
-    <#lemma17>
+    skolem:lemma5
   );
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#isStratified"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
-  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_2"]; r:boundTo [ n3:uri "http://wvw.org/copd#RedZone"]];
-  r:rule <#lemma10>.
+  r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
+  r:rule skolem:lemma6.
 
-<#lemma9> a r:Extraction;
-  r:gives {
-    :patientA :hasPhlemAmountValue 4 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/patient_red1.ttl>].
-
-<#lemma10> a r:Extraction;
-  r:gives {
-    @forAll var:x_0, var:x_1, var:x_2. {var:x_1 var:x_0 var:x_2} => {var:x_1 var:x_0 var:x_2}.
-  };
-  r:because [ a r:Parsing; r:source <http://eulersharp.sourceforge.net/2003/03swap/pass>].
-
-<#lemma11> a r:Extraction;
-  r:gives {
-    :patientA :hasColoredPhlem false.
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/patient_red1.ttl>].
-
-<#lemma12> a r:Extraction;
-  r:gives {
-    :patientA :hasActivityExertionValue 3 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/patient_red1.ttl>].
-
-<#lemma13> a r:Extraction;
-  r:gives {
-    :patientA :hasCoughValue 4 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/patient_red1.ttl>].
-
-<#lemma14> a r:Extraction;
-  r:gives {
-    :patientA :has02SaturationValue 86 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/patient_red1.ttl>].
-
-<#lemma15> a r:Extraction;
-  r:gives {
-    :patientA :hasFeverValue 36 .
-  };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/patient_red1.ttl>].
-
-<#lemma16> a r:Inference;
+skolem:lemma3 a r:Inference;
   r:gives {
     :patientA :hasLow02Saturation true.
   };
   r:evidence (
-    <#lemma14>
+    skolem:lemma7
     [ a r:Fact; r:gives {86 math:lessThan 88}]
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_1"]; r:boundTo 86];
-  r:rule <#lemma18>.
+  r:rule skolem:lemma8.
 
-<#lemma17> a r:Inference;
+skolem:lemma4 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :hasLow02Saturation true}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/target_out.ttl>].
+
+skolem:lemma5 a r:Inference;
   r:gives {
     :patientA :isStratified :RedZone.
   };
   r:evidence (
-    <#lemma16>
+    skolem:lemma3
   );
   r:binding [ r:variable [ n3:uri "http://josd.github.io/var#x_0"]; r:boundTo [ n3:uri "http://wvw.org/copd#patientA"]];
-  r:rule <#lemma19>.
+  r:rule skolem:lemma9.
 
-<#lemma18> a r:Extraction;
+skolem:lemma6 a r:Extraction;
+  r:gives {
+    @forAll var:x_0. {var:x_0 :isStratified :RedZone} => {var:x_0 :isStratified :RedZone}.
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/target_out.ttl>].
+
+skolem:lemma7 a r:Extraction;
+  r:gives {
+    :patientA :has02SaturationValue 86 .
+  };
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/copd/patient_red1.ttl>].
+
+skolem:lemma8 a r:Extraction;
   r:gives {
     @forAll var:x_0, var:x_1. {var:x_0 :has02SaturationValue var:x_1.
      var:x_1 math:lessThan 88} => {var:x_0 :hasLow02Saturation true}.
   };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/copd/rules.n3>].
 
-<#lemma19> a r:Extraction;
+skolem:lemma9 a r:Extraction;
   r:gives {
     @forAll var:x_0. {var:x_0 :hasLow02Saturation true} => {var:x_0 :isStratified :RedZone}.
   };
-  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/expl/jen3-explain/src/main/resources/cases/copd/rules.n3>].
+  r:because [ a r:Parsing; r:source <file:///Users/wvw/git/n3/n3-expl/src/main/resources/cases/copd/rules.n3>].
 
-#2022-08-10T14:46:27.421Z in=28 out=8 ent=10 step=36 brake=4 inf=72820 sec=0.055 inf/sec=1324000
+#2022-11-15T16:14:17.453Z in=41 out=2 ent=4 step=10 brake=3 inf=81717 sec=0.024 inf/sec=3404875
 #ENDS
 

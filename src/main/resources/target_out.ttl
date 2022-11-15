@@ -1,0 +1,21 @@
+#Processed by EYE v22.1105.2210 josd
+#eye --nope --n3 cases/socrates.n3 cases/socrates.n3 --query explain/swap/eye/query_heads.n3
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix : <http://example.org/socrates#>.
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix pml: <http://provenanceweb.org/ns/pml#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix list: <http://www.w3.org/2000/10/swap/list#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+@prefix x: <http://wvw.org/xai#>.
+
+{?U_0 a ?U_1} <= {?U_0 a ?U_1}.
+
+#2022-11-15T16:14:55.579Z in=5 out=1 ent=2 step=8 brake=2 inf=30961 sec=0.023 inf/sec=1346130
+#ENDS
+

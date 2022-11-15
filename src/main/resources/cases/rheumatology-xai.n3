@@ -10,6 +10,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ep: <http://linkedu.eu/dedalo/explanationPattern.owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix x: <http://wvw.org/xai#> .
 
 # Patient profile
 
@@ -453,3 +454,6 @@
 } => {
 	?l3 :hasResponse ?l2 .
 } .
+
+
+:recommendation a x:Explain .

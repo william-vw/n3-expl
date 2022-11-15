@@ -14,12 +14,21 @@
 @base <http://wvw.org/xai#> .
 
 
-{	?x rh:recommendation ?r .
-	?r a ?type .
-	?r prov:used ?u .
-	
-} <= { 
-	?x rh:recommendation ?r .
-	?r a ?type .
-	?r prov:used ?u . 
-} .
+{?U_36 rh:since ?U_37. ?U_36 rh:because ?U_38} <= {?U_36 rh:since ?U_37. ?U_36 rh:because ?U_38}.
+
+
+#{	?x rh:recommendation ?r .
+#	?r a ?type .
+#	?r prov:used ?u .
+#	
+#} <= { 
+#	?x rh:recommendation ?r .
+#	?r a ?type .
+#	?r prov:used ?u . 
+#} .
+
+
+#{	?x rh:hasBmiClass ?cls
+#} <= {
+#	?x rh:hasBmiClass ?cls
+#} .

@@ -24,11 +24,9 @@
 	_:t log:notIncludes { ?x r:component ?inf } 
 } .
 
-# ignore all top-level lemmas that prove the query
-# but use the lemmas used by those lemmas
+# lemmas used by top-level lemmas as root-nodes
 {	?i a x:RootNode
 
 } <= {	
-	?x r:component ?c .
-	?c!r:evidence list:member ?i
+	?x!r:component!r:evidence list:member ?i
 } .

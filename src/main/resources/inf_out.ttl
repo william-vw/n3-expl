@@ -1,58 +1,12 @@
 #Processed by EYE v22.1105.2210 josd
-#eye --pass-only-new --nope --n3 cases/rheumatology-xai.n3
+#eye --pass-only-new --nope --n3 cases/socrates.n3 cases/socrates.n3
 
-@prefix : <http://swot.sisinflab.poliba.it/onto/rheumatology#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix math: <http://www.w3.org/2000/10/swap/math#>.
-@prefix list: <http://www.w3.org/2000/10/swap/list#>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix schema: <http://schema.org/>.
-@prefix eo: <https://purl.org/heals/eo#>.
-@prefix dc: <http://purl.org/dc/elements/1.1/>.
-@prefix dcterms: <http://purl.org/dc/terms/>.
-@prefix ep: <http://linkedu.eu/dedalo/explanationPattern.owl#>.
-@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix : <http://example.org/socrates#>.
+@prefix r: <http://www.w3.org/2000/10/swap/reason#>.
 
-:patientA :bmiValue 32.871972318339104 .
-:patientA :hasBmiClass :ObeseClass1.
-:patientA :cdaiIndex 34 .
-:patientA :hasDiseaseActivity :HighDiseaseActivity.
-:patientA :morningStiffnessLevel 3 .
-:patientA :radaiIndex 4.308333333333334 .
-:patientA :hasDiseaseActivity :ModerateDiseaseActivity.
-:patientA :hasOutcome :SuspectedDiseaseActivity.
-:patientA :recommendation _:sk_0.
-_:sk_0 a :ContactRheumatologistRecommendation.
-_:sk_0 prov:used :SuspectedDiseaseActivity.
-:patientA :recommendation _:sk_1.
-_:sk_1 a :QuitSmokingRecommendation.
-_:sk_1 prov:used :Smoker.
-_:sk_1 prov:used :RheumatoidFactorPositive.
-_:sk_1 prov:used :AntiCyclicCitrullinatedPeptideAntibodyPositive.
-:patientA :recommendation _:sk_2.
-_:sk_2 a :LoseWeightRecommendation.
-_:sk_2 prov:used :ObeseClass1.
-:patientA :recommendation _:sk_3.
-_:sk_3 a :CarefulOralHygieneRecommendation.
-_:sk_3 prov:used :NonErosiveRheumatoidArthritis.
-"You should contact your rheumatologist" :since "You have a suspected (moderate or high) disease activity".
-"You should contact your rheumatologist" :because "Treat-to-target approach aims at remission or low disease activity".
-"You should contact your rheumatologist" :because "A disease activity can be identified according to studies on CDAI and RADAI scales".
-"You should quit smoking" :since "You have a smoking habit".
-"You should quit smoking" :because "Smoking, positive rheumatoid factor and positive Anti-CCP are predictors of Interstitial Lung Disease, one of the most relevant extra-articular manifestations of RA".
-"You should quit smoking" :since "You tested positive for rheumatoid factor".
-"You should quit smoking" :since "You tested positive for anti-CCP antibody".
-"You should lose weight" :since "You have obesity class I".
-"You should lose weight" :because "Negative influence of obesity has been observed on arthritis drug therapies".
-"You have to practice careful oral hygiene" :since "You have a non-erosive rheumatoid arthritis".
-"You have to practice careful oral hygiene" :because "Direct links between Porphyromonas gingivalis bacterium and rheumatoid arthritis have led doctors to draw attention to patients' oral hygiene and the condition of parodentium, as this may be the cause of autoimmune lesions".
-"You should contact your rheumatologist" :plan "Treatment strategy change possibly needed".
-"What happens when your Clinical Disease Activity Index gets lower?" :hasResponse "Lower CDAI values indicate remission (<=3) or low disease activity (<=10)".
-"What happens if you quit smoking?" :hasResponse "Without smoking, the risk of RA-related Interstitial Lung Disease would decrease".
-"What happens when your weight gets lower?" :hasResponse "Lower weight could help improve RA disease activity and disability".
-"What are the benefits of practicing a good oral hygiene?" :hasResponse "Careful oral hygiene prevents the proliferation of Porphyromonas gingivalis, in order to avoid periodontal disease and worsen Rheumatoid Arthritis.".
+:Socrates a :Mortal.
 
-#2022-11-09T14:41:38.390Z in=121 out=38 ent=41 step=50 brake=2 inf=181841 sec=0.043 inf/sec=4228860
+#2022-11-15T16:14:55.544Z in=4 out=1 ent=1 step=4 brake=2 inf=23465 sec=0.032 inf/sec=733281
 #ENDS
 

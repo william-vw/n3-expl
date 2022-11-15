@@ -13,27 +13,11 @@
 @prefix : <http://wvw.org/xai#> .
 
 
-# auxiliary
-
-{ 	?inf a r:Inference .
-	<> log:notIncludes { ?x r:component ?inf } 
-
-} => {	?inf a x:InferenceNode } .
-
-
-{	?inf a x:InferenceNode .
-	
-	( ?x { ?x a x:InferenceNode . ?x!r:evidence list:member ?inf } ?xs ) log:collectAllIn <> .
-	?xs!list:length math:equalTo 0
-	
-} => {	?inf a x:RootNode } .
-
-
 # divide
 # (all terms to be described are indicated as "x:term"s)
 
 # (will generate a skolemized IRI for blank nodes)
-{	?x r:gives ?value . 
+{	?x r:gives ?value . # formula
 	?x!rdf:type list:in ( x:InferenceNode r:Extraction r:Fact ) .
 	?value log:includes { ?s ?p ?o } .
 
@@ -200,7 +184,7 @@
 # finalize
 
 # (using "x:description"s of terms, generate strings for "r:gives"s)
-{	?x!rdf:type list:in ( r:Extraction r:Inference r:Fact ) .
+{	?x!rdf:type list:in ( x:InferenceNode r:Extraction r:Fact ) .
 	?x r:gives ?value .
 
 	( ?str
